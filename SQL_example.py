@@ -59,7 +59,7 @@ def storeData(data, serial, date) -> None:
             json.dump(data, f)
         print(f'\nData on {date} successfully fetched.\nStored at {filename}\n')
     except Exception as e:
-        print(f'\nFailed. Error: {e}\n')
+        print(f'\nFailed to store data. Error: {e}\n')
     return
 
 def loadData(serial, date) -> list:
