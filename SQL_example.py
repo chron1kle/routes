@@ -4,6 +4,9 @@
 This py script is for data fetching, from server to your own host.
 You should first specify the target device ID and the exact date of the data you intend to fetch.
 
+You may need to install the mysql module first.
+command: pip install mysql-connector-python
+
 For example, if you want to get the data from device no.312 on the date 2024-01-03,
 then you should modify the variables, which are at the bottom part of this script, {date} into 20240103, and {node} into 2.
 
@@ -57,7 +60,7 @@ def storeData(data, serial, date) -> None:
         os.makedirs('data')
     except:
         pass  # folder already exists
-    
+
     filename = 'data\\' + serial + '-' + date + '.json'
     try:
         with open(filename, 'w') as f:
@@ -156,7 +159,7 @@ if __name__ == '__main__':
 
     # These are the arguments you have to specify or modify whenever you run this script
 
-    date = '20240101'
+    date = '20240107'
     node = 2  # 0 for 305, 1 for 306, 2 for 312
 
     # These are the arguments you could but not have to modify, unless necessary
