@@ -2,11 +2,11 @@
 '''
 
 This py script is for data fetching, from server to your own host.
-You should first specify the target device ID and the exact date of the data you intend to fetch.
 
 You may need to install the mysql module first.
 command: pip install mysql-connector-python
 
+You should first specify the target device ID and the exact date of the data you intend to fetch.
 For example, if you want to get the data from device no.312 on the date 2024-01-03,
 then you should modify the variables, which are at the bottom part of this script, {date} into 20240103, and {node} into 2.
 
