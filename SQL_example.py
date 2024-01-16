@@ -53,6 +53,11 @@ def data_fetch(feature_list, node, specified_query) -> list:
     return results
 
 def storeData(data, serial, date) -> None:
+    try:
+        os.makedirs('data')
+    except:
+        pass  # folder already exists
+    
     filename = 'data\\' + serial + '-' + date + '.json'
     try:
         with open(filename, 'w') as f:
