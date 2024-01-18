@@ -75,7 +75,7 @@ def loadData(serial, date) -> list:
     try:
         with open(filename, 'r') as f:
             data = json.load(f)
-        print(f'\nData on {date} successfully loaded.\n')
+        print(f'\nData from device #{serial} on {date} successfully loaded.\n{len(data)} lines of data loaded in total.\nFormat: [Time, Date, SVM_mean, SVM_min, SVM_max, SVM_SD]\n')
     except Exception as e:
         print(f'\nFailed. Error: {e}\n')
     return data
