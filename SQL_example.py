@@ -159,13 +159,13 @@ if __name__ == '__main__':
 
     # These are the arguments you have to specify or modify whenever you run this script
 
-    date = '20240107'
-    node = 2  # 0 for 305, 1 for 306, 2 for 312
+    date = '20231122'
+    node = 1  # 0 for 305, 1 for 306, 2 for 312
 
     # These are the arguments you could but not have to modify, unless necessary
 
     ascending_or_descending = 'ASC'  # specifying the ordering of the data you will fetch. ASC for ascending, and DESC for descending
-    ordering = 'id'  # specifying which feature will be applied for ordering. You can chanee to other features which are included in the list {feature_list}, which is at the top of this script
+    ordering = 'Time'  # specifying which feature will be applied for ordering. You can chanee to other features which are included in the list {feature_list}, which is at the top of this script
     feature_list = ['Time', 'Date', 'SVM_mean', 'SVM_min', 'SVM_max', 'SVM_SD']   # specifying the features you wanna fetch. In our project, only SVM is valid for our model training (I guess).
 
 
