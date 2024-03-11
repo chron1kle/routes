@@ -8,7 +8,7 @@ import json, os, time
  1: MTR
 '''
 
-
+transportation = [1, 2, 3, 4, 5]
 
 d312_20240101 = [(1418, 1427), (1555, 1605), (1852, 1858), (1903, 1907), (1914, 1949), (1957, 2032), (2037, 2041), (2047, 2053), (2133, 2201), (2206, 2233)]
 d312_20240102 = [(1916, 1924), (1925, 1934), (1953, 2004), (2010, 2039), (2042, 2121), (2128, 2132), (2149, 2230), (2237, 2323), (2328, 2333)]
@@ -105,6 +105,13 @@ def alignment(date, serial):
     log_write(f'{count} numbers of data beyond transportation period turned into blank.')
     return
 
+def doLinearCali(line, i, l_mean, l_min, l_max, r_mean, r_min, r_max, head, tail) -> list:
+    ratio = (i - head) / (tail - head)
+    line[2] -= ((r_mean - l_mean) * ratio + l_mean)
+    line[3] -= ((r_min - l_min) * ratio + l_min)
+    line[4] -= ((r_max - l_max) * ratio + l_max)
+    return line
+
 def calibration(date, serial, running):
     data = sqllib.loadLabelledData(serial, date)
     head = running[0][0]
@@ -132,6 +139,15 @@ def calibration(date, serial, running):
         max_sum += data[i][4]
         cnt += 1
 
+    l_mean = mean_sum / cnt
+    l_min = min_sum / cnt
+    l_max = max_sum / cnt
+
+    mean_sum = 0
+    min_sum = 0
+    max_sum = 0
+    cnt = 0
+
     for i in range(right, len(data)):
         if data[i][-1] == -1:
             continue
@@ -139,6 +155,16 @@ def calibration(date, serial, running):
         min_sum += data[i][3]
         max_sum += data[i][4]
         cnt += 1
+
+    r_mean = mean_sum / cnt
+    r_min = min_sum / cnt
+    r_max = max_sum / cnt
+
+    for i, line in enumerate(data):
+        if line[-1] == -1:
+            continue
+        elif line[-1] in transportation:
+            data[i] = doLinearCali(line, i, l_mean, l_min, l_max, r_mean, r_min, r_max, head, tail)
     
     save_labelled_data(data, date, serial)
     return
@@ -165,7 +191,7 @@ if __name__ == '__main__':
 
     # override
     logname = 'MajorLog.log'
-    date = '20240102'
+    date = '20240306'
     serial = '312'
     marker = []
     try:
@@ -185,7 +211,7 @@ if __name__ == '__main__':
     
 # Mark out those data in static state for calibration
 
-# remove those invalid data
+# remove those unnormal data
     
 # align the data
         
