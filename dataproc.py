@@ -13,10 +13,6 @@ import json, os, time
 d312_20240101 = [(1418, 1427), (1555, 1605), (1852, 1858), (1903, 1907), (1914, 1949), (1957, 2032), (2037, 2041), (2047, 2053), (2133, 2201), (2206, 2233)]
 d312_20240102 = [(1916, 1924), (1925, 1934), (1953, 2004), (2010, 2039), (2042, 2121), (2128, 2132), (2149, 2230), (2237, 2323), (2328, 2333)]
 
-d312_20240308 = []
-d312_20240309 = []
-d312_20240307 = []
-d312_20240306 = []
 
 def save_labelled_data(d, date, serial) -> None:
     filename = f'data\\labelled-{serial}-{date}.json'
@@ -172,7 +168,10 @@ if __name__ == '__main__':
     date = '20240102'
     serial = '312'
     marker = []
-    running = globals()[f'd{serial}_{date}']
+    try:
+        running = globals()[f'd{serial}_{date}']
+    except KeyError:
+        running = []
 
     log_write(f'------------------\n{time.ctime()}')
 
