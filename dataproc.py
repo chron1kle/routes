@@ -1,5 +1,6 @@
 import SQL_example as sqllib
 import json, os, time
+import numpy as np
 ##  UTC + 8
 
 '''
@@ -71,7 +72,7 @@ def labelling(date, serial, running) -> None:
         log_write(f"Error may have occurred. Missing data:\n{s}")
     return
 
-def removeZero(date, serial):
+def removeAbnormal(date, serial):  # Kalman filter
     data = sqllib.loadLabelledData(serial, date)
     count = 0
     for i in range(len(data)):
