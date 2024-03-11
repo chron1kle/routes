@@ -3,7 +3,7 @@ import json, os, time
 ##  UTC + 8
 
 d612_20240101 = [(1418, 1427), (1555, 1605), (1852, 1858), (1903, 1907), (1914, 1949), (1957, 2032), (2037, 2041), (2047, 2053), (2133, 2201), (2206, 2233)]
-
+d612_20240102 = [(1916, 1924), (1925, 1934), (1953, 2004), (2010, 2039), (2042, 2121), (2128, 2132), (2149, 2230), (2237, 2323), (2328, 2333)]
 
 def save_labelled_data(d, date, serial) -> None:
     filename = f'data\\labelled-{serial}-{date}.json'
@@ -12,7 +12,7 @@ def save_labelled_data(d, date, serial) -> None:
             json.dump(d, f)
         log_write(f'\nLabelled data successfully saved to {filename}\n')
     except Exception as e:
-        print(f'\nFailed to store labelled data. Error: {e}\n')
+        log_write(f'\nFailed to store labelled data. Error: {e}\n')
 
 def time_match(running, record) -> bool:
     #print(int(record[0:4]))
@@ -33,10 +33,11 @@ def log_write(s) -> None:
         print(s)
     return
         
-def labelling(date, serial, data) -> None:
+def labelling(date, serial) -> None:
+    data = sqllib.loadData(serial, date)
     running = d612_20240101
 
-    marker = []
+    global marker
     for i in running:
         marker.append(0)
 
@@ -62,24 +63,66 @@ def labelling(date, serial, data) -> None:
         log_write(f"Error may have occurred. Missing data:\n{s}")
     return
 
-def removeZero(date, serial, data):
+def removeZero(date, serial):
+    data = sqllib.loadLabelledData(serial, date)
+    count = 0
     for i in range(len(data)):
-        if int(data[i][2]) == 0:
+        if int(data[i][2]) == 0:  # SVM_mean = 0 (Invalid)
             data[i][6] = -1
-    return
+            count += 1
+    log_write(f'{count} numbers of invalid (zero) data found.')
+    return save_labelled_data(data, date, serial)
+
+def alignment(date, serial):
+    data = sqllib.loadLabelledData(serial, date)
+    for i in range(len(data)):
+        if int(data[i][6]) == 0:
+            data[i][6] = -1
+
+    add = 0
+    count = 0
+
+    for i in range(len(data)):
+        if int(data[i][6]) == -1:
+            data[i][6] = 0
+            add += data[i][2]
+            count += 1
+        else:
+            break
+    for i in range(len(data)):
+        if int(data[-i-1][6]) == -1:
+            data[-i-1][6] = 0
+            add += data[-i-1][2]
+            count += 1
+        else:
+            break
+    save_labelled_data(data, date, serial)
+    log_write(F'{count} numbers of data within transportation turned into invalid.')
+    return add, count
 
 if __name__ == '__main__':
 
     # override
-    logname = 'dataLabelling.log'
-    date = '20240101'
+    logname = 'MajorLog.log'
+    date = '20240102'
     serial = '312'
+    marker = []
 
     log_write(f'------------------\n{time.ctime()}')
-    data = sqllib.loadData(serial, date)
 
+    labelling(date, serial)
+
+    removeZero(date, serial)
+
+    a, b = alignment(date, serial)
+    print(a, '\n', b, '\n', a / b)
     
 
+    
+# data within metro running should be labelled to -1 (invalid) !!!
+
 # remove those invalid data
+    
+# align the data
         
 # decide the chunk length
