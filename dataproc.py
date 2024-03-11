@@ -31,23 +31,14 @@ def log_write(s) -> None:
     with open(logname, 'a') as f:
         print(s, file=f)
         print(s)
-
-if __name__ == '__main__':
-
-    # override
-    logname = 'dataproc.log'
-    date = '20240101'
-    serial = '312'
+    return
+        
+def labelling(date, serial, data) -> None:
     running = d612_20240101
-    log_write(f'------------------\n{time.ctime()}')
-    
-    original_length = len(running)
 
     marker = []
     for i in running:
         marker.append(0)
-
-    data = sqllib.loadData(serial, date)
 
     i = 0
     labelled = 0
@@ -69,3 +60,26 @@ if __name__ == '__main__':
         log_write(f"Successfully labelled. Totally {labelled} numbers of data labelled.")
     else:
         log_write(f"Error may have occurred. Missing data:\n{s}")
+    return
+
+def removeZero(date, serial, data):
+    for i in range(len(data)):
+        if int(data[i][2]) == 0:
+            data[i][6] = -1
+    return
+
+if __name__ == '__main__':
+
+    # override
+    logname = 'dataLabelling.log'
+    date = '20240101'
+    serial = '312'
+
+    log_write(f'------------------\n{time.ctime()}')
+    data = sqllib.loadData(serial, date)
+
+    
+
+# remove those invalid data
+        
+# decide the chunk length
