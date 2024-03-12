@@ -72,8 +72,25 @@ def labelling(date, serial, running) -> None:
         log_write(f"Error may have occurred. Missing data:\n{s}")
     return
 
+def remove_outliers(date, serial):
+    Ldata = sqllib.loadLabelledData(serial, date)
+    outList = []
+    data = np.array([x[2:5] for x in Ldata])
+    for i in range(data.shape[1]):
+        mean = np.mean(data[:, i])
+        std = np.std(data[:, i])
+        lower_threshold = mean - 3 * std
+        upper_threshold = mean + 3 * std
+        print(f'{i} : lower {lower_threshold} upper {upper_threshold}')
+        for j, ele in enumerate(data[:, i]):
+            if (lower_threshold > ele or ele > upper_threshold) and j not in outList:
+                outList.append(j)
+
+    return [Ldata[x] for x in outList]
+
 def removeAbnormal(date, serial):  # Kalman filter
     data = sqllib.loadLabelledData(serial, date)
+
     count = 0
     for i in range(len(data)):
         if int(data[i][2]) < 10 or int(data[i][3]) < 10 or int(data[i][4]) < 10:  # SVM_mean = 0 (Invalid)
