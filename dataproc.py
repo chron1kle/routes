@@ -20,7 +20,7 @@ def save_labelled_data(d, date, serial) -> None:
     try:
         with open(filename, 'w+') as f:
             json.dump(d, f)
-        log_write(f'\nLabelled data successfully saved to {filename}\n')
+        log_write(f'\n{len(d)} numbers of labelled data successfully saved to {filename}\n')
     except Exception as e:
         log_write(f'\nFailed to store labelled data. Error: {e}\n')
     return
@@ -72,32 +72,37 @@ def labelling(date, serial, running) -> None:
         log_write(f"Error may have occurred. Missing data:\n{s}")
     return
 
-def remove_outliers(date, serial):
+def remove_outliers(date, serial) -> None:
     Ldata = sqllib.loadLabelledData(serial, date)
-    outList = []
+    global running
+    if running != []:
+        # remove zeros
+        pass
+
+    out_cnt = 0
     data = np.array([x[2:5] for x in Ldata])
     for i in range(data.shape[1]):
         mean = np.mean(data[:, i])
         std = np.std(data[:, i])
         lower_threshold = mean - 3 * std
         upper_threshold = mean + 3 * std
-        print(f'{i} : lower {lower_threshold} upper {upper_threshold}')
+        log_write(f'{i} : lower {lower_threshold} upper {upper_threshold}')
         for j, ele in enumerate(data[:, i]):
-            if (lower_threshold > ele or ele > upper_threshold) and j not in outList:
-                outList.append(j)
+            if (lower_threshold > ele or ele > upper_threshold) and Ldata[j][-1] not in transportation:
+                log_write(f'Invalid data removed: {Ldata[j]}')
+                Ldata[j][-1] = -1
+                out_cnt += 1
+    
+    cnt = 0
+    for ele in [x for x in Ldata if x[-1] == -1]:
+        cnt += 1
+        Ldata.remove(ele)
+    log_write(f'Removed {cnt} numbers of data in total, with {out_cnt} numbers of outliers included.')
+    
+    return save_labelled_data(Ldata, date, serial)
 
-    return [Ldata[x] for x in outList]
+# Kalman filter
 
-def removeAbnormal(date, serial):  # Kalman filter
-    data = sqllib.loadLabelledData(serial, date)
-
-    count = 0
-    for i in range(len(data)):
-        if int(data[i][2]) < 10 or int(data[i][3]) < 10 or int(data[i][4]) < 10:  # SVM_mean = 0 (Invalid)
-            data[i][6] = -1
-            count += 1
-    log_write(f'{count} numbers of invalid (zero) data found.')
-    return save_labelled_data(data, date, serial)
 
 def alignment(date, serial):
     data = sqllib.loadLabelledData(serial, date)
@@ -202,15 +207,16 @@ def preprocess(date, serial, running):  # standard workflow
 
     alignment(date, serial)   # mark out the uesless data within transportation period with value -1
 
-    removeZero(date, serial)  # mark out data with invalid value '0'
+    remove_outliers(date, serial)  # mark out data with invalid value '0'
     return
 
 if __name__ == '__main__':
 
     # override
     logname = 'MajorLog.log'
-    date = '20240306'
+    date = '20240102'
     serial = '312'
+    chunkLength = 20
     marker = []
     try:
         running = globals()[f'd{serial}_{date}']
