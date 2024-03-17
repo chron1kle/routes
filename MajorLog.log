@@ -1254,3 +1254,655 @@ Removed 83 numbers of data in total, with 73 numbers of outliers included.
 
 1358 numbers of labelled data successfully saved to data\labelled-312-20240102.json
 
+------------------
+Tue Mar 12 21:10:35 2024
+
+1390 numbers of labelled data successfully saved to data\labelled-312-20240101.json
+
+Data on #312 20240101 resorted according to time.
+
+1390 numbers of labelled data successfully saved to data\labelled-312-20240101.json
+
+Successfully labelled. Totally 174 numbers of data labelled.
+
+1390 numbers of labelled data successfully saved to data\labelled-312-20240101.json
+
+893 numbers of data beyond transportation period turned into blank.
+0 : lower 1023.2759816685607 upper 1153.6189823602163
+Invalid data removed: ['060954', '20240101', 1157.0, 478.0, 4684.0, 198.0, 0]
+Invalid data removed: ['061753', '20240101', 1014.0, 524.0, 2119.0, 201.0, 0]
+Invalid data removed: ['062951', '20240101', 1173.0, 486.0, 2062.0, 344.0, -1]
+Invalid data removed: ['063050', '20240101', 1174.0, 246.0, 3192.0, 426.0, -1]
+Invalid data removed: ['063150', '20240101', 1175.0, 513.0, 2728.0, 363.0, -1]
+Invalid data removed: ['063250', '20240101', 1166.0, 522.0, 2276.0, 268.0, -1]
+Invalid data removed: ['063350', '20240101', 1169.0, 392.0, 2364.0, 274.0, -1]
+Invalid data removed: ['080733', '20240101', 1158.0, 337.0, 3326.0, 395.0, -1]
+Invalid data removed: ['080833', '20240101', 1174.0, 347.0, 3265.0, 492.0, -1]
+Invalid data removed: ['081133', '20240101', 1167.0, 358.0, 4875.0, 421.0, -1]
+Invalid data removed: ['110202', '20240101', 1155.0, 522.0, 2262.0, 241.0, -1]
+Invalid data removed: ['111000', '20240101', 1156.0, 569.0, 2178.0, 216.0, -1]
+Invalid data removed: ['123444', '20240101', 1159.0, 377.0, 2943.0, 287.0, -1]
+Invalid data removed: ['123544', '20240101', 1160.0, 66.0, 5549.0, 278.0, -1]
+Invalid data removed: ['124442', '20240101', 1155.0, 477.0, 2023.0, 261.0, -1]
+Invalid data removed: ['124542', '20240101', 1154.0, 567.0, 2177.0, 216.0, -1]
+Invalid data removed: ['125540', '20240101', 1163.0, 695.0, 2189.0, 288.0, -1]
+Invalid data removed: ['125646', '20240101', 1159.0, 502.0, 2409.0, 267.0, -1]
+Invalid data removed: ['125939', '20240101', 1169.0, 615.0, 2257.0, 289.0, -1]
+Invalid data removed: ['130039', '20240101', 1157.0, 481.0, 2630.0, 213.0, -1]
+Invalid data removed: ['132934', '20240101', 1155.0, 123.0, 7982.0, 579.0, -1]
+Removed 21 numbers of outliers data.
+
+1369 numbers of labelled data successfully saved to data\labelled-312-20240101.json
+
+------------------
+Tue Mar 12 21:12:50 2024
+
+1390 numbers of labelled data successfully saved to data\labelled-312-20240101.json
+
+Data on #312 20240101 resorted according to time.
+
+1390 numbers of labelled data successfully saved to data\labelled-312-20240101.json
+
+Successfully labelled. Totally 174 numbers of data labelled.
+
+1390 numbers of labelled data successfully saved to data\labelled-312-20240101.json
+
+893 numbers of data beyond transportation period turned into blank.
+0 : lower 979.8283147713422 upper 1197.0666492574346
+Removed 0 numbers of outliers data.
+
+1390 numbers of labelled data successfully saved to data\labelled-312-20240101.json
+
+------------------
+Tue Mar 12 21:13:12 2024
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240306.json
+
+Data on #312 20240306 resorted according to time.
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240306.json
+
+Successfully labelled. Totally 0 numbers of data labelled.
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240306.json
+
+1442 numbers of data beyond transportation period turned into blank.
+0 : lower 897.7342323854105 upper 1308.937057489763
+Invalid data removed: ['070222', '20240306', 0.0, 0.0, 0.0, 0.0, 0]
+Invalid data removed: ['070322', '20240306', 0.0, 0.0, 0.0, 0.0, 0]
+Removed 2 numbers of outliers data.
+
+1440 numbers of labelled data successfully saved to data\labelled-312-20240306.json
+
+------------------
+Tue Mar 12 21:13:31 2024
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240307.json
+
+Data on #312 20240307 resorted according to time.
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240307.json
+
+Successfully labelled. Totally 0 numbers of data labelled.
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240307.json
+
+1442 numbers of data beyond transportation period turned into blank.
+0 : lower 957.9209487011308 upper 1248.547844641449
+Invalid data removed: ['070224', '20240307', 0.0, 0.0, 0.0, 0.0, 0]
+Removed 1 numbers of outliers data.
+
+1441 numbers of labelled data successfully saved to data\labelled-312-20240307.json
+
+------------------
+Tue Mar 12 21:13:39 2024
+
+1441 numbers of labelled data successfully saved to data\labelled-312-20240308.json
+
+Data on #312 20240308 resorted according to time.
+
+1441 numbers of labelled data successfully saved to data\labelled-312-20240308.json
+
+Successfully labelled. Totally 0 numbers of data labelled.
+
+1441 numbers of labelled data successfully saved to data\labelled-312-20240308.json
+
+1441 numbers of data beyond transportation period turned into blank.
+0 : lower 896.9636303480108 upper 1307.971831137069
+Invalid data removed: ['070223', '20240308', 0.0, 0.0, 0.0, 0.0, 0]
+Invalid data removed: ['070323', '20240308', 0.0, 0.0, 0.0, 0.0, 0]
+Removed 2 numbers of outliers data.
+
+1439 numbers of labelled data successfully saved to data\labelled-312-20240308.json
+
+------------------
+Tue Mar 12 21:13:47 2024
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240309.json
+
+Data on #312 20240309 resorted according to time.
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240309.json
+
+Successfully labelled. Totally 0 numbers of data labelled.
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240309.json
+
+1442 numbers of data beyond transportation period turned into blank.
+0 : lower 957.9209487011308 upper 1248.547844641449
+Invalid data removed: ['070210', '20240309', 0.0, 0.0, 0.0, 0.0, 0]
+Removed 1 numbers of outliers data.
+
+1441 numbers of labelled data successfully saved to data\labelled-312-20240309.json
+
+------------------
+Tue Mar 12 21:13:58 2024
+
+1441 numbers of labelled data successfully saved to data\labelled-312-20240102.json
+
+Data on #312 20240102 resorted according to time.
+
+1441 numbers of labelled data successfully saved to data\labelled-312-20240102.json
+
+Successfully labelled. Totally 202 numbers of data labelled.
+
+1441 numbers of labelled data successfully saved to data\labelled-312-20240102.json
+
+1182 numbers of data beyond transportation period turned into blank.
+0 : lower 921.5444063905373 upper 1258.383421506756
+Invalid data removed: ['070209', '20240102', 0.0, 0.0, 0.0, 0.0, 0]
+Removed 1 numbers of outliers data.
+
+1440 numbers of labelled data successfully saved to data\labelled-312-20240102.json
+
+------------------
+Tue Mar 12 21:14:20 2024
+
+1390 numbers of labelled data successfully saved to data\labelled-312-20240101.json
+
+Data on #312 20240101 resorted according to time.
+
+1390 numbers of labelled data successfully saved to data\labelled-312-20240101.json
+
+Successfully labelled. Totally 174 numbers of data labelled.
+
+1390 numbers of labelled data successfully saved to data\labelled-312-20240101.json
+
+893 numbers of data beyond transportation period turned into blank.
+0 : lower 1001.5521482199515 upper 1175.3428158088254
+Removed 0 numbers of outliers data.
+
+1390 numbers of labelled data successfully saved to data\labelled-312-20240101.json
+
+------------------
+Tue Mar 12 21:14:33 2024
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240306.json
+
+Data on #312 20240306 resorted according to time.
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240306.json
+
+Successfully labelled. Totally 0 numbers of data labelled.
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240306.json
+
+1442 numbers of data beyond transportation period turned into blank.
+0 : lower 938.8545148958457 upper 1267.8167749793279
+Invalid data removed: ['070222', '20240306', 0.0, 0.0, 0.0, 0.0, 0]
+Invalid data removed: ['070322', '20240306', 0.0, 0.0, 0.0, 0.0, 0]
+Removed 2 numbers of outliers data.
+
+1440 numbers of labelled data successfully saved to data\labelled-312-20240306.json
+
+------------------
+Tue Mar 12 21:15:06 2024
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240306.json
+
+Data on #312 20240306 resorted according to time.
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240306.json
+
+Successfully labelled. Totally 0 numbers of data labelled.
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240306.json
+
+1442 numbers of data beyond transportation period turned into blank.
+0 : lower 938.8545148958457 upper 1267.8167749793279
+Invalid data removed: ['070222', '20240306', 0.0, 0.0, 0.0, 0.0, 0]
+Invalid data removed: ['070322', '20240306', 0.0, 0.0, 0.0, 0.0, 0]
+1 : lower 921.6395458940203 upper 1249.0747398202654
+Invalid data removed: ['070222', '20240306', 0.0, 0.0, 0.0, 0.0, 0]
+Invalid data removed: ['070322', '20240306', 0.0, 0.0, 0.0, 0.0, 0]
+Invalid data removed: ['204949', '20240306', 1105.0, 893.0, 1420.0, 49.0, 0]
+2 : lower 952.5651081352075 upper 1294.9619376345568
+Invalid data removed: ['070222', '20240306', 0.0, 0.0, 0.0, 0.0, 0]
+Invalid data removed: ['070322', '20240306', 0.0, 0.0, 0.0, 0.0, 0]
+Invalid data removed: ['204949', '20240306', 1105.0, 893.0, 1420.0, 49.0, 0]
+------------------
+Tue Mar 12 21:16:40 2024
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240306.json
+
+Data on #312 20240306 resorted according to time.
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240306.json
+
+Successfully labelled. Totally 0 numbers of data labelled.
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240306.json
+
+1442 numbers of data beyond transportation period turned into blank.
+0 : lower 938.8545148958457 upper 1267.8167749793279
+Invalid data removed: ['070222', '20240306', 0.0, 0.0, 0.0, 0.0, 0]
+Invalid data removed: ['070322', '20240306', 0.0, 0.0, 0.0, 0.0, 0]
+1 : lower 921.6395458940203 upper 1249.0747398202654
+Invalid data removed: ['070222', '20240306', 0.0, 0.0, 0.0, 0.0, 0]
+Invalid data removed: ['070322', '20240306', 0.0, 0.0, 0.0, 0.0, 0]
+Invalid data removed: ['204949', '20240306', 1105.0, 893.0, 1420.0, 49.0, 0]
+2 : lower 952.5651081352075 upper 1294.9619376345568
+Invalid data removed: ['070222', '20240306', 0.0, 0.0, 0.0, 0.0, 0]
+Invalid data removed: ['070322', '20240306', 0.0, 0.0, 0.0, 0.0, 0]
+Invalid data removed: ['204949', '20240306', 1105.0, 893.0, 1420.0, 49.0, 0]
+Removed 8 numbers of outliers data.
+
+1439 numbers of labelled data successfully saved to data\labelled-312-20240306.json
+
+------------------
+Tue Mar 12 21:16:56 2024
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240307.json
+
+Data on #312 20240307 resorted according to time.
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240307.json
+
+Successfully labelled. Totally 0 numbers of data labelled.
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240307.json
+
+1442 numbers of data beyond transportation period turned into blank.
+0 : lower 986.9836382951626 upper 1219.4851550474173
+Invalid data removed: ['070224', '20240307', 0.0, 0.0, 0.0, 0.0, 0]
+1 : lower 971.6578799925759 upper 1201.1576539880066
+Invalid data removed: ['070224', '20240307', 0.0, 0.0, 0.0, 0.0, 0]
+2 : lower 1002.6662705657056 upper 1239.6541177838087
+Invalid data removed: ['070224', '20240307', 0.0, 0.0, 0.0, 0.0, 0]
+Removed 3 numbers of outliers data.
+
+1441 numbers of labelled data successfully saved to data\labelled-312-20240307.json
+
+------------------
+Tue Mar 12 21:17:34 2024
+
+1441 numbers of labelled data successfully saved to data\labelled-312-20240308.json
+
+Data on #312 20240308 resorted according to time.
+
+1441 numbers of labelled data successfully saved to data\labelled-312-20240308.json
+
+Successfully labelled. Totally 0 numbers of data labelled.
+
+1441 numbers of labelled data successfully saved to data\labelled-312-20240308.json
+
+1441 numbers of data beyond transportation period turned into blank.
+0 : lower 938.0644504269167 upper 1266.8710110581633
+Invalid data removed: ['070223', '20240308', 0.0, 0.0, 0.0, 0.0, 0]
+Invalid data removed: ['070323', '20240308', 0.0, 0.0, 0.0, 0.0, 0]
+1 : lower 923.9705191090495 upper 1248.1807647216235
+Invalid data removed: ['070223', '20240308', 0.0, 0.0, 0.0, 0.0, 0]
+Invalid data removed: ['070323', '20240308', 0.0, 0.0, 0.0, 0.0, 0]
+2 : lower 952.366247546285 upper 1286.8190404481632
+Invalid data removed: ['070223', '20240308', 0.0, 0.0, 0.0, 0.0, 0]
+Invalid data removed: ['070323', '20240308', 0.0, 0.0, 0.0, 0.0, 0]
+Removed 6 numbers of outliers data.
+
+1439 numbers of labelled data successfully saved to data\labelled-312-20240308.json
+
+------------------
+Tue Mar 12 21:18:35 2024
+
+1441 numbers of labelled data successfully saved to data\labelled-312-20240308.json
+
+Data on #312 20240308 resorted according to time.
+
+1441 numbers of labelled data successfully saved to data\labelled-312-20240308.json
+
+Successfully labelled. Totally 0 numbers of data labelled.
+
+1441 numbers of labelled data successfully saved to data\labelled-312-20240308.json
+
+1441 numbers of data beyond transportation period turned into blank.
+0 : lower 938.0644504269167 upper 1266.8710110581633
+Invalid data removed: ['070223', '20240308', 0.0, 0.0, 0.0, 0.0, 0]
+Invalid data removed: ['070323', '20240308', 0.0, 0.0, 0.0, 0.0, 0]
+1 : lower 923.9705191090495 upper 1248.1807647216235
+2 : lower 952.366247546285 upper 1286.8190404481632
+Removed 2 numbers of outliers data.
+
+1439 numbers of labelled data successfully saved to data\labelled-312-20240308.json
+
+------------------
+Tue Mar 12 21:18:55 2024
+
+1441 numbers of labelled data successfully saved to data\labelled-312-20240308.json
+
+Data on #312 20240308 resorted according to time.
+
+1441 numbers of labelled data successfully saved to data\labelled-312-20240308.json
+
+Successfully labelled. Totally 0 numbers of data labelled.
+
+1441 numbers of labelled data successfully saved to data\labelled-312-20240308.json
+
+1441 numbers of data beyond transportation period turned into blank.
+0 : lower 979.1652705058225 upper 1225.7701909792574
+Invalid data removed: ['070223', '20240308', 0.0, 0.0, 0.0, 0.0, 0]
+Invalid data removed: ['070323', '20240308', 0.0, 0.0, 0.0, 0.0, 0]
+1 : lower 964.4967998106213 upper 1207.6544840200518
+2 : lower 994.1728466590198 upper 1245.0124413354283
+Removed 2 numbers of outliers data.
+
+1439 numbers of labelled data successfully saved to data\labelled-312-20240308.json
+
+------------------
+Tue Mar 12 23:22:21 2024
+
+1390 numbers of labelled data successfully saved to data\labelled-312-20240101.json
+
+Data on #312 20240101 resorted according to time.
+
+1390 numbers of labelled data successfully saved to data\labelled-312-20240101.json
+
+Successfully labelled. Totally 174 numbers of data labelled.
+
+1390 numbers of labelled data successfully saved to data\labelled-312-20240101.json
+
+893 numbers of data beyond transportation period turned into blank.
+Tag 0:
+0 : lower 1071.6383686000827 upper 1103.676301052773
+Invalid data removed: ['060555', '20240101', 1105.0, 391.0, 3446.0, 98.0, 0]
+Invalid data removed: ['060954', '20240101', 1157.0, 478.0, 4684.0, 198.0, 0]
+Invalid data removed: ['061054', '20240101', 1060.0, 483.0, 6195.0, 150.0, 0]
+Invalid data removed: ['061154', '20240101', 1038.0, 568.0, 1718.0, 63.0, 0]
+Invalid data removed: ['061301', '20240101', 1050.0, 853.0, 1394.0, 39.0, 0]
+Invalid data removed: ['061453', '20240101', 1056.0, 56.0, 5802.0, 501.0, 0]
+Invalid data removed: ['061553', '20240101', 1035.0, 273.0, 2125.0, 343.0, 0]
+Invalid data removed: ['061653', '20240101', 1041.0, 244.0, 3185.0, 387.0, 0]
+Invalid data removed: ['061753', '20240101', 1014.0, 524.0, 2119.0, 201.0, 0]
+1 : lower 732.8899580334577 upper 1373.5938045645266
+Invalid data removed: ['060455', '20240101', 1093.0, 408.0, 4189.0, 84.0, 0]
+Invalid data removed: ['060855', '20240101', 1084.0, 422.0, 2384.0, 116.0, 0]
+Invalid data removed: ['061354', '20240101', 1096.0, 132.0, 4587.0, 525.0, 0]
+2 : lower -185.15138582000918 upper 2521.8344765254965
+Tag 1:
+0 : lower 960.1775345987827 upper 1204.3971780448956
+1 : lower 216.3530055750026 upper 1538.7044656893654
+2 : lower -1922.6604193612336 upper 5180.028235453187
+Tag 2:
+------------------
+Tue Mar 12 23:23:09 2024
+
+1390 numbers of labelled data successfully saved to data\labelled-312-20240101.json
+
+Data on #312 20240101 resorted according to time.
+
+1390 numbers of labelled data successfully saved to data\labelled-312-20240101.json
+
+Successfully labelled. Totally 174 numbers of data labelled.
+
+1390 numbers of labelled data successfully saved to data\labelled-312-20240101.json
+
+893 numbers of data beyond transportation period turned into blank.
+Tag 0:
+0 : lower 1071.6383686000827 upper 1103.676301052773
+Invalid data removed: ['060555', '20240101', 1105.0, 391.0, 3446.0, 98.0, 0]
+Invalid data removed: ['060954', '20240101', 1157.0, 478.0, 4684.0, 198.0, 0]
+Invalid data removed: ['061054', '20240101', 1060.0, 483.0, 6195.0, 150.0, 0]
+Invalid data removed: ['061154', '20240101', 1038.0, 568.0, 1718.0, 63.0, 0]
+Invalid data removed: ['061301', '20240101', 1050.0, 853.0, 1394.0, 39.0, 0]
+Invalid data removed: ['061453', '20240101', 1056.0, 56.0, 5802.0, 501.0, 0]
+Invalid data removed: ['061553', '20240101', 1035.0, 273.0, 2125.0, 343.0, 0]
+Invalid data removed: ['061653', '20240101', 1041.0, 244.0, 3185.0, 387.0, 0]
+Invalid data removed: ['061753', '20240101', 1014.0, 524.0, 2119.0, 201.0, 0]
+1 : lower 732.8899580334577 upper 1373.5938045645266
+Invalid data removed: ['060455', '20240101', 1093.0, 408.0, 4189.0, 84.0, 0]
+Invalid data removed: ['060855', '20240101', 1084.0, 422.0, 2384.0, 116.0, 0]
+Invalid data removed: ['061354', '20240101', 1096.0, 132.0, 4587.0, 525.0, 0]
+2 : lower -185.15138582000918 upper 2521.8344765254965
+Tag 1:
+0 : lower 960.1775345987827 upper 1204.3971780448956
+1 : lower 216.3530055750026 upper 1538.7044656893654
+2 : lower -1922.6604193612336 upper 5180.028235453187
+Tag 2:
+Tag 3:
+Tag 4:
+Tag 5:
+Removed 12 numbers of outliers data.
+
+1378 numbers of labelled data successfully saved to data\labelled-312-20240101.json
+
+------------------
+Sat Mar 16 20:23:19 2024
+Performing function: calibration
+------------------
+Sat Mar 16 20:26:26 2024
+Performing function: calibration
+Left: 824, Right: 1324
+------------------
+Sat Mar 16 20:27:15 2024
+Performing function: calibration
+Left: 824, Right: 1324
+------------------
+Sat Mar 16 20:29:35 2024
+Performing function: calibration
+Left: 824, Right: 1324
+------------------
+Sat Mar 16 20:30:11 2024
+Performing function: calibration
+Left: 824, Right: 1324
+------------------
+Sat Mar 16 20:33:14 2024
+Performing function: calibration
+Left: 824, Right: 1324
+Not enough data for calibration from right. Actual number of data: 54
+------------------
+Sat Mar 16 20:35:24 2024
+Performing function: calibration
+Left: 824, Right: 1324
+Not enough data for calibration from right. Actual number of data: 54
+------------------
+Sat Mar 16 20:36:16 2024
+Performing function: calibration
+Left: 824, Right: 1324, head: 1418, tail: 2233
+Not enough data for calibration from right. Actual number of data: 54
+------------------
+Sat Mar 16 20:36:55 2024
+Performing function: calibration
+Left: 343, Right: 899, head: 618, tail: 1433
+------------------
+Sat Mar 16 20:37:46 2024
+Performing function: calibration
+Left: 343, Right: 899, head: 618, tail: 1433
+------------------
+Sat Mar 16 20:38:08 2024
+Performing function: calibration
+Left: 343, Right: 899, head: 618, tail: 1433
+------------------
+Sat Mar 16 20:40:53 2024
+Performing function: calibration
+Left: 343, Right: 899, head: 618, tail: 1433
+------------------
+Sat Mar 16 20:41:40 2024
+Performing function: calibration
+Left: 343, Right: 899, head: 618, tail: 1433
+------------------
+Sat Mar 16 20:43:29 2024
+Performing function: calibration
+Left: 343, Right: 899, head: 618, tail: 1433
+------------------
+Sat Mar 16 21:35:22 2024
+Performing function: calibration
+Left: 343, Right: 899, head: 618, tail: 1433
+Successfully removed 323 number of Tag = 1 data.
+
+1055 numbers of calibrated data successfully saved to data\cali-312-20240101.json
+
+------------------
+Sat Mar 16 21:42:51 2024
+
+1441 numbers of labelled data successfully saved to data\labelled-312-20240102.json
+
+Data on #312 20240102 resorted according to time.
+
+1441 numbers of labelled data successfully saved to data\labelled-312-20240102.json
+
+Successfully labelled. Totally 202 numbers of data labelled.
+
+1441 numbers of labelled data successfully saved to data\labelled-312-20240102.json
+
+1182 numbers of data beyond transportation period turned into blank.
+Performing function: remove_outliers
+Tag 0:
+0 : lower 986.9601546966929 upper 1183.1379840511922
+Invalid data removed: ['070209', '20240102', 0.0, 0.0, 0.0, 0.0, 0]
+1 : lower 732.6565348492309 upper 1368.9982874857947
+Invalid data removed: ['104431', '20240102', 1112.0, 267.0, 6061.0, 150.0, 0]
+Invalid data removed: ['104530', '20240102', 1114.0, 258.0, 4316.0, 145.0, 0]
+Invalid data removed: ['104636', '20240102', 1070.0, 640.0, 4512.0, 146.0, 0]
+Invalid data removed: ['104730', '20240102', 1079.0, 163.0, 3374.0, 284.0, 0]
+Invalid data removed: ['104830', '20240102', 1090.0, 282.0, 3543.0, 388.0, 0]
+Invalid data removed: ['104930', '20240102', 1058.0, 416.0, 3290.0, 249.0, 0]
+Invalid data removed: ['105030', '20240102', 1076.0, 479.0, 2506.0, 260.0, 0]
+Invalid data removed: ['105129', '20240102', 1070.0, 444.0, 2479.0, 333.0, 0]
+Invalid data removed: ['105229', '20240102', 1051.0, 530.0, 2312.0, 248.0, 0]
+Invalid data removed: ['105329', '20240102', 1086.0, 343.0, 4001.0, 159.0, 0]
+Invalid data removed: ['105429', '20240102', 1089.0, 513.0, 2020.0, 89.0, 0]
+Invalid data removed: ['110228', '20240102', 1035.0, 706.0, 1612.0, 57.0, 0]
+Invalid data removed: ['110328', '20240102', 1063.0, 538.0, 2648.0, 191.0, 0]
+Invalid data removed: ['110428', '20240102', 1061.0, 205.0, 2438.0, 151.0, 0]
+Invalid data removed: ['110527', '20240102', 1057.0, 468.0, 2877.0, 229.0, 0]
+Invalid data removed: ['110627', '20240102', 1065.0, 512.0, 2307.0, 287.0, 0]
+Invalid data removed: ['110727', '20240102', 1036.0, 598.0, 1922.0, 128.0, 0]
+Invalid data removed: ['110827', '20240102', 1035.0, 727.0, 1603.0, 57.0, 0]
+Invalid data removed: ['110927', '20240102', 1034.0, 704.0, 1401.0, 48.0, 0]
+Invalid data removed: ['111426', '20240102', 1023.0, 576.0, 2469.0, 84.0, 0]
+Invalid data removed: ['111526', '20240102', 1064.0, 479.0, 2644.0, 298.0, 0]
+2 : lower -106.16444670561941 upper 2434.836189514418
+Invalid data removed: ['011731', '20240102', 1088.0, 1069.0, 7906.0, 91.0, 0]
+Tag 1:
+0 : lower 1035.4033196180606 upper 1187.2204427581771
+1 : lower 392.3353260524092 upper 1494.823089789175
+2 : lower -673.5102335482222 upper 3518.549837508618
+Tag 2:
+Tag 3:
+Tag 4:
+Tag 5:
+Removed 23 numbers of outliers data.
+
+1418 numbers of labelled data successfully saved to data\labelled-312-20240102.json
+
+Performing function: calibration
+Left: 626, Right: 944, head: 1116, tail: 1533
+Successfully removed 57 number of Tag = 1 data.
+
+1361 numbers of calibrated data successfully saved to data\cali-312-20240102.json
+
+------------------
+Sun Mar 17 07:54:26 2024
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240306.json
+
+Data on #312 20240306 resorted according to time.
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240306.json
+
+Successfully labelled. Totally 0 numbers of data labelled.
+
+1442 numbers of labelled data successfully saved to data\labelled-312-20240306.json
+
+1442 numbers of data beyond transportation period turned into blank.
+Performing function: remove_outliers
+Tag 0:
+0 : lower 979.9747974062809 upper 1226.6964924688925
+Invalid data removed: ['070222', '20240306', 0.0, 0.0, 0.0, 0.0, 0]
+Invalid data removed: ['070322', '20240306', 0.0, 0.0, 0.0, 0.0, 0]
+1 : lower 962.568945134801 upper 1208.1453405794848
+Invalid data removed: ['204949', '20240306', 1105.0, 893.0, 1420.0, 49.0, 0]
+2 : lower 995.3647118226262 upper 1252.162333947138
+Tag 1:
+Tag 2:
+Tag 3:
+Tag 4:
+Tag 5:
+Removed 3 numbers of outliers data.
+
+1439 numbers of labelled data successfully saved to data\labelled-312-20240306.json
+
+------------------
+Sun Mar 17 09:55:17 2024
+
+1444 numbers of labelled data successfully saved to data\labelled-312-20240106.json
+
+Data on #312 20240106 resorted according to time.
+
+1444 numbers of labelled data successfully saved to data\labelled-312-20240106.json
+
+Successfully labelled. Totally 103 numbers of data labelled.
+
+1444 numbers of labelled data successfully saved to data\labelled-312-20240106.json
+
+1303 numbers of data beyond transportation period turned into blank.
+Performing function: remove_outliers
+Tag 0:
+0 : lower 1042.366711182458 upper 1137.2787224322774
+Invalid data removed: ['065628', '20240106', 1139.0, 238.0, 4159.0, 584.0, 0]
+Invalid data removed: ['065727', '20240106', 1174.0, 81.0, 5221.0, 606.0, 0]
+Invalid data removed: ['071724', '20240106', 1166.0, 163.0, 4799.0, 390.0, 0]
+Invalid data removed: ['071824', '20240106', 1147.0, 536.0, 3524.0, 302.0, 0]
+Invalid data removed: ['071923', '20240106', 1149.0, 485.0, 3303.0, 311.0, 0]
+Invalid data removed: ['072023', '20240106', 1140.0, 414.0, 3675.0, 312.0, 0]
+Invalid data removed: ['072123', '20240106', 1146.0, 508.0, 3789.0, 290.0, 0]
+Invalid data removed: ['072223', '20240106', 1157.0, 450.0, 4047.0, 343.0, 0]
+Invalid data removed: ['072323', '20240106', 1173.0, 437.0, 3294.0, 348.0, 0]
+Invalid data removed: ['072422', '20240106', 1160.0, 246.0, 3858.0, 339.0, 0]
+Invalid data removed: ['072722', '20240106', 1162.0, 408.0, 2716.0, 379.0, 0]
+Invalid data removed: ['072828', '20240106', 1139.0, 434.0, 2359.0, 380.0, 0]
+Invalid data removed: ['072921', '20240106', 1139.0, 434.0, 2359.0, 380.0, 0]
+Invalid data removed: ['073321', '20240106', 1140.0, 399.0, 2459.0, 380.0, 0]
+1 : lower 479.12828739451345 upper 1555.6683357827696
+Invalid data removed: ['064929', '20240106', 1100.0, 247.0, 5503.0, 124.0, 0]
+Invalid data removed: ['065029', '20240106', 1114.0, 281.0, 5687.0, 249.0, 0]
+Invalid data removed: ['065129', '20240106', 1087.0, 336.0, 2419.0, 162.0, 0]
+Invalid data removed: ['065228', '20240106', 1085.0, 363.0, 4153.0, 163.0, 0]
+Invalid data removed: ['065328', '20240106', 1106.0, 186.0, 3196.0, 327.0, 0]
+Invalid data removed: ['065428', '20240106', 1113.0, 472.0, 2422.0, 309.0, 0]
+Invalid data removed: ['065528', '20240106', 1137.0, 150.0, 6183.0, 601.0, 0]
+Invalid data removed: ['065833', '20240106', 1108.0, 213.0, 5518.0, 172.0, 0]
+Invalid data removed: ['065927', '20240106', 1108.0, 213.0, 5518.0, 172.0, 0]
+Invalid data removed: ['071524', '20240106', 1105.0, 202.0, 5245.0, 171.0, 0]
+Invalid data removed: ['071624', '20240106', 1095.0, 394.0, 4346.0, 189.0, 0]
+Invalid data removed: ['073221', '20240106', 1114.0, 463.0, 3572.0, 297.0, 0]
+Invalid data removed: ['073421', '20240106', 1115.0, 394.0, 3062.0, 388.0, 0]
+Invalid data removed: ['073521', '20240106', 1118.0, 466.0, 3280.0, 312.0, 0]
+Invalid data removed: ['073620', '20240106', 1096.0, 464.0, 2570.0, 287.0, 0]
+2 : lower -918.96724558557 upper 3481.2297168058312
+Tag 1:
+0 : lower 972.7843120173575 upper 1180.128309341866
+1 : lower 317.4159852121385 upper 1421.011199253881
+2 : lower -1189.8755210304641 upper 4144.749307438231
+Tag 2:
+Tag 3:
+Tag 4:
+Tag 5:
+Removed 29 numbers of outliers data.
+
+1415 numbers of labelled data successfully saved to data\labelled-312-20240106.json
+
+Performing function: calibration
+Left: 405, Right: 602, head: 739, tail: 958
+Successfully removed 38 number of Tag = -1 data.
+
+1377 numbers of calibrated data successfully saved to data\cali-312-20240106.json
+

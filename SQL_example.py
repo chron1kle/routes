@@ -90,6 +90,16 @@ def loadLabelledData(serial, date) -> list:
         print(f'\nFailed. Error: {e}\n')
     return data
 
+def loadCaliData(serial, date) -> list:
+    filename = 'data\\cali-' + serial + '-' + date + '.json'
+    try:
+        with open(filename, 'r') as f:
+            data = json.load(f)
+        print(f'\nCalibrated data from device #{serial} on {date} successfully loaded.\n{len(data)} lines of data loaded in total.\nFormat: [Time, Date, SVM_mean, SVM_min, SVM_max, SVM_SD]\n')
+    except Exception as e:
+        print(f'\nFailed. Error: {e}\n')
+    return data
+
 class ConPool():
     def __init__(self,target_DB = None, file_name = "database_pass"):
            
