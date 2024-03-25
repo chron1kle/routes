@@ -1,6 +1,17 @@
 import os, json
 
 
+
+'''
+ -1: invalid
+ 0: static or walking
+ 1: MTR
+'''
+transportation_tag = [1, 2, 3, 4, 5]
+valid_tag = [0, 1, 2, 3, 4, 5]
+
+logname = 'MajorLog.log'
+
 # These are all the features recorded by our devices in every piece of data. The data on the server has one piece per minute.
 # You may select the features, if necessary, which are all included in this list, that you wanna fetch and modify the variable {feature_list} at the bottom part of this script correspondingly.
 feature_list = ['NodeID', 'SubSeqNo', 'Time', 'Date', 'GPSTime', 'GPSDate', 
@@ -22,15 +33,6 @@ feature_list = ['NodeID', 'SubSeqNo', 'Time', 'Date', 'GPSTime', 'GPSDate',
 
 # device ID. 305 for Owen, 306 for Johnny and 312 for Saunders.
 nodes_list = ["305", "306", "312"]  
-
-
-'''
- -1: invalid
- 0: static or walking
- 1: MTR
-'''
-transportation_tag = [1, 2, 3, 4, 5]
-valid_tag = [0, 1, 2, 3, 4, 5]
 
 
 def loadData(serial, date) -> list:

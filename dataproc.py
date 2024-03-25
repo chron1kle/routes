@@ -17,10 +17,11 @@ def resort(date, serial) -> None:
     log_write(f'Data on #{serial} {date} resorted according to time.')
     return 
 
-def labelling(date, serial, running) -> None:
+def labelling(date, serial, running, marker) -> None:
     data = loadLabelledData(serial, date)
+
+    # Marker 的意义是什么？
     
-    global marker
     for i in running:
         marker.append(0)
 
@@ -211,11 +212,11 @@ def calibration(date, serial, running):
 
 
 
-def preprocess(date, serial, running, sigma_multiplier):  # standard workflow
+def preprocess(date, serial, running, sigma_multiplier, marker):  # standard workflow
     
     resort(date, serial)  # sort the data in ascending order
 
-    labelling(date, serial, running)  # tag those data within transportation period
+    labelling(date, serial, running, marker)  # tag those data within transportation period
 
     alignment(date, serial)   # mark out the uesless data within transportation period with value -1
 
@@ -229,8 +230,7 @@ if __name__ == '__main__':
     # parameters
     date = '20240106'
     serial = '312'
-
-    logname = 'MajorLog.log'
+    
     sigma_multiplier = 3
     chunkLength = 20
     marker = []
@@ -242,7 +242,7 @@ if __name__ == '__main__':
 
     log_write(f'------------------\n{time.ctime()}')
 
-    preprocess(date, serial, running, sigma_multiplier)
+    preprocess(date, serial, running, sigma_multiplier, marker)
 
     exit(0)
     
