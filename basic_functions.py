@@ -85,9 +85,11 @@ def save_cali_data(d, date, serial) -> None:
         log_write(f'\nFailed to store calibrated data. Error: {e}\n')
     return
 
-def time_match(running, record) -> bool:
-    instant = int(record[0:4])
-    for i, (start, end, mode) in enumerate(running):
+def time_match(running, instant) -> bool:
+    if type(instant) == str:
+        instant = int(instant[0:4])
+
+    for (start, end, mode) in running:
         if start - 800 <= instant and end - 800 >= instant:
             return mode
         else:
@@ -100,3 +102,24 @@ def log_write(s) -> None:
         print(s, file=f)
         print(s)
     return
+
+def distrubution_process(data, position, order) -> tuple:
+    data = [x[position] for x in data]
+    refs = {}
+    for ele in data:
+        if ele in refs.keys():
+            refs[ele] += 1
+        else:
+            refs[ele] = 1
+
+    if order == 'frequency':
+        refs = sorted(refs.items(), key=lambda x: x[1])
+    elif order == 'numerical':
+        refs = sorted(refs.items(), key=lambda x: x[0])
+    else:
+        log_write(f'Wrong argument in function [{distrubution_process.__name__}]: order = {order} ')
+        exit(1)
+
+    subjects = [x[0] for x in refs]
+    freqs = [x[1] for x in refs]
+    return (subjects, freqs)
