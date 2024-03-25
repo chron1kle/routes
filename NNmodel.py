@@ -42,8 +42,6 @@ if __name__ == "__main__":
         for i in range(6):
             l[i] = [float(l[i])]
         train_loader_x.append((t.tensor(l[:3], dtype=dtype), t.tensor([l[3]], dtype=dtype)))
-        train_loader_y.append((t.tensor(l[:3], dtype=dtype), t.tensor([l[4]], dtype=dtype)))
-        train_loader_z.append((t.tensor(l[:3], dtype=dtype), t.tensor([l[5]], dtype=dtype)))
     with open('test','r+') as f:
         lines = f.readlines()
     test_loader_x = []

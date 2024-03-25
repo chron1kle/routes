@@ -2,68 +2,23 @@ import SQL_example as sqllib
 import json, os, time
 import numpy as np
 import matplotlib.pyplot as plt
+from basic_functions import feature_list, nodes_list, transportation_tag, valid_tag, loadData, loadLabelledData, loadCaliData, save_labelled_data, save_cali_data, time_match, log_write
 ##  UTC + 8
-
-'''
- -1: invalid
- 0: static or walking
- 1: MTR
-'''
-
-transportation_tag = [1, 2, 3, 4, 5]
-valid_tag = [0, 1, 2, 3, 4, 5]
 
 d312_20240101 = [(1418, 1427), (1555, 1605), (1852, 1858), (1903, 1907), (1914, 1949), (1957, 2032), (2037, 2041), (2047, 2053), (2133, 2201), (2206, 2233)]
 d312_20240102 = [(1916, 1924), (1925, 1934), (1953, 2004), (2010, 2039), (2042, 2121), (2128, 2132), (2149, 2230), (2237, 2323), (2328, 2333)]
 d312_20240106 = {1 : [(1539, 1543), (1546, 1552), (1559, 1636), (1640, 1708), (1736, 1758)], }
 
-def save_labelled_data(d, date, serial) -> None:
-    filename = f'data\\labelled-{serial}-{date}.json'
-    try:
-        with open(filename, 'w+') as f:
-            json.dump(d, f)
-        log_write(f'\n{len(d)} numbers of labelled data successfully saved to {filename}\n')
-    except Exception as e:
-        log_write(f'\nFailed to store labelled data. Error: {e}\n')
-    return
-
-def save_cali_data(d, date, serial) -> None:
-    filename = f'data\\cali-{serial}-{date}.json'
-    try:
-        with open(filename, 'w+') as f:
-            json.dump(d, f)
-        log_write(f'\n{len(d)} numbers of calibrated data successfully saved to {filename}\n')
-    except Exception as e:
-        log_write(f'\nFailed to store calibrated data. Error: {e}\n')
-    return
-
-def time_match(running, record) -> bool:
-    global marker
-    instant = int(record[0:4])
-    for i, (start, end) in enumerate(running):
-        if start - 800 <= instant and end - 800 >= instant:
-            marker[i] = 1
-            return True
-        else:
-            continue
-    return False
-
-def log_write(s) -> None:
-    global logname
-    with open(logname, 'a') as f:
-        print(s, file=f)
-        print(s)
-    return
 
 def resort(date, serial) -> None:
-    data = sqllib.loadData(serial, date)
+    data = loadData(serial, date)
     data = sorted(data, key=lambda x: int(x[0]))
     save_labelled_data(data, date, serial)
     log_write(f'Data on #{serial} {date} resorted according to time.')
     return 
 
 def labelling(date, serial, running) -> None:
-    data = sqllib.loadLabelledData(serial, date)
+    data = loadLabelledData(serial, date)
     
     global marker
     for i in running:
@@ -93,7 +48,7 @@ def labelling(date, serial, running) -> None:
 
 def remove_outliers(date, serial, sigma_multiplier) -> None:
     log_write(f"Performing function: {remove_outliers.__name__}")
-    Ldata = sqllib.loadLabelledData(serial, date)
+    Ldata = loadLabelledData(serial, date)
 
     outList = []
     for tag in valid_tag:
@@ -132,7 +87,7 @@ def removing_Invalid_data(data) -> list:
     return data
 
 def alignment(date, serial):
-    data = sqllib.loadLabelledData(serial, date)
+    data = loadLabelledData(serial, date)
     for i in range(len(data)):
         if int(data[i][6]) == 0:
             data[i][6] = -1
@@ -172,7 +127,7 @@ def calibration(date, serial, running):
     cali_range = range(2,3)
 
     log_write(f"Performing function: {calibration.__name__}")
-    data = sqllib.loadLabelledData(serial, date)
+    data = loadLabelledData(serial, date)
     head = running[0][0] - 800
     tail = running[-1][-1] - 800
     headList = range(head-5, head+5)
@@ -282,6 +237,7 @@ if __name__ == '__main__':
     try:
         running = globals()[f'd{serial}_{date}']
     except KeyError:
+        print(f'No transportation modes data.')
         running = []
 
     log_write(f'------------------\n{time.ctime()}')
