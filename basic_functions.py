@@ -86,15 +86,13 @@ def save_cali_data(d, date, serial) -> None:
     return
 
 def time_match(running, record) -> bool:
-    global marker
     instant = int(record[0:4])
-    for i, (start, end) in enumerate(running):
+    for i, (start, end, mode) in enumerate(running):
         if start - 800 <= instant and end - 800 >= instant:
-            marker[i] = 1
-            return True
+            return mode
         else:
             continue
-    return False
+    return 0
 
 def log_write(s) -> None:
     global logname

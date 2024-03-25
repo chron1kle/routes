@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 from basic_functions import feature_list, nodes_list, transportation_tag, valid_tag, loadData, loadLabelledData, loadCaliData, save_labelled_data, save_cali_data, time_match, log_write
 ##  UTC + 8
 
-d312_20240101 = [(1418, 1427), (1555, 1605), (1852, 1858), (1903, 1907), (1914, 1949), (1957, 2032), (2037, 2041), (2047, 2053), (2133, 2201), (2206, 2233)]
-d312_20240102 = [(1916, 1924), (1925, 1934), (1953, 2004), (2010, 2039), (2042, 2121), (2128, 2132), (2149, 2230), (2237, 2323), (2328, 2333)]
-d312_20240106 = {1 : [(1539, 1543), (1546, 1552), (1559, 1636), (1640, 1708), (1736, 1758)], }
+d312_20240101 = [(1418, 1427, 1), (1555, 1605, 1), (1852, 1858, 1), (1903, 1907, 1), (1914, 1949, 1), (1957, 2032, 1), (2037, 2041, 1), (2047, 2053, 1), (2133, 2201, 1), (2206, 2233, 1)]
+d312_20240102 = [(1916, 1924, 1), (1925, 1934, 1), (1953, 2004, 1), (2010, 2039, 1), (2042, 2121, 1), (2128, 2132, 1), (2149, 2230, 1), (2237, 2323, 1), (2328, 2333, 1)]
+d312_20240106 = [(1539, 1543, 1), (1546, 1552, 1), (1559, 1636, 1), (1640, 1708, 1), (1736, 1758, 1)]
 
 
 def resort(date, serial) -> None:
@@ -17,35 +17,23 @@ def resort(date, serial) -> None:
     log_write(f'Data on #{serial} {date} resorted according to time.')
     return 
 
-def labelling(date, serial, running, marker) -> None:
+def labelling(date, serial, running) -> None:
     data = loadLabelledData(serial, date)
 
     # Marker 的意义是什么？
-    
-    for i in running:
-        marker.append(0)
+    # 用于确保下载的数据里包含了所有被记录的区间 -> 没有意义，删去
 
     i = 0
-    labelled = 0
+    labelled = [0, 0, 0, 0, 0, 0]
     while i < len(data):
-
-        if time_match(running, data[i][0]):
-            data[i].append(1)
-            labelled += 1
-        else:
-            data[i].append(0)
+        mode = time_match(running, data[i][0])
+        data[i].append(mode)
+        labelled[mode] += 1
         i += 1
     
     save_labelled_data(data, date, serial)
-    s = ''
-    for i in marker:
-        if i == 0:
-            s += ' ' + str(running[i]) + ' '
-    if s == '':
-        log_write(f"Successfully labelled. Totally {labelled} numbers of data labelled.")
-    else:
-        log_write(f"Error may have occurred. Missing data:\n{s}")
-    return
+
+    return log_write(f"Successfully labelled. Labelled numbers: {labelled} .")
 
 def remove_outliers(date, serial, sigma_multiplier) -> None:
     log_write(f"Performing function: {remove_outliers.__name__}")
@@ -130,7 +118,7 @@ def calibration(date, serial, running):
     log_write(f"Performing function: {calibration.__name__}")
     data = loadLabelledData(serial, date)
     head = running[0][0] - 800
-    tail = running[-1][-1] - 800
+    tail = running[-1][1] - 800
     headList = range(head-5, head+5)
     tailList = range(tail-5, tail+5)
 
@@ -212,11 +200,11 @@ def calibration(date, serial, running):
 
 
 
-def preprocess(date, serial, running, sigma_multiplier, marker):  # standard workflow
+def preprocess(date, serial, running, sigma_multiplier):  # standard workflow
     
     resort(date, serial)  # sort the data in ascending order
 
-    labelling(date, serial, running, marker)  # tag those data within transportation period
+    labelling(date, serial, running)  # tag those data within transportation period
 
     alignment(date, serial)   # mark out the uesless data within transportation period with value -1
 
@@ -233,7 +221,6 @@ if __name__ == '__main__':
     
     sigma_multiplier = 3
     chunkLength = 20
-    marker = []
     try:
         running = globals()[f'd{serial}_{date}']
     except KeyError:
@@ -242,7 +229,7 @@ if __name__ == '__main__':
 
     log_write(f'------------------\n{time.ctime()}')
 
-    preprocess(date, serial, running, sigma_multiplier, marker)
+    preprocess(date, serial, running, sigma_multiplier)
 
     exit(0)
     
