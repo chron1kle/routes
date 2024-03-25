@@ -85,9 +85,11 @@ def save_cali_data(d, date, serial) -> None:
         log_write(f'\nFailed to store calibrated data. Error: {e}\n')
     return
 
-def time_match(running, record) -> bool:
-    instant = int(record[0:4])
-    for i, (start, end, mode) in enumerate(running):
+def time_match(running, instant) -> bool:
+    if type(instant) == str:
+        instant = int(instant[0:4])
+
+    for (start, end, mode) in running:
         if start - 800 <= instant and end - 800 >= instant:
             return mode
         else:

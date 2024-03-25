@@ -21,7 +21,7 @@ def labelling(date, serial, running) -> None:
     data = loadLabelledData(serial, date)
 
     # Marker 的意义是什么？
-    # 用于确保下载的数据里包含了所有被记录的区间 -> 没有意义，删去
+    # 用于确保下载的数据里包含了所有被记录的区间 -> 没有意义，删去 (solved)
 
     i = 0
     labelled = [0, 0, 0, 0, 0, 0]
@@ -210,7 +210,7 @@ def preprocess(date, serial, running, sigma_multiplier):  # standard workflow
 
     remove_outliers(date, serial, sigma_multiplier)  # removing outliers data
 
-    calibration(date, serial, running) # calibrating data with transportation tag
+    calibration(date, serial, running) # calibrating data with transportation tag using static data
     return
 
 if __name__ == '__main__':
