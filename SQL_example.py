@@ -23,6 +23,7 @@ import mysql.connector, mysql.connector.pooling
 from mysql.connector import errorcode
 import os, json
 import basic_functions
+from basic_functions import storeData
 
 
 def data_fetch(feature_list, node, specified_query) -> list:
@@ -34,23 +35,6 @@ def data_fetch(feature_list, node, specified_query) -> list:
     print(f'\n{len(results)} of lines of records found successfully\n')
         
     return results
-
-def storeData(data, serial, date) -> None:
-    try:
-        os.makedirs('data')
-    except:
-        pass  # folder already exists
-
-    filename = 'data\\' + serial + '-' + date + '.json'
-    try:
-        with open(filename, 'w') as f:
-            json.dump(data, f)
-        print(f'\nData on {date} successfully fetched.\nStored at {filename}\n')
-    except Exception as e:
-        print(f'\nFailed to store data. Error: {e}\n')
-    return
-
-
 
 class ConPool():
     def __init__(self,target_DB = None, file_name = "database_pass"):

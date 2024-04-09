@@ -35,6 +35,21 @@ feature_list = ['NodeID', 'SubSeqNo', 'Time', 'Date', 'GPSTime', 'GPSDate',
 nodes_list = ["305", "306", "312"]  
 
 
+def storeData(data, serial, date) -> None:
+    try:
+        os.makedirs('data')
+    except:
+        pass  # folder already exists
+
+    filename = 'data\\' + serial + '-' + date + '.json'
+    try:
+        with open(filename, 'w') as f:
+            json.dump(data, f)
+        print(f'\nData on {date} successfully fetched.\nStored at {filename}\n')
+    except Exception as e:
+        print(f'\nFailed to store data. Error: {e}\n')
+    return
+
 def loadData(serial, date) -> list:
     filename = 'data\\' + serial + '-' + date + '.json'
     try:
