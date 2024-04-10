@@ -1,13 +1,10 @@
-import SQL_example as sqllib
+
 import json, os, time
 import numpy as np
 import matplotlib.pyplot as plt
-from basic_functions import feature_list, nodes_list, transportation_tag, valid_tag, loadData, loadLabelledData, loadCaliData, save_labelled_data, save_cali_data, time_match, log_write
+from basic_functions import *
 ##  UTC + 8
 
-d312_20240101 = [(1418, 1427, 1), (1555, 1605, 1), (1852, 1858, 1), (1903, 1907, 1), (1914, 1949, 1), (1957, 2032, 1), (2037, 2041, 1), (2047, 2053, 1), (2133, 2201, 1), (2206, 2233, 1)]
-d312_20240102 = [(1916, 1924, 1), (1925, 1934, 1), (1953, 2004, 1), (2010, 2039, 1), (2042, 2121, 1), (2128, 2132, 1), (2149, 2230, 1), (2237, 2323, 1), (2328, 2333, 1)]
-d312_20240106 = [(1539, 1543, 1), (1546, 1552, 1), (1559, 1636, 1), (1640, 1708, 1), (1736, 1758, 1)]
 
 
 def resort(date, serial) -> None:
@@ -109,6 +106,7 @@ def calibration(date, serial, running):
 
     if running == []:
         # static data
+        print("Static data, no need for any calibration")
         return
 
     ####     parameters     ####
@@ -216,8 +214,8 @@ def preprocess(date, serial, running, sigma_multiplier):  # standard workflow
 if __name__ == '__main__':
 
     # parameters
-    date = '20240106'
-    serial = '312'
+    date = '20240327'
+    serial = '306'
     
     sigma_multiplier = 3
     chunkLength = 20

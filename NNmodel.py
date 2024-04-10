@@ -9,10 +9,10 @@ from torch import nn
 
 
 
-class Net(nn.Module):
+class NeuralNet(nn.Module):
 
     def __init__(self, in_dim, n_hidden_1, n_hidden_2, n_hidden_3, out_dim):
-        super(Net, self).__init__()
+        super(NeuralNet, self).__init__()
         self.layer1 = nn.Sequential(nn.Linear(in_dim, n_hidden_1),nn.BatchNorm1d(n_hidden_1))
         self.layer2 = nn.Sequential(nn.Linear(n_hidden_1, n_hidden_2),nn.BatchNorm1d (n_hidden_2))
         self.layer3 = nn.Sequential(nn.Linear(n_hidden_2, n_hidden_3),nn.BatchNorm1d (n_hidden_3))
@@ -22,6 +22,25 @@ class Net(nn.Module):
         x = F.relu(self.layer2(x))
         x = F.relu(self.layer3(x))
         x = self.layer4(x)
+        return x
+    
+class ConvNet(nn.Module):
+    def __init__(self):
+        super(ConvNet, self).__init__()
+        self.conv1 = nn.Conv2d(3, 6, 5)
+        self.pool = nn.MaxPool2d(2, 2)
+        self.conv2 = nn.Conv2d(6, 16, 5)
+        self.fc1 = nn.Linear(16 * 5 * 5, 120)
+        self.fc2 = nn.Linear(120, 84)
+        self.fc3 = nn.Linear(84, 10)
+
+    def forward(self, x):
+        x = self.pool(F.relu(self.conv1(x)))
+        x = self.pool(F.relu(self.conv2(x)))
+        x = x.view(-1, 16 * 5 * 5)
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        x = self.fc3(x)
         return x
 
 

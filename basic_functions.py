@@ -34,6 +34,15 @@ feature_list = ['NodeID', 'SubSeqNo', 'Time', 'Date', 'GPSTime', 'GPSDate',
 # device ID. 305 for Owen, 306 for Johnny and 312 for Saunders.
 nodes_list = ["305", "306", "312"]  
 
+# MTR = 1, Bus = 2, LRT = 3
+d312_20240101 = [(1418, 1427, 1), (1555, 1605, 1), (1852, 1858, 1), (1903, 1907, 1), (1914, 1949, 1), (1957, 2032, 1), (2037, 2041, 1), (2047, 2053, 1), (2133, 2201, 1), (2206, 2233, 1)]
+d312_20240102 = [(1916, 1924, 1), (1925, 1934, 1), (1953, 2004, 1), (2010, 2039, 1), (2042, 2121, 1), (2128, 2132, 1), (2149, 2230, 1), (2237, 2323, 1), (2328, 2333, 1)]
+d312_20240103 = [(1436, 1441, 1), (1447, 1457, 1), (1459, 1509, 1), (1514, 1554, 1), (1600, 1640, 1), (1646, 1651, 1), (1911, 1916, 1), (1921, 1926, 1), (1928, 2005, 1), (2010, 2045, 1), (2047, 2052, 1), (2058, 2063, 1)]
+d312_20240106 = [(1539, 1543, 1), (1546, 1552, 1), (1559, 1636, 1), (1640, 1708, 1), (1736, 1758, 1), (1814, 1858, 2)]
+d312_20240107 = [(1500, 1504, 1), (1507, 1526, 1), (1537, 1554, 1), (1611, 1657, 3), (1701, 1748, 3), (1825, 1837, 1), (1844, 1854, 1), (1858, 1920, 1), (1922, 1925, 1), (1928, 1957, 1), (1958, 2001, 1), (2007, 2023, 1)]
+d312_20240119 = [(1941, 1948, 1), (1951, 2044, 1)]
+d312_20240127 = [(1604, 1610, 1), (1616, 1656, 1), (2230, 2310, 1), (2315, 2323, 1)]
+d312_20240329 = [(1445, 1451, 1), (1457, 1542, 1)]
 
 def storeData(data, serial, date) -> None:
     try:
@@ -75,7 +84,27 @@ def loadCaliData(serial, date) -> list:
     try:
         with open(filename, 'r') as f:
             data = json.load(f)
-        print(f'\nCalibrated data from device #{serial} on {date} successfully loaded.\n{len(data)} lines of data loaded in total.\nFormat: [Time, Date, SVM_mean, SVM_min, SVM_max, SVM_SD]\n')
+        print(f'\nCalibrated data from device #{serial} on {date} successfully loaded.\n{len(data)} lines of data loaded in total.\nFormat: [Time, Date, SVM_mean, SVM_min, SVM_max, SVM_SD, Tag]\n')
+        cnt = 0
+        for line in data:
+            if line[-1] > 0:
+                cnt += 1
+        print(f'{cnt} numbers of dynamic data loaded.')
+    except Exception as e:
+        print(f'\nFailed. Error: {e}\n')
+    return data
+
+def load_seg_data(seg_length, offset) -> list:
+    filename = f'data\\segs_{seg_length}_{offset}.json'
+    try:
+        with open(filename, 'r') as f:
+            data = json.load(f)
+        print(f'\nSegmentations on {filename} successfully loaded, {len(data)} numbers of segs in total.\nFormat: [[SVM_mean, SVM_min, SVM_max, SVM_SD, Tag], ...]\n')
+        cnt = 0
+        for seg in data:
+            if seg[0][-1] > 0:
+                cnt += 1
+        print(f'{cnt} numbers of dynamic data included.')
     except Exception as e:
         print(f'\nFailed. Error: {e}\n')
     return data
@@ -98,6 +127,33 @@ def save_cali_data(d, date, serial) -> None:
         log_write(f'\n{len(d)} numbers of calibrated data successfully saved to {filename}\n')
     except Exception as e:
         log_write(f'\nFailed to store calibrated data. Error: {e}\n')
+    return
+
+def save_seg_data(d, filename) -> None:
+    try:
+        with open(filename, 'r+') as f:
+            data = json.load(f)
+    except:
+        data = []
+    try:
+        for line in d:
+            data.append(line)
+        with open(filename, 'w+') as f:
+            json.dump(data, f)
+        log_write(f'\n{len(d)} numbers of segmentation data successfully appended to {filename}\n')
+    except Exception as e:
+        log_write(f'\nFailed to store segmentation data. Error: {e}\n')
+    return
+
+def save_train_data(trainSet, testSet, seg_length, offset) -> None:
+    try:
+        with open(f'training\\train_{seg_length}_{offset}.json', 'w+') as f:
+            json.dump(trainSet, f)
+        with open(f'training\\test_{seg_length}_{offset}.json', 'w+') as f:
+            json.dump(testSet, f)
+        log_write(f'\nTraining set and testing set ready.\n')
+    except Exception as e:
+        log_write(f'\nFailed on function {save_train_data.__name__}. Error: {e}\n')
     return
 
 def time_match(running, instant) -> bool:
