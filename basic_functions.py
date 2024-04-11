@@ -1,4 +1,4 @@
-import os, json
+import os, json, random, time
 
 
 
@@ -108,6 +108,15 @@ def load_seg_data(seg_length, offset) -> list:
     except Exception as e:
         print(f'\nFailed. Error: {e}\n')
     return data
+
+def load_train_data(seg_length, offset, training_set_length) -> None:
+    data = load_seg_data(seg_length, offset)
+    testing_set = []
+    random.seed(int(time.time()))
+    for i in range(training_set_length):
+        rd = random.randint(0, len(data) - 1)
+        testing_set.append(data.pop(rd))
+    return data, testing_set
 
 def save_labelled_data(d, date, serial) -> None:
     filename = f'data\\labelled-{serial}-{date}.json'

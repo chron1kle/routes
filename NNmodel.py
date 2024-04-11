@@ -2,27 +2,32 @@ from scipy.stats import normaltest
 import numpy as np
 import torch as t
 import random, time
+from torch.utils.data import Dataset, DataLoader
 
 import torch.nn.functional as F
 import torch.optim as optim
 from torch import nn
 
+from basic_functions import *
 
+device = t.device("cuda:0" if t.cuda.is_available() else "cpu")
 
 class NeuralNet(nn.Module):
 
-    def __init__(self, in_dim, n_hidden_1, n_hidden_2, n_hidden_3, out_dim):
+    def __init__(self, in_dim, n_hidden_1, n_hidden_2, n_hidden_3, n_hidden_4, out_dim):
         super(NeuralNet, self).__init__()
-        self.layer1 = nn.Sequential(nn.Linear(in_dim, n_hidden_1),nn.BatchNorm1d(n_hidden_1))
-        self.layer2 = nn.Sequential(nn.Linear(n_hidden_1, n_hidden_2),nn.BatchNorm1d (n_hidden_2))
-        self.layer3 = nn.Sequential(nn.Linear(n_hidden_2, n_hidden_3),nn.BatchNorm1d (n_hidden_3))
-        self.layer4 = nn.Sequential(nn.Linear(n_hidden_3, out_dim))
+        self.layer1 = nn.Linear(in_dim, n_hidden_1) #,nn.BatchNorm1d(n_hidden_1)
+        self.layer2 = nn.Linear(n_hidden_1, n_hidden_2) #,nn.BatchNorm1d (n_hidden_2))
+        self.layer3 = nn.Linear(n_hidden_2, n_hidden_3) #,nn.BatchNorm1d (n_hidden_3))
+        self.layer4 = nn.Linear(n_hidden_3, n_hidden_4) #,nn.BatchNorm1d (n_hidden_4))
+        self.layer5 = nn.Linear(n_hidden_4, out_dim)
     def forward(self, x):
         x = F.relu(self.layer1(x))
         x = F.relu(self.layer2(x))
         x = F.relu(self.layer3(x))
-        x = self.layer4(x)
-        return x
+        x = F.relu(self.layer4(x))
+        x = F.sigmoid(self.layer5(x))
+        return x.squeeze()
     
 class ConvNet(nn.Module):
     def __init__(self):
@@ -43,101 +48,147 @@ class ConvNet(nn.Module):
         x = self.fc3(x)
         return x
 
+class MyDataset(Dataset):
+    def __init__(self, x, y):
+        self.x = t.tensor(x).float().to(device)
+        self.y = t.tensor(y).float().to(device)
+    def __getitem__(self, ix):
+        return self.x[ix], self.y[ix]
+    def __len__(self): 
+        return len(self.x)
+
+
+def training_set(seg_length, offset, training_set_length, mode) -> tuple:
+    trainSet, testSet = load_train_data(seg_length, offset, training_set_length)
+    print(random.choice(trainSet), '\n', random.choice(trainSet), '\n', random.choice(testSet), '\n', random.choice(testSet))
+    for i in range(len(trainSet)):
+        if trainSet[i][1] != [mode]:
+            trainSet[i][1] = 0
+        else:
+            trainSet[i][1] = 1
+    for i in range(len(testSet)):
+        if testSet[i][1] != [mode]:
+            testSet[i][1] = 0
+        else:
+            testSet[i][1] = 1
+
+    train_ds = MyDataset([x[0] for x in trainSet], [x[1] for x in trainSet])
+    train_dl = DataLoader(train_ds, batch_size=1, shuffle=True)
+
+    test_ds = MyDataset([x[0] for x in testSet], [x[1] for x in testSet])
+    test_dl = DataLoader(test_ds, batch_size=1, shuffle=True)
+
+    return train_dl, test_dl
+
+def cri_opt(criterion_type, optimizer_type, model, learning_rate, momentum) -> object:
+    if criterion_type == 'mse':
+        criterion = nn.MSELoss()
+    elif criterion_type == 'ce':
+        criterion = nn.CrossEntropyLoss()
+    else:
+        print(f'Wrong criterion type: {criterion_type}')
+        exit(1)
+    if optimizer_type == 'sgd':
+        optimizer = optim.SGD(model.parameters(), lr=learning_rate, momentum=momentum)
+    elif optimizer_type == 'adagrad':
+        optimizer = optim.Adagrad(model.parameters(), lr=learning_rate)
+    elif optimizer_type == 'adadelta':
+        optimizer = optim.Adadelta(model.parameters(), lr=learning_rate, momentum=momentum)
+    elif optimizer_type == 'rms':
+        optimizer = optim.RMSprop(model.parameters(), lr=learning_rate, momentum=momentum)
+    elif optimizer_type == 'adam':
+        optimizer = optim.Adam(model.parameters(), lr=learning_rate, momentum=momentum)
+    else:
+        print(f'Wrong optimizer type: {optimizer_type}')
+        exit(1)
+    return criterion, optimizer
+
+def training(model, criterion, optimizer, train_loader, test_loader, num_epoches, pt_path, threshold) -> None:
+    # 开始训练
+    prev_train_loss = []
+    prev_test_loss = []
+    for epoch in range(num_epoches):
+        print(f'On number {epoch} training')
+        train_loss = 0
+        model.train()
+
+        #动态修改参数学习率
+        if epoch % 5 == 0:
+            optimizer.param_groups[0]['lr'] *= lr_itr_rate
+
+        for seg, tag in train_loader:
+            # 前向传播
+            out = model(seg)
+            loss = criterion(out, tag)
+            # 反向传播
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+            train_loss += loss.item()
+
+        # 在测试集上检验效果
+        test_loss = 0
+
+        # 将模型改为预测模式
+        model.eval()
+
+        for seg, tag in test_loader:
+            out = model(seg)
+            loss = criterion(out, tag)
+            test_loss += loss.item()
+
+        print('epoch: {}, Train Loss x: {:.4f}, Test Loss x: {:.4f}'
+            .format(epoch, train_loss / len(train_loader), test_loss / len(test_loader)))
+        
+        t.save(model.state_dict(), pt_path)
+        try:
+            if abs(train_loss - prev_train_loss[-1]) / prev_train_loss[-1] < threshold and abs(test_loss - prev_test_loss[-1]) / prev_test_loss[-1] < threshold:
+                print('Converged.')
+                break
+            elif train_loss == 0 and test_loss == 0:
+                break
+        except:
+            pass
+        prev_train_loss.append(train_loss)
+        prev_test_loss.append(test_loss)
+    return
+
+def testing(data, model):
+    for seg, tag in data:
+        out = model(seg)
+        print(f'model out: {out}, actual val: {tag}')
+    return
 
 if __name__ == "__main__":
 
-    # 定义一些超参数
-    #learning_rate = 0.01
     num_epoches = 20
-    lr = 0.0001
+    learning_rate = 0.01
     momentum = 0.1
+    lr_itr_rate = 1
+    threshold = 0.01
 
+    seg_length = 3
+    offset = 5
+    training_set_length = 40
+    mode = 1
+    criterion_type = 'mse'
+    optimizer_type = 'adagrad'
+    
+    pt_path = f'net\\model_nn_{learning_rate}_{momentum}_{criterion_type}_{optimizer_type}.pt'
     dtype = t.float
+    train_loader, test_loader = training_set(seg_length, offset, training_set_length, mode)
+    
+    model = NeuralNet(1, 300, 800, 400, 1, 1)
+    try:
+        model.load_state_dict(t.load(pt_path))
+        print(f'model parameters loaded.')
+    except Exception as e:
+        print(f'Exception: {e}\nStart with new model.')
 
-    train_loader_x = []
+    criterion, optimizer = cri_opt(criterion_type, optimizer_type, model, learning_rate, momentum)
 
-    for line in lines:
-        l = line.strip('\n').split(' ')
-        for i in range(6):
-            l[i] = [float(l[i])]
-        train_loader_x.append((t.tensor(l[:3], dtype=dtype), t.tensor([l[3]], dtype=dtype)))
-    with open('test','r+') as f:
-        lines = f.readlines()
-    test_loader_x = []
-    test_loader_y = []
-    test_loader_z = []
-    for line in lines:
-        l = line.strip('\n').split(' ')
-        for i in range(6):
-            l[i] = [float(l[i])]
-        test_loader_x.append((t.tensor(l[:3], dtype=dtype), t.tensor([l[3]], dtype=dtype)))
-        test_loader_y.append((t.tensor(l[:3], dtype=dtype), t.tensor([l[4]], dtype=dtype)))
-        test_loader_z.append((t.tensor(l[:3], dtype=dtype), t.tensor([l[5]], dtype=dtype)))
-    #检测是否有可用的GPU，有则使用，否则使用CPU
-    device = t.device("cuda:0" if t.cuda.is_available() else "cpu")
-    #实例化网络
-    model_x = Net(3, 500, 1000, 100, 1)
-    '''
-    for i in range(20, 0, -1):
-        try:
-            model_x.load_state_dict(t.load(f'model_x_{i-1}.mdl'))
-            print(f'---------- Model_x num. {i-1} loaded. ---------')
+    model.to(device)
+    print(f'Device: {device}')
 
-            break
-        except:
-            pass
-    '''
-
-    model_x.to(device)
-
-    # 定义损失函数和优化器
-    criterion = nn.MSELoss()
-    optimizer_x = optim.SGD(model_x.parameters(), lr=lr, momentum=momentum)
-
-
-    # 开始训练
-    for epoch in range(num_epoches):
-        train_loss_x = 0
-
-        model_x.train()
-
-        #动态修改参数学习率
-        if epoch%5==0:
-            optimizer_x.param_groups[0]['lr']*=0.1
-
-        for eul, facc in train_loader_x:
-            eul=eul.to(device)
-            facc = facc.to(device)
-            #eul = eul.view(eul.size(0), -1)
-            # 前向传播
-            out = model_x(eul)
-            loss = criterion(out, facc)
-            # 反向传播
-            optimizer_x.zero_grad()
-            loss.backward()
-            optimizer_x.step()
-            # 记录误差
-            train_loss_x += loss.item()
-
-        # 在测试集上检验效果
-        eval_loss_x = 0
-
-        # 将模型改为预测模式
-        model_x.eval()
-
-        for eul, facc in test_loader_x:
-            eul=eul.to(device)
-            facc = facc.to(device)
-            out = model_x(eul)
-            loss = criterion(out, facc)
-            # 记录误差
-            eval_loss_x += loss.item()
-
-
-        print('epoch: {}, Train Loss x: {:.4f}, Test Loss x: {:.4f}'
-            .format(epoch, train_loss_x / len(train_loader_x), eval_loss_x / len(test_loader_x)))
-        random.seed(time.time())
-        x = random.choice(train_loader_x)
-
-        t.save(model_x.state_dict(), f'model_x_{epoch}.mdl')
-
+    training(model, criterion, optimizer, train_loader, test_loader, num_epoches, pt_path, threshold)
+    testing(test_loader, model)

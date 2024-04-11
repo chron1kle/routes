@@ -45,7 +45,11 @@ def segmentize():
         for i in range(len(data)):
             try:
                 seg = data[i : i + seg_length]
+                if len(seg) != seg_length:
+                    continue
                 if isConsecutive(seg, deviceID, date):
+                    # for j in range(len(seg)):
+                    #     seg[j] = [ [x] for x in seg[j]]
                     segs.append([[ x[2:-1] for x in seg ], seg[0][-1]])
             except Exception as e:
                 print(f'Exception: {e}')
@@ -54,18 +58,8 @@ def segmentize():
             save_seg_data(segs, dest_name)
     return
 
-def select_training_set():
-    data = load_seg_data(seg_length, offset)
-    testing_set = []
-    random.seed(int(time.time()))
-    for i in range(training_set_length):
-        rd = random.randint(0, len(data) - 1)
-        testing_set.append(data.pop(rd))
-    return save_train_data(data, testing_set, seg_length, offset)
-
 
 if __name__ == '__main__':
     with open(dest_name, 'w') as f:
         pass
     segmentize()
-    select_training_set()
