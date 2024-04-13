@@ -1,0 +1,3367 @@
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: rms
+learning_rate: 0.1
+threshold: 0.01
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adadelta
+learning_rate: 0.1
+threshold: 0.01
+segmentation length: 3
+offset: 5
+testing set length: 50
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adadelta
+learning_rate: 0.1
+threshold: 0.01
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 0.9945828318595886, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adadelta
+learning_rate: 0.01
+threshold: 0.01
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adadelta
+learning_rate: 0.1
+threshold: 0.01
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adadelta
+learning_rate: 0.1
+threshold: 0.01
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 1.4462312397132388e-38, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 9.362465145718852e-32, actual val: tensor([1.])
+model out: 8.618340146556519e-30, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 1.2250199026529399e-30, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 9.631747781869346e-29, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 2.7263223551502662e-28, actual val: tensor([1.])
+model out: 1.9922849933699712e-36, actual val: tensor([1.])
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adadelta
+learning_rate: 0.1
+threshold: 0.01
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 1.0908637166798753e-33, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 1.1893699801789419e-30, actual val: tensor([1.])
+model out: 2.480554434947011e-29, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 1.3179571488909965e-34, actual val: tensor([0.])
+model out: 2.1604847538087905e-37, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 1.617085862482699e-29, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 1.8969573000236488e-30, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 9.26105701131494e-31, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adadelta
+learning_rate: 0.1
+threshold: 0.01
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adadelta
+learning_rate: 0.1
+threshold: 0.01
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 0.5931556820869446, actual val: tensor([0.])
+model out: 0.593485414981842, actual val: tensor([0.])
+model out: 0.9936082363128662, actual val: tensor([1.])
+model out: 0.5975661873817444, actual val: tensor([0.])
+model out: 0.5934311747550964, actual val: tensor([0.])
+model out: 0.5943668484687805, actual val: tensor([0.])
+model out: 0.9999997615814209, actual val: tensor([1.])
+model out: 0.5931328535079956, actual val: tensor([0.])
+model out: 0.5953763723373413, actual val: tensor([0.])
+model out: 0.5913052558898926, actual val: tensor([0.])
+model out: 0.591456413269043, actual val: tensor([0.])
+model out: 0.5929465293884277, actual val: tensor([0.])
+model out: 0.6027283668518066, actual val: tensor([0.])
+model out: 0.5974664092063904, actual val: tensor([0.])
+model out: 0.5936900973320007, actual val: tensor([0.])
+model out: 0.5905962586402893, actual val: tensor([0.])
+model out: 0.5897040367126465, actual val: tensor([0.])
+model out: 0.5969287157058716, actual val: tensor([0.])
+model out: 0.5847409963607788, actual val: tensor([0.])
+model out: 0.5923373103141785, actual val: tensor([0.])
+model out: 0.5978416204452515, actual val: tensor([0.])
+model out: 0.592892587184906, actual val: tensor([0.])
+model out: 0.5918325781822205, actual val: tensor([0.])
+model out: 0.593307614326477, actual val: tensor([0.])
+model out: 0.5418906211853027, actual val: tensor([1.])
+model out: 0.5981240272521973, actual val: tensor([0.])
+model out: 0.5955633521080017, actual val: tensor([0.])
+model out: 0.5907878279685974, actual val: tensor([0.])
+model out: 0.5908458828926086, actual val: tensor([0.])
+model out: 0.5909363031387329, actual val: tensor([0.])
+model out: 0.5952097177505493, actual val: tensor([0.])
+model out: 0.5972059369087219, actual val: tensor([0.])
+model out: 0.5993351340293884, actual val: tensor([0.])
+model out: 0.5935233235359192, actual val: tensor([0.])
+model out: 0.5902059078216553, actual val: tensor([0.])
+model out: 0.4687587320804596, actual val: tensor([0.])
+model out: 0.5965303778648376, actual val: tensor([0.])
+model out: 0.29538494348526, actual val: tensor([1.])
+model out: 0.5842433571815491, actual val: tensor([0.])
+model out: 0.452712744474411, actual val: tensor([1.])
+model out: 0.5925679206848145, actual val: tensor([0.])
+model out: 0.5967885851860046, actual val: tensor([0.])
+model out: 0.5960047841072083, actual val: tensor([0.])
+model out: 0.592894971370697, actual val: tensor([0.])
+model out: 0.5957219004631042, actual val: tensor([0.])
+model out: 0.59233158826828, actual val: tensor([0.])
+model out: 0.5945863723754883, actual val: tensor([0.])
+model out: 0.550632655620575, actual val: tensor([1.])
+model out: 0.5948747992515564, actual val: tensor([0.])
+model out: 0.5879586935043335, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adadelta
+learning_rate: 0.1
+threshold: 0.01
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adadelta
+learning_rate: 0.01
+threshold: 0.01
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adadelta
+learning_rate: 0.01
+threshold: 0.01
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 5.514252585642673e-23, actual val: tensor([0.])
+model out: 5.769594869976955e-22, actual val: tensor([0.])
+model out: 5.940398402086684e-23, actual val: tensor([0.])
+model out: 5.815420115505606e-23, actual val: tensor([0.])
+model out: 5.1195958877245494e-23, actual val: tensor([0.])
+model out: 3.615341955563207e-23, actual val: tensor([0.])
+model out: 4.199521539327592e-23, actual val: tensor([0.])
+model out: 5.2790268854802505e-23, actual val: tensor([0.])
+model out: 4.848004646464525e-23, actual val: tensor([0.])
+model out: 2.4060340364043158e-29, actual val: tensor([1.])
+model out: 4.498611209566173e-23, actual val: tensor([0.])
+model out: 4.214237266197947e-23, actual val: tensor([0.])
+model out: 6.248610144288879e-23, actual val: tensor([0.])
+model out: 5.0263225520130274e-23, actual val: tensor([0.])
+model out: 6.039979154051991e-23, actual val: tensor([0.])
+model out: 4.675674510731012e-23, actual val: tensor([0.])
+model out: 6.117104128380405e-22, actual val: tensor([0.])
+model out: 2.909356252689818e-23, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 4.3191853646535054e-21, actual val: tensor([0.])
+model out: 5.330181675284574e-23, actual val: tensor([0.])
+model out: 7.394953383367889e-14, actual val: tensor([1.])
+model out: 5.402154188833319e-23, actual val: tensor([0.])
+model out: 5.882444262368079e-23, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 5.37444686948706e-23, actual val: tensor([0.])
+model out: 1.3352413504697609e-15, actual val: tensor([1.])
+model out: 4.205982625685714e-23, actual val: tensor([0.])
+model out: 3.171428782723084e-23, actual val: tensor([0.])
+model out: 5.636455344014822e-23, actual val: tensor([0.])
+model out: 6.799174471615624e-23, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 4.821410252083352e-23, actual val: tensor([0.])
+model out: 5.948425850658213e-23, actual val: tensor([0.])
+model out: 3.9559809296797784e-23, actual val: tensor([0.])
+model out: 4.193182253093236e-23, actual val: tensor([0.])
+model out: 5.521114413340647e-23, actual val: tensor([0.])
+model out: 5.715637415148562e-23, actual val: tensor([0.])
+model out: 2.822018621973541e-23, actual val: tensor([0.])
+model out: 5.564586960105567e-23, actual val: tensor([0.])
+model out: 3.9180294626183197e-23, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 5.862328309284944e-23, actual val: tensor([0.])
+model out: 3.058030027597563e-23, actual val: tensor([0.])
+model out: 4.471578208521697e-23, actual val: tensor([0.])
+model out: 5.940874242984713e-23, actual val: tensor([0.])
+model out: 7.0774464812186565e-22, actual val: tensor([0.])
+model out: 3.032843592160029e-23, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 3.883686297225962e-15, actual val: tensor([1.])
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adadelta
+learning_rate: 0.01
+threshold: 0.01
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 9.68232487649009e-37, actual val: tensor([1.])
+model out: 8.334258620749865e-34, actual val: tensor([0.])
+model out: 2.0961346387240912e-34, actual val: tensor([0.])
+model out: 3.598043475125077e-33, actual val: tensor([0.])
+model out: 2.452753818989153e-33, actual val: tensor([0.])
+model out: 2.995709700517175e-34, actual val: tensor([0.])
+model out: 1.916819863168363e-33, actual val: tensor([0.])
+model out: 8.576904164646601e-33, actual val: tensor([0.])
+model out: 1.1039666216007052e-33, actual val: tensor([0.])
+model out: 1.4585957266640232e-33, actual val: tensor([0.])
+model out: 1.0529302384723516e-33, actual val: tensor([0.])
+model out: 2.515367627611656e-33, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 7.270354683335106e-33, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 2.0111257341730043e-33, actual val: tensor([0.])
+model out: 1.3807389705537206e-33, actual val: tensor([0.])
+model out: 4.93022681480816e-33, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 1.3675608523615373e-33, actual val: tensor([0.])
+model out: 2.943972704388632e-33, actual val: tensor([0.])
+model out: 1.250520395312955e-31, actual val: tensor([0.])
+model out: 6.395539297825682e-33, actual val: tensor([0.])
+model out: 3.098656006013337e-33, actual val: tensor([0.])
+model out: 2.0906975181740574e-33, actual val: tensor([0.])
+model out: 4.697047214677908e-34, actual val: tensor([0.])
+model out: 1.7411482935807187e-33, actual val: tensor([0.])
+model out: 1.174520986398509e-33, actual val: tensor([0.])
+model out: 5.041563394904308e-33, actual val: tensor([0.])
+model out: 4.554186539322095e-33, actual val: tensor([0.])
+model out: 1.284126375556583e-33, actual val: tensor([0.])
+model out: 1.2924316104871271e-33, actual val: tensor([0.])
+model out: 7.643720341831066e-33, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 3.6008838092679995e-34, actual val: tensor([0.])
+model out: 4.518760537501669e-34, actual val: tensor([0.])
+model out: 4.107370483656989e-33, actual val: tensor([0.])
+model out: 2.2562752647079847e-33, actual val: tensor([0.])
+model out: 1.745684048735962e-33, actual val: tensor([0.])
+model out: 8.214819211156705e-34, actual val: tensor([0.])
+model out: 2.828880603512599e-33, actual val: tensor([0.])
+model out: 9.826161226793369e-32, actual val: tensor([0.])
+model out: 2.1893609834713952e-33, actual val: tensor([0.])
+model out: 6.034145314608878e-33, actual val: tensor([0.])
+model out: 1.183850370782207e-33, actual val: tensor([0.])
+model out: 1.1252167125631913e-33, actual val: tensor([0.])
+model out: 2.5210351634215502e-33, actual val: tensor([0.])
+model out: 6.703285922922865e-33, actual val: tensor([0.])
+model out: 4.603231469716262e-33, actual val: tensor([0.])
+model out: 2.2134115978892192e-33, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adagrad
+learning_rate: 0.01
+threshold: 0.01
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adagrad
+learning_rate: 0.05
+threshold: 0.01
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 1.88774655847706e-37, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 1.439952311643641e-35, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adagrad
+learning_rate: 0.1
+threshold: 0.01
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: mse
+optimizer: adagrad
+learning_rate: 0.1
+threshold: 0.01
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 1.9352310483332895e-19, actual val: tensor([0.])
+model out: 5.217674358225503e-19, actual val: tensor([0.])
+model out: 2.9577222614220045e-22, actual val: tensor([0.])
+model out: 9.406842036325374e-20, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 1.4574111756184046e-18, actual val: tensor([0.])
+model out: 1.68580856404379e-19, actual val: tensor([0.])
+model out: 2.8179365472448512e-19, actual val: tensor([0.])
+model out: 2.5775126247971924e-19, actual val: tensor([0.])
+model out: 2.853438363653803e-19, actual val: tensor([0.])
+model out: 2.359968259598809e-19, actual val: tensor([0.])
+model out: 4.802091580648502e-19, actual val: tensor([0.])
+model out: 3.869113016786293e-19, actual val: tensor([0.])
+model out: 6.457932218280108e-18, actual val: tensor([0.])
+model out: 9.3181973552281e-20, actual val: tensor([0.])
+model out: 1.9341091846275144e-19, actual val: tensor([0.])
+model out: 3.019458682472024e-19, actual val: tensor([0.])
+model out: 5.513172844736343e-18, actual val: tensor([0.])
+model out: 2.328659731907618e-19, actual val: tensor([0.])
+model out: 1.061123122536936e-19, actual val: tensor([0.])
+model out: 1.225068833604783e-19, actual val: tensor([0.])
+model out: 2.5917611727399363e-18, actual val: tensor([0.])
+model out: 1.555274681245006e-19, actual val: tensor([0.])
+model out: 1.699144922588178e-29, actual val: tensor([0.])
+model out: 2.2579962771166273e-19, actual val: tensor([0.])
+model out: 1.7228066726326678e-19, actual val: tensor([0.])
+model out: 3.811948115616402e-19, actual val: tensor([0.])
+model out: 1.3321555064589272e-19, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 3.5222512671268555e-18, actual val: tensor([0.])
+model out: 1.9897275165458729e-19, actual val: tensor([0.])
+model out: 1.2520985110836017e-19, actual val: tensor([0.])
+model out: 1.2458712627877552e-19, actual val: tensor([0.])
+model out: 1.3032237013121487e-19, actual val: tensor([0.])
+model out: 1.0869714697787554e-18, actual val: tensor([0.])
+model out: 8.014698357868335e-20, actual val: tensor([0.])
+model out: 2.952259821977923e-19, actual val: tensor([0.])
+model out: 2.9916783385873134e-19, actual val: tensor([0.])
+model out: 5.906678365199308e-25, actual val: tensor([1.])
+model out: 9.058246800445361e-20, actual val: tensor([0.])
+model out: 4.864056714310615e-19, actual val: tensor([0.])
+model out: 3.4156708457069366e-31, actual val: tensor([1.])
+model out: 6.827279942313611e-20, actual val: tensor([0.])
+model out: 2.34096869641029e-19, actual val: tensor([0.])
+model out: 2.1880408372311935e-19, actual val: tensor([0.])
+model out: 1.9531574739239914e-18, actual val: tensor([0.])
+model out: 1.250967083101994e-19, actual val: tensor([0.])
+model out: 1.9696997937053448e-19, actual val: tensor([0.])
+model out: 5.228294323314918e-19, actual val: tensor([0.])
+model out: 1.5418357104774042e-19, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: mse
+optimizer: adagrad
+learning_rate: 0.01
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: mse
+optimizer: adagrad
+learning_rate: 0.01
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: mse
+optimizer: adagrad
+learning_rate: 0.01
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: mse
+optimizer: sgd
+learning_rate: 0.01
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: mse
+optimizer: sgd
+learning_rate: 0.01
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 50
+-----------------------------------------
+Model
+type: nn
+criterion: mse
+optimizer: sgd
+learning_rate: 0.01
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 50
+-----------------------------------------
+Model
+type: nn
+criterion: mse
+optimizer: sgd
+learning_rate: 0.01
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: nn
+criterion: ce
+optimizer: sgd
+learning_rate: 0.01
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 50
+-----------------------------------------
+Model
+type: nn
+criterion: ce
+optimizer: sgd
+learning_rate: 0.01
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 0.9729024171829224, actual val: tensor([0.])
+model out: 0.9730978012084961, actual val: tensor([0.])
+model out: 0.9677474498748779, actual val: tensor([0.])
+model out: 0.9724850058555603, actual val: tensor([0.])
+model out: 0.9719381928443909, actual val: tensor([0.])
+model out: 0.9724656343460083, actual val: tensor([0.])
+model out: 0.9708450436592102, actual val: tensor([0.])
+model out: 0.9716335535049438, actual val: tensor([0.])
+model out: 0.965670108795166, actual val: tensor([0.])
+model out: 0.9725197553634644, actual val: tensor([0.])
+model out: 0.0017289442475885153, actual val: tensor([1.])
+model out: 0.9717766046524048, actual val: tensor([0.])
+model out: 0.9719707369804382, actual val: tensor([0.])
+model out: 0.973170280456543, actual val: tensor([0.])
+model out: 0.9706839323043823, actual val: tensor([0.])
+model out: 0.9712798595428467, actual val: tensor([0.])
+model out: 0.9715627431869507, actual val: tensor([0.])
+model out: 0.9709919095039368, actual val: tensor([0.])
+model out: 0.00012108217924833298, actual val: tensor([1.])
+model out: 0.9730004072189331, actual val: tensor([0.])
+model out: 0.971964418888092, actual val: tensor([0.])
+model out: 0.9742178320884705, actual val: tensor([0.])
+model out: 0.9721457958221436, actual val: tensor([0.])
+model out: 0.9666277170181274, actual val: tensor([0.])
+model out: 0.9716371297836304, actual val: tensor([0.])
+model out: 0.9739688634872437, actual val: tensor([0.])
+model out: 0.9723836779594421, actual val: tensor([0.])
+model out: 0.9670868515968323, actual val: tensor([0.])
+model out: 0.9714550971984863, actual val: tensor([0.])
+model out: 0.9726499915122986, actual val: tensor([0.])
+model out: 0.9717186689376831, actual val: tensor([0.])
+model out: 0.9716118574142456, actual val: tensor([0.])
+model out: 0.9723554849624634, actual val: tensor([0.])
+model out: 0.966996431350708, actual val: tensor([0.])
+model out: 0.9742388725280762, actual val: tensor([0.])
+model out: 0.9711365699768066, actual val: tensor([0.])
+model out: 0.00039581905002705753, actual val: tensor([1.])
+model out: 0.9710903763771057, actual val: tensor([0.])
+model out: 0.9721776843070984, actual val: tensor([0.])
+model out: 0.9712296724319458, actual val: tensor([0.])
+model out: 0.9736416339874268, actual val: tensor([0.])
+model out: 0.9703932404518127, actual val: tensor([0.])
+model out: 0.8995077013969421, actual val: tensor([1.])
+model out: 0.972434937953949, actual val: tensor([0.])
+model out: 0.9730673432350159, actual val: tensor([0.])
+model out: 0.9714049100875854, actual val: tensor([0.])
+model out: 0.9716482758522034, actual val: tensor([0.])
+model out: 0.9730490446090698, actual val: tensor([0.])
+model out: 0.9631062150001526, actual val: tensor([0.])
+model out: 0.00415886752307415, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: nn
+criterion: mse
+optimizer: sgd
+learning_rate: 0.01
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: nn
+criterion: mse
+optimizer: sgd
+learning_rate: 0.1
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 2.0908454134715981e-10, actual val: tensor([0.])
+model out: 5.168024341806188e-11, actual val: tensor([0.])
+model out: 5.5091146922148226e-11, actual val: tensor([0.])
+model out: 3.6987365439308273e-22, actual val: tensor([1.])
+model out: 5.16455593568832e-11, actual val: tensor([0.])
+model out: 4.1939039047145243e-11, actual val: tensor([0.])
+model out: 1.6786642909050187e-10, actual val: tensor([0.])
+model out: 2.625915110354704e-11, actual val: tensor([0.])
+model out: 4.94268237449802e-11, actual val: tensor([0.])
+model out: 4.584103582838672e-11, actual val: tensor([0.])
+model out: 5.103209521628571e-11, actual val: tensor([0.])
+model out: 3.1898312116696026e-14, actual val: tensor([0.])
+model out: 6.405389413322027e-11, actual val: tensor([0.])
+model out: 4.5419973337956776e-11, actual val: tensor([0.])
+model out: 4.473593370746265e-11, actual val: tensor([0.])
+model out: 3.617371333031194e-11, actual val: tensor([0.])
+model out: 4.691818808466586e-11, actual val: tensor([0.])
+model out: 3.701114414944584e-11, actual val: tensor([0.])
+model out: 1.4352267085776152e-18, actual val: tensor([1.])
+model out: 4.5229524986423186e-11, actual val: tensor([0.])
+model out: 4.1608796079841207e-14, actual val: tensor([1.])
+model out: 5.2858502297414844e-11, actual val: tensor([0.])
+model out: 4.8875025554506735e-11, actual val: tensor([0.])
+model out: 4.999867533883595e-11, actual val: tensor([0.])
+model out: 5.135107963849528e-11, actual val: tensor([0.])
+model out: 3.0774098225364597e-15, actual val: tensor([1.])
+model out: 5.792069302596535e-21, actual val: tensor([0.])
+model out: 3.2170439923095984e-11, actual val: tensor([0.])
+model out: 5.44325903795162e-11, actual val: tensor([0.])
+model out: 1.7255144535432976e-10, actual val: tensor([0.])
+model out: 4.8756127607463284e-11, actual val: tensor([0.])
+model out: 9.60385945574481e-15, actual val: tensor([1.])
+model out: 4.374032039344833e-11, actual val: tensor([0.])
+model out: 7.607777602336441e-11, actual val: tensor([0.])
+model out: 4.518167090461489e-11, actual val: tensor([0.])
+model out: 5.2759088764453566e-11, actual val: tensor([0.])
+model out: 4.214914181566165e-11, actual val: tensor([0.])
+model out: 5.3239048586339877e-11, actual val: tensor([0.])
+model out: 4.0106692272834366e-11, actual val: tensor([0.])
+model out: 4.048081661545133e-11, actual val: tensor([0.])
+model out: 5.113859335992288e-11, actual val: tensor([0.])
+model out: 5.445980125196037e-11, actual val: tensor([0.])
+model out: 5.15994816319143e-11, actual val: tensor([0.])
+model out: 5.4574497698745006e-11, actual val: tensor([0.])
+model out: 5.217466389484393e-11, actual val: tensor([0.])
+model out: 5.376089157183017e-11, actual val: tensor([0.])
+model out: 6.105109473519832e-11, actual val: tensor([0.])
+model out: 5.815444653611834e-11, actual val: tensor([0.])
+model out: 5.104971306790773e-11, actual val: tensor([0.])
+model out: 5.058900520715781e-11, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: nn
+criterion: mse
+optimizer: adagrad
+learning_rate: 0.1
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adagrad
+learning_rate: 0.1
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 8.43236106638072e-29, actual val: tensor([1.])
+model out: 1.1686639736916598e-37, actual val: tensor([0.])
+model out: 1.6144781118064286e-37, actual val: tensor([0.])
+model out: 3.7630889350517935e-39, actual val: tensor([0.])
+model out: 5.6647770680023595e-39, actual val: tensor([0.])
+model out: 3.8984221368408914e-39, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 3.873894223305695e-36, actual val: tensor([1.])
+model out: 1.3211612346179931e-30, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 3.7399913324643275e-39, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 9.857292796407722e-38, actual val: tensor([0.])
+model out: 4.154886380483155e-39, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 4.231664924641976e-39, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 1.5198897934789693e-27, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 2.109832382556442e-38, actual val: tensor([1.])
+model out: 6.516762005817437e-31, actual val: tensor([0.])
+model out: 3.992667866357521e-39, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 4.953609129047343e-38, actual val: tensor([0.])
+model out: 4.846682053364188e-27, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 4.201811662158e-39, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adagrad
+learning_rate: 0.1
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 4.85247374097302e-34, actual val: tensor([0.])
+model out: 1.2889751979182288e-33, actual val: tensor([0.])
+model out: 1.7683244372747838e-33, actual val: tensor([0.])
+model out: 1.0067167543817884e-31, actual val: tensor([0.])
+model out: 2.0046610662564587e-33, actual val: tensor([0.])
+model out: 1.3097232242232191e-33, actual val: tensor([0.])
+model out: 3.876575759526464e-33, actual val: tensor([0.])
+model out: 1.2713366296776519e-33, actual val: tensor([0.])
+model out: 4.0798420222654634e-32, actual val: tensor([0.])
+model out: 1.2706965362694307e-33, actual val: tensor([0.])
+model out: 3.504076568936755e-34, actual val: tensor([0.])
+model out: 5.074944863073769e-33, actual val: tensor([0.])
+model out: 1.2993722617802596e-33, actual val: tensor([0.])
+model out: 2.7907231385299458e-33, actual val: tensor([0.])
+model out: 5.933508745309487e-32, actual val: tensor([0.])
+model out: 1.834688807560379e-33, actual val: tensor([0.])
+model out: 1.9518095545465424e-33, actual val: tensor([0.])
+model out: 2.7917669407792775e-33, actual val: tensor([0.])
+model out: 3.321887893364259e-33, actual val: tensor([0.])
+model out: 1.5262413857920149e-33, actual val: tensor([0.])
+model out: 0.9928707480430603, actual val: tensor([0.])
+model out: 1.3737934519792917e-33, actual val: tensor([0.])
+model out: 2.1199323565525954e-31, actual val: tensor([0.])
+model out: 2.7587577737112415e-33, actual val: tensor([0.])
+model out: 0.9997714161872864, actual val: tensor([0.])
+model out: 1.5165492511984928e-33, actual val: tensor([0.])
+model out: 6.433887303095764e-32, actual val: tensor([0.])
+model out: 1.01085743323256e-31, actual val: tensor([0.])
+model out: 2.1019888760976747e-33, actual val: tensor([0.])
+model out: 2.6274286061014985e-33, actual val: tensor([0.])
+model out: 4.19122620988282e-33, actual val: tensor([0.])
+model out: 5.217458492089601e-33, actual val: tensor([0.])
+model out: 1.5232632524871074e-33, actual val: tensor([0.])
+model out: 0.6972076892852783, actual val: tensor([0.])
+model out: 0.9999781847000122, actual val: tensor([0.])
+model out: 3.856810556701357e-33, actual val: tensor([0.])
+model out: 1.0622982855999322e-33, actual val: tensor([0.])
+model out: 1.0705330496441445e-31, actual val: tensor([0.])
+model out: 0.9975903034210205, actual val: tensor([0.])
+model out: 0.9999978542327881, actual val: tensor([0.])
+model out: 3.794062668254463e-33, actual val: tensor([0.])
+model out: 1.669076347208904e-33, actual val: tensor([0.])
+model out: 5.278177109944991e-32, actual val: tensor([0.])
+model out: 3.6072631620086144e-34, actual val: tensor([0.])
+model out: 0.47197192907333374, actual val: tensor([0.])
+model out: 2.1354978119358025e-33, actual val: tensor([0.])
+model out: 0.4876825511455536, actual val: tensor([0.])
+model out: 3.835214154082859e-33, actual val: tensor([0.])
+model out: 6.601950963042291e-34, actual val: tensor([0.])
+model out: 0.9873713254928589, actual val: tensor([1.])
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adagrad
+learning_rate: 0.1
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 0.9999676942825317, actual val: tensor([0.])
+model out: 0.9999933242797852, actual val: tensor([0.])
+model out: 0.9999717473983765, actual val: tensor([0.])
+model out: 0.9999772310256958, actual val: tensor([0.])
+model out: 0.999950647354126, actual val: tensor([0.])
+model out: 0.9999449253082275, actual val: tensor([0.])
+model out: 0.9999675750732422, actual val: tensor([0.])
+model out: 0.9999736547470093, actual val: tensor([0.])
+model out: 0.9999467134475708, actual val: tensor([0.])
+model out: 0.9999384880065918, actual val: tensor([0.])
+model out: 0.9999690055847168, actual val: tensor([0.])
+model out: 0.9999685287475586, actual val: tensor([0.])
+model out: 0.9999895095825195, actual val: tensor([0.])
+model out: 0.9999455213546753, actual val: tensor([0.])
+model out: 0.9999512434005737, actual val: tensor([0.])
+model out: 0.9999697208404541, actual val: tensor([0.])
+model out: 0.9999756813049316, actual val: tensor([0.])
+model out: 0.999996542930603, actual val: tensor([1.])
+model out: 0.9999758005142212, actual val: tensor([0.])
+model out: 0.9999681711196899, actual val: tensor([0.])
+model out: 0.9999685287475586, actual val: tensor([0.])
+model out: 0.9999673366546631, actual val: tensor([0.])
+model out: 0.9999775886535645, actual val: tensor([0.])
+model out: 0.9999688863754272, actual val: tensor([0.])
+model out: 0.9999737739562988, actual val: tensor([0.])
+model out: 0.9999752044677734, actual val: tensor([0.])
+model out: 0.9999938011169434, actual val: tensor([0.])
+model out: 0.999970555305481, actual val: tensor([0.])
+model out: 0.9999688863754272, actual val: tensor([0.])
+model out: 0.9999756813049316, actual val: tensor([0.])
+model out: 0.9999712705612183, actual val: tensor([0.])
+model out: 0.9999994039535522, actual val: tensor([0.])
+model out: 0.9999706745147705, actual val: tensor([0.])
+model out: 0.9999700784683228, actual val: tensor([0.])
+model out: 0.9999958276748657, actual val: tensor([0.])
+model out: 0.9999712705612183, actual val: tensor([0.])
+model out: 0.9999978542327881, actual val: tensor([0.])
+model out: 0.9999452829360962, actual val: tensor([0.])
+model out: 0.9999701976776123, actual val: tensor([0.])
+model out: 0.9999700784683228, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 0.9999938011169434, actual val: tensor([0.])
+model out: 0.9999920129776001, actual val: tensor([0.])
+model out: 0.9999680519104004, actual val: tensor([0.])
+model out: 0.9999704360961914, actual val: tensor([0.])
+model out: 0.999974250793457, actual val: tensor([0.])
+model out: 0.9999712705612183, actual val: tensor([0.])
+model out: 0.9999749660491943, actual val: tensor([0.])
+model out: 0.9999774694442749, actual val: tensor([0.])
+model out: 0.9999661445617676, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adagrad
+learning_rate: 0.2
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adagrad
+learning_rate: 0.05
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 50
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adagrad
+learning_rate: 0.05
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 100
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([1.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adagrad
+learning_rate: 0.1
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 100
+model out: 0.999950647354126, actual val: tensor([0.])
+model out: 0.9999932050704956, actual val: tensor([0.])
+model out: 0.9999755620956421, actual val: tensor([0.])
+model out: 0.9999754428863525, actual val: tensor([0.])
+model out: 0.9999778270721436, actual val: tensor([0.])
+model out: 0.9999982118606567, actual val: tensor([1.])
+model out: 1.0, actual val: tensor([0.])
+model out: 0.9999673366546631, actual val: tensor([0.])
+model out: 0.9999730587005615, actual val: tensor([0.])
+model out: 0.9999704360961914, actual val: tensor([0.])
+model out: 0.999975323677063, actual val: tensor([0.])
+model out: 0.9999755620956421, actual val: tensor([0.])
+model out: 0.9999769926071167, actual val: tensor([0.])
+model out: 0.004641911946237087, actual val: tensor([0.])
+model out: 0.9999942779541016, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([1.])
+model out: 0.999968409538269, actual val: tensor([0.])
+model out: 0.9999798536300659, actual val: tensor([0.])
+model out: 0.9999673366546631, actual val: tensor([0.])
+model out: 0.9999680519104004, actual val: tensor([0.])
+model out: 0.9999696016311646, actual val: tensor([0.])
+model out: 0.9999516010284424, actual val: tensor([0.])
+model out: 0.9999704360961914, actual val: tensor([0.])
+model out: 0.9999774694442749, actual val: tensor([0.])
+model out: 0.9999765157699585, actual val: tensor([0.])
+model out: 0.9923415184020996, actual val: tensor([0.])
+model out: 0.9999716281890869, actual val: tensor([0.])
+model out: 0.9999743700027466, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 0.9999709129333496, actual val: tensor([0.])
+model out: 0.9999674558639526, actual val: tensor([0.])
+model out: 0.9999768733978271, actual val: tensor([0.])
+model out: 0.9999743700027466, actual val: tensor([0.])
+model out: 0.9999754428863525, actual val: tensor([0.])
+model out: 0.9999703168869019, actual val: tensor([0.])
+model out: 0.9999744892120361, actual val: tensor([0.])
+model out: 0.9999761581420898, actual val: tensor([0.])
+model out: 0.9999464750289917, actual val: tensor([0.])
+model out: 0.9999679327011108, actual val: tensor([0.])
+model out: 0.9999735355377197, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 0.9999657869338989, actual val: tensor([0.])
+model out: 0.9999688863754272, actual val: tensor([0.])
+model out: 0.9999955892562866, actual val: tensor([0.])
+model out: 0.9999674558639526, actual val: tensor([0.])
+model out: 0.9999701976776123, actual val: tensor([0.])
+model out: 0.9999716281890869, actual val: tensor([0.])
+model out: 0.999996542930603, actual val: tensor([0.])
+model out: 0.9999679327011108, actual val: tensor([0.])
+model out: 0.9999746084213257, actual val: tensor([0.])
+model out: 0.9999485015869141, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 0.9999667406082153, actual val: tensor([0.])
+model out: 0.9999914169311523, actual val: tensor([0.])
+model out: 0.9999688863754272, actual val: tensor([0.])
+model out: 0.9999731779098511, actual val: tensor([0.])
+model out: 0.9999740123748779, actual val: tensor([0.])
+model out: 0.9999717473983765, actual val: tensor([0.])
+model out: 0.9999738931655884, actual val: tensor([0.])
+model out: 0.9999507665634155, actual val: tensor([0.])
+model out: 0.9999750852584839, actual val: tensor([0.])
+model out: 0.9999678134918213, actual val: tensor([0.])
+model out: 0.22558851540088654, actual val: tensor([0.])
+model out: 0.9999746084213257, actual val: tensor([0.])
+model out: 0.9999703168869019, actual val: tensor([0.])
+model out: 0.9999772310256958, actual val: tensor([0.])
+model out: 0.999971866607666, actual val: tensor([0.])
+model out: 0.9999668598175049, actual val: tensor([0.])
+model out: 0.9999786615371704, actual val: tensor([0.])
+model out: 0.999970555305481, actual val: tensor([0.])
+model out: 0.9999731779098511, actual val: tensor([0.])
+model out: 0.9999676942825317, actual val: tensor([0.])
+model out: 1.0, actual val: tensor([0.])
+model out: 0.9999634027481079, actual val: tensor([0.])
+model out: 0.999970555305481, actual val: tensor([0.])
+model out: 0.9999699592590332, actual val: tensor([0.])
+model out: 0.9999606609344482, actual val: tensor([0.])
+model out: 0.9999722242355347, actual val: tensor([0.])
+model out: 0.9999676942825317, actual val: tensor([0.])
+model out: 0.9999738931655884, actual val: tensor([0.])
+model out: 0.999970555305481, actual val: tensor([0.])
+model out: 0.9999712705612183, actual val: tensor([0.])
+model out: 0.999972939491272, actual val: tensor([0.])
+model out: 0.9999532699584961, actual val: tensor([0.])
+model out: 0.9999744892120361, actual val: tensor([0.])
+model out: 0.999976634979248, actual val: tensor([0.])
+model out: 0.9999728202819824, actual val: tensor([0.])
+model out: 0.999972939491272, actual val: tensor([0.])
+model out: 0.9999436140060425, actual val: tensor([0.])
+model out: 0.9999667406082153, actual val: tensor([0.])
+model out: 0.9999663829803467, actual val: tensor([0.])
+model out: 0.9999698400497437, actual val: tensor([0.])
+model out: 0.9999785423278809, actual val: tensor([0.])
+model out: 0.9999693632125854, actual val: tensor([0.])
+model out: 0.9999545812606812, actual val: tensor([0.])
+model out: 0.9999744892120361, actual val: tensor([0.])
+model out: 0.9999750852584839, actual val: tensor([0.])
+model out: 0.9999765157699585, actual val: tensor([0.])
+model out: 0.9999711513519287, actual val: tensor([0.])
+model out: 0.9999978542327881, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: cnn
+criterion: ce
+optimizer: adagrad
+learning_rate: 0.1
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 100
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+model out: 0.0, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: nn
+criterion: ce
+optimizer: adagrad
+learning_rate: 0.1
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 100
+model out: 0.999290943145752, actual val: tensor([0.])
+model out: 0.9992799162864685, actual val: tensor([0.])
+model out: 0.999281108379364, actual val: tensor([0.])
+model out: 0.9992683529853821, actual val: tensor([0.])
+model out: 0.38517770171165466, actual val: tensor([0.])
+model out: 0.5042533874511719, actual val: tensor([0.])
+model out: 0.9992756247520447, actual val: tensor([0.])
+model out: 0.9993152618408203, actual val: tensor([0.])
+model out: 0.9993547797203064, actual val: tensor([0.])
+model out: 0.9992559552192688, actual val: tensor([0.])
+model out: 0.9989491105079651, actual val: tensor([0.])
+model out: 0.9992737174034119, actual val: tensor([0.])
+model out: 0.9992934465408325, actual val: tensor([0.])
+model out: 0.9993614554405212, actual val: tensor([0.])
+model out: 0.9992807507514954, actual val: tensor([0.])
+model out: 0.2967795133590698, actual val: tensor([0.])
+model out: 0.9992589354515076, actual val: tensor([0.])
+model out: 0.17167788743972778, actual val: tensor([0.])
+model out: 0.9992846846580505, actual val: tensor([0.])
+model out: 0.38594549894332886, actual val: tensor([0.])
+model out: 0.9993166923522949, actual val: tensor([0.])
+model out: 0.9252883791923523, actual val: tensor([0.])
+model out: 0.9989401698112488, actual val: tensor([0.])
+model out: 0.9891439080238342, actual val: tensor([0.])
+model out: 0.9989312291145325, actual val: tensor([0.])
+model out: 0.9993563294410706, actual val: tensor([0.])
+model out: 0.9992924928665161, actual val: tensor([0.])
+model out: 0.9992944002151489, actual val: tensor([0.])
+model out: 0.99893718957901, actual val: tensor([0.])
+model out: 0.9991894364356995, actual val: tensor([0.])
+model out: 0.40480300784111023, actual val: tensor([1.])
+model out: 0.9992799162864685, actual val: tensor([0.])
+model out: 0.9989180564880371, actual val: tensor([0.])
+model out: 0.9993202686309814, actual val: tensor([0.])
+model out: 0.9992828965187073, actual val: tensor([0.])
+model out: 0.9992805123329163, actual val: tensor([0.])
+model out: 0.9992353916168213, actual val: tensor([0.])
+model out: 0.12332770973443985, actual val: tensor([0.])
+model out: 0.9993139505386353, actual val: tensor([0.])
+model out: 0.9992819428443909, actual val: tensor([0.])
+model out: 0.3724653720855713, actual val: tensor([0.])
+model out: 0.999352753162384, actual val: tensor([0.])
+model out: 0.9992875456809998, actual val: tensor([0.])
+model out: 0.999312162399292, actual val: tensor([0.])
+model out: 0.9992947578430176, actual val: tensor([0.])
+model out: 0.999272882938385, actual val: tensor([0.])
+model out: 0.9993608593940735, actual val: tensor([0.])
+model out: 0.9993473887443542, actual val: tensor([0.])
+model out: 0.9992870688438416, actual val: tensor([0.])
+model out: 0.999289870262146, actual val: tensor([0.])
+model out: 0.1952519565820694, actual val: tensor([0.])
+model out: 0.496873140335083, actual val: tensor([0.])
+model out: 0.9992357492446899, actual val: tensor([0.])
+model out: 0.999265730381012, actual val: tensor([0.])
+model out: 0.2140062004327774, actual val: tensor([1.])
+model out: 0.9992890357971191, actual val: tensor([0.])
+model out: 0.9992733597755432, actual val: tensor([0.])
+model out: 0.9993513226509094, actual val: tensor([0.])
+model out: 0.9992758631706238, actual val: tensor([0.])
+model out: 0.9992735981941223, actual val: tensor([0.])
+model out: 0.9993133544921875, actual val: tensor([0.])
+model out: 0.9999868869781494, actual val: tensor([0.])
+model out: 0.9992857575416565, actual val: tensor([0.])
+model out: 0.9992749094963074, actual val: tensor([0.])
+model out: 0.999283492565155, actual val: tensor([0.])
+model out: 0.9992805123329163, actual val: tensor([0.])
+model out: 0.999349057674408, actual val: tensor([0.])
+model out: 0.9989628791809082, actual val: tensor([0.])
+model out: 0.35880839824676514, actual val: tensor([0.])
+model out: 0.9993100166320801, actual val: tensor([0.])
+model out: 0.9992469549179077, actual val: tensor([0.])
+model out: 0.9993025064468384, actual val: tensor([0.])
+model out: 0.9992658495903015, actual val: tensor([0.])
+model out: 0.23014402389526367, actual val: tensor([0.])
+model out: 0.9992757439613342, actual val: tensor([0.])
+model out: 0.9992650151252747, actual val: tensor([0.])
+model out: 0.9991958737373352, actual val: tensor([0.])
+model out: 0.9989411234855652, actual val: tensor([0.])
+model out: 0.9992666840553284, actual val: tensor([0.])
+model out: 0.9993581175804138, actual val: tensor([0.])
+model out: 0.12172453105449677, actual val: tensor([1.])
+model out: 0.9993044137954712, actual val: tensor([0.])
+model out: 0.695874035358429, actual val: tensor([0.])
+model out: 0.06828577816486359, actual val: tensor([0.])
+model out: 0.9989497065544128, actual val: tensor([0.])
+model out: 0.9993526339530945, actual val: tensor([0.])
+model out: 0.15431605279445648, actual val: tensor([0.])
+model out: 0.9997782111167908, actual val: tensor([0.])
+model out: 0.9989662170410156, actual val: tensor([0.])
+model out: 0.9992650151252747, actual val: tensor([0.])
+model out: 0.40624117851257324, actual val: tensor([0.])
+model out: 0.9992778897285461, actual val: tensor([0.])
+model out: 0.9988971948623657, actual val: tensor([0.])
+model out: 0.9992595314979553, actual val: tensor([0.])
+model out: 0.9992813467979431, actual val: tensor([0.])
+model out: 0.9992857575416565, actual val: tensor([0.])
+model out: 0.9993372559547424, actual val: tensor([0.])
+model out: 0.999284565448761, actual val: tensor([0.])
+model out: 0.9993201494216919, actual val: tensor([0.])
+model out: 0.9992893934249878, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: nn
+criterion: ce
+optimizer: adagrad
+learning_rate: 0.1
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 100
+model out: 0.9564822912216187, actual val: tensor([0.])
+model out: 0.9545570015907288, actual val: tensor([0.])
+model out: 0.9829220771789551, actual val: tensor([0.])
+model out: 0.9541216492652893, actual val: tensor([0.])
+model out: 0.9564692974090576, actual val: tensor([0.])
+model out: 0.9565606117248535, actual val: tensor([0.])
+model out: 0.9547257423400879, actual val: tensor([0.])
+model out: 0.9554747939109802, actual val: tensor([0.])
+model out: 0.9547609686851501, actual val: tensor([0.])
+model out: 0.956120491027832, actual val: tensor([0.])
+model out: 0.9545431137084961, actual val: tensor([0.])
+model out: 0.9316076636314392, actual val: tensor([0.])
+model out: 0.9548066854476929, actual val: tensor([0.])
+model out: 0.955308198928833, actual val: tensor([0.])
+model out: 0.9546052813529968, actual val: tensor([0.])
+model out: 0.9566919803619385, actual val: tensor([0.])
+model out: 0.9548447132110596, actual val: tensor([0.])
+model out: 0.9268591403961182, actual val: tensor([0.])
+model out: 0.9548061490058899, actual val: tensor([0.])
+model out: 0.9566158056259155, actual val: tensor([0.])
+model out: 0.9987226128578186, actual val: tensor([0.])
+model out: 0.9543931484222412, actual val: tensor([0.])
+model out: 0.999388575553894, actual val: tensor([0.])
+model out: 0.9302114844322205, actual val: tensor([0.])
+model out: 0.9457146525382996, actual val: tensor([0.])
+model out: 0.9554871916770935, actual val: tensor([0.])
+model out: 0.954410970211029, actual val: tensor([0.])
+model out: 0.9542883634567261, actual val: tensor([0.])
+model out: 0.9363793730735779, actual val: tensor([0.])
+model out: 0.9474883675575256, actual val: tensor([0.])
+model out: 0.9554880261421204, actual val: tensor([0.])
+model out: 0.9314007759094238, actual val: tensor([0.])
+model out: 0.9475476145744324, actual val: tensor([0.])
+model out: 0.9316743612289429, actual val: tensor([0.])
+model out: 0.9513757228851318, actual val: tensor([0.])
+model out: 0.9437034130096436, actual val: tensor([1.])
+model out: 0.9476442933082581, actual val: tensor([0.])
+model out: 0.955051064491272, actual val: tensor([0.])
+model out: 0.9542208313941956, actual val: tensor([0.])
+model out: 0.9331560134887695, actual val: tensor([0.])
+model out: 0.9565057754516602, actual val: tensor([0.])
+model out: 0.9547356367111206, actual val: tensor([0.])
+model out: 0.9548609256744385, actual val: tensor([0.])
+model out: 0.9565356373786926, actual val: tensor([0.])
+model out: 0.9544785022735596, actual val: tensor([0.])
+model out: 0.9545782208442688, actual val: tensor([0.])
+model out: 0.9482204914093018, actual val: tensor([0.])
+model out: 0.9999663829803467, actual val: tensor([0.])
+model out: 0.9554718136787415, actual val: tensor([0.])
+model out: 0.9476582407951355, actual val: tensor([0.])
+model out: 0.9548237919807434, actual val: tensor([0.])
+model out: 0.9479256272315979, actual val: tensor([0.])
+model out: 0.9565213322639465, actual val: tensor([0.])
+model out: 0.9553946852684021, actual val: tensor([0.])
+model out: 0.9543959498405457, actual val: tensor([0.])
+model out: 0.9561406373977661, actual val: tensor([0.])
+model out: 0.954933762550354, actual val: tensor([0.])
+model out: 0.9545321464538574, actual val: tensor([0.])
+model out: 0.9544463753700256, actual val: tensor([0.])
+model out: 0.9545815587043762, actual val: tensor([0.])
+model out: 0.9471105337142944, actual val: tensor([0.])
+model out: 0.9543824791908264, actual val: tensor([0.])
+model out: 0.9743490815162659, actual val: tensor([0.])
+model out: 0.9555379152297974, actual val: tensor([0.])
+model out: 0.9563671350479126, actual val: tensor([0.])
+model out: 0.9542008638381958, actual val: tensor([0.])
+model out: 0.957059919834137, actual val: tensor([0.])
+model out: 0.9547197818756104, actual val: tensor([0.])
+model out: 0.9542825222015381, actual val: tensor([0.])
+model out: 0.9543072581291199, actual val: tensor([0.])
+model out: 0.9544951319694519, actual val: tensor([0.])
+model out: 0.9474366903305054, actual val: tensor([0.])
+model out: 0.927026093006134, actual val: tensor([0.])
+model out: 0.9546349048614502, actual val: tensor([0.])
+model out: 0.954305112361908, actual val: tensor([0.])
+model out: 0.9551056623458862, actual val: tensor([0.])
+model out: 0.9545164108276367, actual val: tensor([0.])
+model out: 0.9830390214920044, actual val: tensor([0.])
+model out: 0.9554904699325562, actual val: tensor([0.])
+model out: 0.9229153394699097, actual val: tensor([1.])
+model out: 0.9550142288208008, actual val: tensor([0.])
+model out: 0.954937756061554, actual val: tensor([0.])
+model out: 0.9545458555221558, actual val: tensor([0.])
+model out: 0.9545220732688904, actual val: tensor([0.])
+model out: 0.9544486403465271, actual val: tensor([0.])
+model out: 0.9514806270599365, actual val: tensor([0.])
+model out: 0.9571214914321899, actual val: tensor([0.])
+model out: 0.9541987180709839, actual val: tensor([0.])
+model out: 0.9564590454101562, actual val: tensor([0.])
+model out: 0.9479364156723022, actual val: tensor([0.])
+model out: 0.9546078443527222, actual val: tensor([0.])
+model out: 0.9565653204917908, actual val: tensor([0.])
+model out: 0.9484719038009644, actual val: tensor([0.])
+model out: 0.9544622302055359, actual val: tensor([0.])
+model out: 0.954627513885498, actual val: tensor([0.])
+model out: 0.9543644785881042, actual val: tensor([0.])
+model out: 0.9543622136116028, actual val: tensor([0.])
+model out: 0.9547797441482544, actual val: tensor([0.])
+model out: 0.9556024670600891, actual val: tensor([0.])
+model out: 0.9544566869735718, actual val: tensor([0.])
+-----------------------------------------
+Model
+type: nn
+criterion: ce
+optimizer: adagrad
+learning_rate: 0.1
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 100
+model out: 0.17356029152870178, actual val: tensor([0.])
+model out: 0.17344924807548523, actual val: tensor([0.])
+model out: 0.17326728999614716, actual val: tensor([0.])
+model out: 0.1734754741191864, actual val: tensor([0.])
+model out: 0.18308569490909576, actual val: tensor([0.])
+model out: 0.1729433238506317, actual val: tensor([0.])
+model out: 0.17426465451717377, actual val: tensor([0.])
+model out: 0.2822248339653015, actual val: tensor([0.])
+model out: 0.17116326093673706, actual val: tensor([0.])
+model out: 0.17686454951763153, actual val: tensor([0.])
+model out: 0.17451134324073792, actual val: tensor([0.])
+model out: 0.1859554499387741, actual val: tensor([0.])
+model out: 0.17701952159404755, actual val: tensor([0.])
+model out: 0.17366467416286469, actual val: tensor([0.])
+model out: 0.17661860585212708, actual val: tensor([0.])
+model out: 0.17403028905391693, actual val: tensor([0.])
+model out: 0.17639940977096558, actual val: tensor([0.])
+model out: 0.17110052704811096, actual val: tensor([0.])
+model out: 0.1744045913219452, actual val: tensor([0.])
+model out: 0.17605654895305634, actual val: tensor([0.])
+model out: 0.30391964316368103, actual val: tensor([0.])
+model out: 0.18865622580051422, actual val: tensor([0.])
+model out: 0.17122696340084076, actual val: tensor([0.])
+model out: 0.17434893548488617, actual val: tensor([0.])
+model out: 0.3078518509864807, actual val: tensor([0.])
+model out: 0.1764504313468933, actual val: tensor([0.])
+model out: 0.17546816170215607, actual val: tensor([0.])
+model out: 0.18646188080310822, actual val: tensor([0.])
+model out: 0.28738391399383545, actual val: tensor([0.])
+model out: 0.17572182416915894, actual val: tensor([0.])
+model out: 0.303124338388443, actual val: tensor([0.])
+model out: 0.19042856991291046, actual val: tensor([0.])
+model out: 0.17556634545326233, actual val: tensor([0.])
+model out: 0.17438948154449463, actual val: tensor([0.])
+model out: 0.17609286308288574, actual val: tensor([0.])
+model out: 0.17391666769981384, actual val: tensor([0.])
+model out: 0.1734204888343811, actual val: tensor([0.])
+model out: 0.1749829351902008, actual val: tensor([0.])
+model out: 0.1765979826450348, actual val: tensor([0.])
+model out: 0.1769540160894394, actual val: tensor([0.])
+model out: 0.29306283593177795, actual val: tensor([0.])
+model out: 0.17343223094940186, actual val: tensor([0.])
+model out: 0.17464898526668549, actual val: tensor([0.])
+model out: 0.18611080944538116, actual val: tensor([0.])
+model out: 0.18560467660427094, actual val: tensor([0.])
+model out: 0.32403355836868286, actual val: tensor([0.])
+model out: 0.17638960480690002, actual val: tensor([0.])
+model out: 0.17373307049274445, actual val: tensor([0.])
+model out: 0.17298364639282227, actual val: tensor([0.])
+model out: 0.28690284490585327, actual val: tensor([0.])
+model out: 0.18470056354999542, actual val: tensor([0.])
+model out: 0.1740129292011261, actual val: tensor([0.])
+model out: 0.175807386636734, actual val: tensor([0.])
+model out: 0.17633485794067383, actual val: tensor([0.])
+model out: 0.17104122042655945, actual val: tensor([0.])
+model out: 0.17274774610996246, actual val: tensor([0.])
+model out: 0.1771605908870697, actual val: tensor([0.])
+model out: 0.17577633261680603, actual val: tensor([0.])
+model out: 0.17634721100330353, actual val: tensor([0.])
+model out: 0.17298083007335663, actual val: tensor([0.])
+model out: 0.27781790494918823, actual val: tensor([0.])
+model out: 0.173841193318367, actual val: tensor([0.])
+model out: 0.17268964648246765, actual val: tensor([0.])
+model out: 0.18469548225402832, actual val: tensor([0.])
+model out: 0.18624247610569, actual val: tensor([0.])
+model out: 0.17620129883289337, actual val: tensor([0.])
+model out: 0.17151816189289093, actual val: tensor([0.])
+model out: 0.17453254759311676, actual val: tensor([0.])
+model out: 0.1861049383878708, actual val: tensor([0.])
+model out: 0.1732434332370758, actual val: tensor([0.])
+model out: 0.17582392692565918, actual val: tensor([0.])
+model out: 0.17576539516448975, actual val: tensor([0.])
+model out: 0.1867077797651291, actual val: tensor([0.])
+model out: 0.1753128170967102, actual val: tensor([0.])
+model out: 0.1766168177127838, actual val: tensor([0.])
+model out: 0.17343378067016602, actual val: tensor([0.])
+model out: 0.18611013889312744, actual val: tensor([0.])
+model out: 0.17245382070541382, actual val: tensor([0.])
+model out: 0.17608386278152466, actual val: tensor([0.])
+model out: 0.1770039200782776, actual val: tensor([0.])
+model out: 0.17587246000766754, actual val: tensor([0.])
+model out: 0.1743626445531845, actual val: tensor([0.])
+model out: 0.17388993501663208, actual val: tensor([0.])
+model out: 0.17327263951301575, actual val: tensor([0.])
+model out: 0.17617167532444, actual val: tensor([0.])
+model out: 0.17674338817596436, actual val: tensor([0.])
+model out: 0.17432144284248352, actual val: tensor([0.])
+model out: 0.17341551184654236, actual val: tensor([0.])
+model out: 0.18937957286834717, actual val: tensor([0.])
+model out: 0.17554107308387756, actual val: tensor([0.])
+model out: 0.18671472370624542, actual val: tensor([0.])
+model out: 0.1745741218328476, actual val: tensor([0.])
+model out: 0.17340466380119324, actual val: tensor([0.])
+model out: 0.1731574386358261, actual val: tensor([0.])
+model out: 0.17752157151699066, actual val: tensor([0.])
+model out: 0.17519685626029968, actual val: tensor([0.])
+model out: 0.1764882504940033, actual val: tensor([0.])
+model out: 0.17435841262340546, actual val: tensor([0.])
+model out: 0.1707472950220108, actual val: tensor([0.])
+model out: 0.17367278039455414, actual val: tensor([0.])
+Total loss: [31m0.036299461902765666[30m
+-----------------------------------------
+Model
+type: nn
+criterion: ce
+optimizer: adagrad
+learning_rate: 0.1
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 100
+model out: 0.17717619240283966, actual val: 0.0
+model out: 0.1744023859500885, actual val: 0.0
+model out: 0.1758902668952942, actual val: 0.0
+model out: 0.25360068678855896, actual val: 0.0
+model out: 0.1764264553785324, actual val: 0.0
+model out: 0.18544194102287292, actual val: 0.0
+model out: 0.17325027287006378, actual val: 0.0
+model out: 0.1708296835422516, actual val: 0.0
+model out: 0.18607546389102936, actual val: 0.0
+model out: 0.174917072057724, actual val: 0.0
+model out: 0.1709459275007248, actual val: 0.0
+model out: 0.1898019015789032, actual val: 0.0
+model out: 0.07241638749837875, actual val: 0.0
+model out: 0.1763729304075241, actual val: 0.0
+model out: 0.17559461295604706, actual val: 0.0
+model out: 0.18683691322803497, actual val: 0.0
+model out: 0.18744073808193207, actual val: 0.0
+model out: 0.17315486073493958, actual val: 0.0
+model out: 0.1735200583934784, actual val: 0.0
+model out: 0.17653094232082367, actual val: 0.0
+model out: 0.17721346020698547, actual val: 0.0
+model out: 0.176393061876297, actual val: 0.0
+model out: 0.17545029520988464, actual val: 0.0
+model out: 0.17254091799259186, actual val: 0.0
+model out: 0.3033963739871979, actual val: 0.0
+model out: 0.1770515739917755, actual val: 0.0
+model out: 0.18313023447990417, actual val: 0.0
+model out: 0.17396366596221924, actual val: 0.0
+model out: 0.28777357935905457, actual val: 0.0
+model out: 0.18656589090824127, actual val: 0.0
+model out: 0.17323169112205505, actual val: 0.0
+model out: 0.1818850338459015, actual val: 0.0
+model out: 0.17250579595565796, actual val: 0.0
+model out: 0.17771878838539124, actual val: 0.0
+model out: 0.18685635924339294, actual val: 0.0
+model out: 0.17427627742290497, actual val: 0.0
+model out: 0.17370463907718658, actual val: 0.0
+model out: 0.17046253383159637, actual val: 0.0
+model out: 0.3044418692588806, actual val: 0.0
+model out: 0.17598630487918854, actual val: 0.0
+model out: 0.17389945685863495, actual val: 0.0
+model out: 0.17346256971359253, actual val: 0.0
+model out: 0.1758035272359848, actual val: 0.0
+model out: 0.17346376180648804, actual val: 0.0
+model out: 0.17286166548728943, actual val: 0.0
+model out: 0.1733430027961731, actual val: 0.0
+model out: 0.1772780567407608, actual val: 0.0
+model out: 0.1733018457889557, actual val: 0.0
+model out: 0.1734149307012558, actual val: 0.0
+model out: 0.173370823264122, actual val: 0.0
+model out: 0.17592357099056244, actual val: 0.0
+model out: 0.17718134820461273, actual val: 0.0
+model out: 0.17291712760925293, actual val: 0.0
+model out: 0.17905880510807037, actual val: 0.0
+model out: 0.26124927401542664, actual val: 0.0
+model out: 0.1756138950586319, actual val: 0.0
+model out: 0.1770511269569397, actual val: 0.0
+model out: 0.1759520173072815, actual val: 0.0
+model out: 0.17380505800247192, actual val: 0.0
+model out: 0.17330023646354675, actual val: 0.0
+model out: 0.22983106970787048, actual val: 0.0
+model out: 0.28567367792129517, actual val: 0.0
+model out: 0.17554107308387756, actual val: 0.0
+model out: 0.17352071404457092, actual val: 0.0
+model out: 0.29933568835258484, actual val: 0.0
+model out: 0.18708521127700806, actual val: 0.0
+model out: 0.17456625401973724, actual val: 0.0
+model out: 0.17411242425441742, actual val: 0.0
+model out: 0.17630329728126526, actual val: 0.0
+model out: 0.18674346804618835, actual val: 0.0
+model out: 0.06012183427810669, actual val: 0.0
+model out: 0.17031815648078918, actual val: 0.0
+model out: 0.17132307589054108, actual val: 0.0
+model out: 0.17200610041618347, actual val: 0.0
+model out: 0.3170110285282135, actual val: 0.0
+model out: 0.18645571172237396, actual val: 0.0
+model out: 0.17358246445655823, actual val: 0.0
+model out: 0.17486368119716644, actual val: 0.0
+model out: 0.1774943470954895, actual val: 0.0
+model out: 0.17328518629074097, actual val: 0.0
+model out: 0.17427203059196472, actual val: 0.0
+model out: 0.04112612456083298, actual val: 0.0
+model out: 0.18626171350479126, actual val: 0.0
+model out: 0.08188025653362274, actual val: 0.0
+model out: 0.3136304020881653, actual val: 0.0
+model out: 0.08887294679880142, actual val: 0.0
+model out: 0.1768895834684372, actual val: 0.0
+model out: 0.17363475263118744, actual val: 0.0
+model out: 0.07117428630590439, actual val: 0.0
+model out: 0.1759728342294693, actual val: 0.0
+model out: 0.1757199764251709, actual val: 0.0
+model out: 0.18156218528747559, actual val: 0.0
+model out: 0.17404678463935852, actual val: 0.0
+model out: 0.1759558767080307, actual val: 0.0
+model out: 0.1746203601360321, actual val: 0.0
+model out: 0.288817435503006, actual val: 0.0
+model out: 0.1740620732307434, actual val: 0.0
+model out: 0.17348727583885193, actual val: 0.0
+model out: 0.17387078702449799, actual val: 0.0
+model out: 0.3188425898551941, actual val: 0.0
+Total loss: 0.03594258089245535
+-----------------------------------------
+Model
+type: nn
+criterion: ce
+optimizer: adagrad
+learning_rate: 0.1
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 100
+model out: 0.17721740901470184, actual val: 0.0
+model out: 0.17796891927719116, actual val: 0.0
+model out: 0.17572642862796783, actual val: 0.0
+model out: 0.1866692751646042, actual val: 0.0
+model out: 0.18739548325538635, actual val: 0.0
+model out: 0.172907754778862, actual val: 0.0
+model out: 0.185721293091774, actual val: 0.0
+model out: 0.17341750860214233, actual val: 0.0
+model out: 0.17398270964622498, actual val: 0.0
+model out: 0.17101165652275085, actual val: 0.0
+model out: 0.2711719870567322, actual val: 0.0
+model out: 0.33804452419281006, actual val: 0.0
+model out: 0.1729133129119873, actual val: 0.0
+model out: 0.17493455111980438, actual val: 0.0
+model out: 0.27767425775527954, actual val: 1.0
+model out: 0.1768384426832199, actual val: 0.0
+model out: 0.17425347864627838, actual val: 0.0
+model out: 0.1734573245048523, actual val: 0.0
+model out: 0.17597784101963043, actual val: 0.0
+model out: 0.17437918484210968, actual val: 0.0
+model out: 0.17616663873195648, actual val: 0.0
+model out: 0.17571941018104553, actual val: 0.0
+model out: 0.17348936200141907, actual val: 0.0
+model out: 0.17620375752449036, actual val: 0.0
+model out: 0.17268764972686768, actual val: 0.0
+model out: 0.23457320034503937, actual val: 1.0
+model out: 0.17671522498130798, actual val: 0.0
+model out: 0.17509901523590088, actual val: 0.0
+model out: 0.17440883815288544, actual val: 0.0
+model out: 0.1735156625509262, actual val: 0.0
+model out: 0.17620712518692017, actual val: 0.0
+model out: 0.1775161176919937, actual val: 0.0
+model out: 0.17592653632164001, actual val: 0.0
+model out: 0.17623202502727509, actual val: 0.0
+model out: 0.29935821890830994, actual val: 1.0
+model out: 0.1869991272687912, actual val: 0.0
+model out: 0.18635718524456024, actual val: 0.0
+model out: 0.17328518629074097, actual val: 0.0
+model out: 0.17633679509162903, actual val: 0.0
+model out: 0.18601259589195251, actual val: 0.0
+model out: 0.3166857361793518, actual val: 0.0
+model out: 0.177082359790802, actual val: 0.0
+model out: 0.17720095813274384, actual val: 0.0
+model out: 0.28738391399383545, actual val: 0.0
+model out: 0.17385943233966827, actual val: 0.0
+model out: 0.17092542350292206, actual val: 0.0
+model out: 0.17542298138141632, actual val: 0.0
+model out: 0.005311245564371347, actual val: 0.0
+model out: 0.17379222810268402, actual val: 0.0
+model out: 0.17339883744716644, actual val: 0.0
+model out: 0.17450912296772003, actual val: 0.0
+model out: 0.18206310272216797, actual val: 0.0
+model out: 0.17436084151268005, actual val: 0.0
+model out: 0.17650441825389862, actual val: 0.0
+model out: 0.1862107366323471, actual val: 0.0
+model out: 0.18611283600330353, actual val: 0.0
+model out: 0.17746780812740326, actual val: 0.0
+model out: 0.28799203038215637, actual val: 0.0
+model out: 0.1627054065465927, actual val: 0.0
+model out: 0.1748923659324646, actual val: 0.0
+model out: 0.17310935258865356, actual val: 0.0
+model out: 0.17622826993465424, actual val: 0.0
+model out: 0.17588099837303162, actual val: 0.0
+model out: 0.17489512264728546, actual val: 0.0
+model out: 0.1731782853603363, actual val: 0.0
+model out: 0.18571318686008453, actual val: 0.0
+model out: 0.18624629080295563, actual val: 0.0
+model out: 0.17417359352111816, actual val: 0.0
+model out: 0.172865092754364, actual val: 0.0
+model out: 0.18714532256126404, actual val: 0.0
+model out: 0.10286227613687515, actual val: 0.0
+model out: 0.1712353378534317, actual val: 0.0
+model out: 0.17620904743671417, actual val: 0.0
+model out: 0.18599718809127808, actual val: 0.0
+model out: 0.1712193787097931, actual val: 0.0
+model out: 0.17667552828788757, actual val: 0.0
+model out: 0.17649978399276733, actual val: 0.0
+model out: 0.17366325855255127, actual val: 0.0
+model out: 0.1710641235113144, actual val: 0.0
+model out: 0.17452505230903625, actual val: 0.0
+model out: 0.17647618055343628, actual val: 0.0
+model out: 0.17611069977283478, actual val: 0.0
+model out: 0.17459990084171295, actual val: 0.0
+model out: 0.17284227907657623, actual val: 0.0
+model out: 0.17456477880477905, actual val: 0.0
+model out: 0.1873299926519394, actual val: 0.0
+model out: 0.18656054139137268, actual val: 0.0
+model out: 0.17571672797203064, actual val: 0.0
+model out: 0.1788814216852188, actual val: 0.0
+model out: 0.17552301287651062, actual val: 0.0
+model out: 0.17607168853282928, actual val: 0.0
+model out: 0.17444567382335663, actual val: 0.0
+model out: 0.17325431108474731, actual val: 0.0
+model out: 0.1750294417142868, actual val: 0.0
+model out: 0.17378133535385132, actual val: 0.0
+model out: 0.17391417920589447, actual val: 0.0
+model out: 0.17340528964996338, actual val: 0.0
+model out: 0.1744718998670578, actual val: 0.0
+model out: 0.17358751595020294, actual val: 0.0
+model out: 0.17620724439620972, actual val: 0.0
+Total loss: 0.048700988424140626
+-----------------------------------------
+Model
+type: nn
+criterion: ce
+optimizer: sgd
+learning_rate: 0.1
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 100
+model out: 0.7162613272666931, actual val: 0.0
+model out: 0.7157857418060303, actual val: 0.0
+model out: 0.7155740857124329, actual val: 0.0
+model out: 0.7533563375473022, actual val: 0.0
+model out: 0.7213736772537231, actual val: 0.0
+model out: 0.7181360721588135, actual val: 0.0
+model out: 0.7167431712150574, actual val: 0.0
+model out: 0.7148234844207764, actual val: 0.0
+model out: 0.7151671051979065, actual val: 0.0
+model out: 0.7156490683555603, actual val: 0.0
+model out: 0.7186874151229858, actual val: 0.0
+model out: 0.7162969708442688, actual val: 0.0
+model out: 0.7149169445037842, actual val: 0.0
+model out: 0.807960033416748, actual val: 0.0
+model out: 0.7171508073806763, actual val: 0.0
+model out: 0.706282913684845, actual val: 0.0
+model out: 0.7161566019058228, actual val: 0.0
+model out: 0.7182804346084595, actual val: 0.0
+model out: 0.7064104676246643, actual val: 0.0
+model out: 0.715711236000061, actual val: 0.0
+model out: 0.7128544449806213, actual val: 0.0
+model out: 0.8152990937232971, actual val: 0.0
+model out: 0.7334076762199402, actual val: 0.0
+model out: 0.7142797112464905, actual val: 0.0
+model out: 0.7189623713493347, actual val: 0.0
+model out: 0.7826825380325317, actual val: 0.0
+model out: 0.5971365571022034, actual val: 0.0
+model out: 0.6308051347732544, actual val: 1.0
+model out: 0.7193896174430847, actual val: 0.0
+model out: 0.7170873880386353, actual val: 0.0
+model out: 0.7183456420898438, actual val: 0.0
+model out: 0.7011760473251343, actual val: 0.0
+model out: 0.8075884580612183, actual val: 0.0
+model out: 0.7151007652282715, actual val: 0.0
+model out: 0.7069829106330872, actual val: 0.0
+model out: 0.7191595435142517, actual val: 0.0
+model out: 0.7160815000534058, actual val: 0.0
+model out: 0.761289656162262, actual val: 0.0
+model out: 0.7127148509025574, actual val: 0.0
+model out: 0.7182360887527466, actual val: 0.0
+model out: 0.8105341792106628, actual val: 1.0
+model out: 0.7181699872016907, actual val: 0.0
+model out: 0.7165185213088989, actual val: 0.0
+model out: 0.840925931930542, actual val: 0.0
+model out: 0.7183526158332825, actual val: 0.0
+model out: 0.7180752158164978, actual val: 0.0
+model out: 0.7218794822692871, actual val: 0.0
+model out: 0.6846578121185303, actual val: 0.0
+model out: 0.7162939310073853, actual val: 0.0
+model out: 0.7176635265350342, actual val: 0.0
+model out: 0.7152541279792786, actual val: 0.0
+model out: 0.7162070274353027, actual val: 0.0
+model out: 0.7161199450492859, actual val: 0.0
+model out: 0.7174013257026672, actual val: 0.0
+model out: 0.7190207242965698, actual val: 0.0
+model out: 0.7042856812477112, actual val: 0.0
+model out: 0.9280770421028137, actual val: 0.0
+model out: 0.7170062065124512, actual val: 0.0
+model out: 0.7639150619506836, actual val: 0.0
+model out: 0.716722309589386, actual val: 0.0
+model out: 0.8629389405250549, actual val: 0.0
+model out: 0.7194390892982483, actual val: 0.0
+model out: 0.7164906859397888, actual val: 0.0
+model out: 0.7179944515228271, actual val: 0.0
+model out: 0.8364148736000061, actual val: 0.0
+model out: 0.7166920304298401, actual val: 0.0
+model out: 0.7152894139289856, actual val: 0.0
+model out: 0.7163925766944885, actual val: 0.0
+model out: 0.7195974588394165, actual val: 0.0
+model out: 0.7163469791412354, actual val: 0.0
+model out: 0.7184853553771973, actual val: 0.0
+model out: 0.7170628309249878, actual val: 0.0
+model out: 0.7156611084938049, actual val: 0.0
+model out: 0.8459840416908264, actual val: 0.0
+model out: 0.7177187204360962, actual val: 0.0
+model out: 0.7182700037956238, actual val: 0.0
+model out: 0.7174776792526245, actual val: 0.0
+model out: 0.7167977094650269, actual val: 0.0
+model out: 0.8723915219306946, actual val: 1.0
+model out: 0.7164459824562073, actual val: 0.0
+model out: 0.7154956459999084, actual val: 0.0
+model out: 0.7151596546173096, actual val: 0.0
+model out: 0.7058783769607544, actual val: 0.0
+model out: 0.7227362394332886, actual val: 0.0
+model out: 0.7161539793014526, actual val: 0.0
+model out: 0.8203527331352234, actual val: 0.0
+model out: 0.714728593826294, actual val: 0.0
+model out: 0.7054123878479004, actual val: 0.0
+model out: 0.7213821411132812, actual val: 0.0
+model out: 0.7194679975509644, actual val: 0.0
+model out: 0.7159421443939209, actual val: 0.0
+model out: 0.7185723781585693, actual val: 0.0
+model out: 0.7162899971008301, actual val: 0.0
+model out: 0.7170257568359375, actual val: 0.0
+model out: 0.7180142402648926, actual val: 0.0
+model out: 0.8231574892997742, actual val: 0.0
+model out: 0.715576171875, actual val: 0.0
+model out: 0.7198290228843689, actual val: 0.0
+model out: 0.7707936763763428, actual val: 0.0
+model out: 0.9384944438934326, actual val: 0.0
+Total loss: 0.5241347346123937
+-----------------------------------------
+Model
+type: nn
+criterion: ce
+optimizer: adam
+learning_rate: 0.1
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 100
+model out: 0.56748, actual val: 0
+model out: 0.569342, actual val: 0
+model out: 0.578157, actual val: 0
+model out: 0.578963, actual val: 0
+model out: 0.579143, actual val: 0
+model out: 0.58053, actual val: 0
+model out: 0.580674, actual val: 0
+model out: 0.583574, actual val: 0
+model out: 0.584657, actual val: 1
+model out: 0.590964, actual val: 0
+model out: 0.599254, actual val: 1
+model out: 0.603455, actual val: 0
+model out: 0.60811, actual val: 0
+model out: 0.609523, actual val: 0
+model out: 0.615566, actual val: 0
+model out: 0.615784, actual val: 0
+model out: 0.628078, actual val: 0
+model out: 0.633696, actual val: 0
+model out: 0.681774, actual val: 0
+model out: 0.75088, actual val: 0
+model out: 0.750945, actual val: 0
+model out: 0.751031, actual val: 0
+model out: 0.751614, actual val: 0
+model out: 0.75162, actual val: 0
+model out: 0.751715, actual val: 0
+model out: 0.752687, actual val: 0
+model out: 0.753675, actual val: 0
+model out: 0.754084, actual val: 0
+model out: 0.759514, actual val: 0
+model out: 0.759821, actual val: 0
+model out: 0.760332, actual val: 0
+model out: 0.760424, actual val: 0
+model out: 0.760466, actual val: 0
+model out: 0.760724, actual val: 0
+model out: 0.76075, actual val: 0
+model out: 0.76077, actual val: 0
+model out: 0.76078, actual val: 0
+model out: 0.760954, actual val: 0
+model out: 0.760956, actual val: 0
+model out: 0.760996, actual val: 0
+model out: 0.761055, actual val: 0
+model out: 0.761073, actual val: 0
+model out: 0.761107, actual val: 0
+model out: 0.761111, actual val: 0
+model out: 0.761143, actual val: 0
+model out: 0.761169, actual val: 0
+model out: 0.761249, actual val: 0
+model out: 0.761323, actual val: 0
+model out: 0.761604, actual val: 0
+model out: 0.761638, actual val: 0
+model out: 0.761826, actual val: 0
+model out: 0.761831, actual val: 0
+model out: 0.761839, actual val: 0
+model out: 0.761999, actual val: 0
+model out: 0.762004, actual val: 0
+model out: 0.762157, actual val: 0
+model out: 0.762262, actual val: 0
+model out: 0.762275, actual val: 0
+model out: 0.76232, actual val: 0
+model out: 0.762351, actual val: 0
+model out: 0.762357, actual val: 0
+model out: 0.7624, actual val: 0
+model out: 0.762442, actual val: 0
+model out: 0.762448, actual val: 0
+model out: 0.762466, actual val: 0
+model out: 0.762473, actual val: 0
+model out: 0.762663, actual val: 0
+model out: 0.762709, actual val: 0
+model out: 0.762772, actual val: 0
+model out: 0.762815, actual val: 0
+model out: 0.762863, actual val: 0
+model out: 0.763709, actual val: 0
+model out: 0.764022, actual val: 0
+model out: 0.764507, actual val: 0
+model out: 0.764519, actual val: 0
+model out: 0.764621, actual val: 0
+model out: 0.764634, actual val: 0
+model out: 0.764701, actual val: 0
+model out: 0.764821, actual val: 0
+model out: 0.764827, actual val: 0
+model out: 0.764983, actual val: 0
+model out: 0.765104, actual val: 0
+model out: 0.765173, actual val: 0
+model out: 0.765373, actual val: 0
+model out: 0.765908, actual val: 0
+model out: 0.765985, actual val: 0
+model out: 0.766169, actual val: 0
+model out: 0.76625, actual val: 0
+model out: 0.767274, actual val: 0
+model out: 0.767808, actual val: 0
+model out: 0.768483, actual val: 0
+model out: 0.769218, actual val: 0
+model out: 0.769308, actual val: 0
+model out: 0.769657, actual val: 0
+model out: 0.769887, actual val: 0
+model out: 0.770768, actual val: 0
+model out: 0.771387, actual val: 0
+model out: 0.800897, actual val: 0
+model out: 0.847535, actual val: 0
+model out: 0.869256, actual val: 0
+Total loss: 0.5389439319516924
+-----------------------------------------
+Model
+type: nn
+criterion: ce
+optimizer: adam
+learning_rate: 0.1
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 100
+model out: 0.012137, actual val: 0
+model out: 0.223917, actual val: 0
+model out: 0.319924, actual val: 0
+model out: 0.505625, actual val: 0
+model out: 0.576585, actual val: 0
+model out: 0.577082, actual val: 0
+model out: 0.578157, actual val: 0
+model out: 0.57919, actual val: 0
+model out: 0.580692, actual val: 0
+model out: 0.580775, actual val: 0
+model out: 0.580873, actual val: 0
+model out: 0.580916, actual val: 0
+model out: 0.582487, actual val: 0
+model out: 0.583522, actual val: 0
+model out: 0.583798, actual val: 0
+model out: 0.584437, actual val: 0
+model out: 0.58558, actual val: 0
+model out: 0.587633, actual val: 0
+model out: 0.591118, actual val: 0
+model out: 0.592497, actual val: 0
+model out: 0.594019, actual val: 0
+model out: 0.596571, actual val: 0
+model out: 0.597525, actual val: 0
+model out: 0.598918, actual val: 1
+model out: 0.601654, actual val: 0
+model out: 0.608647, actual val: 0
+model out: 0.621239, actual val: 0
+model out: 0.625491, actual val: 0
+model out: 0.635709, actual val: 0
+model out: 0.637184, actual val: 0
+model out: 0.66696, actual val: 0
+model out: 0.671064, actual val: 0
+model out: 0.748848, actual val: 0
+model out: 0.750014, actual val: 0
+model out: 0.750232, actual val: 0
+model out: 0.750569, actual val: 0
+model out: 0.750656, actual val: 0
+model out: 0.750733, actual val: 0
+model out: 0.750967, actual val: 0
+model out: 0.75099, actual val: 0
+model out: 0.751098, actual val: 0
+model out: 0.751189, actual val: 0
+model out: 0.751204, actual val: 0
+model out: 0.751238, actual val: 0
+model out: 0.751239, actual val: 0
+model out: 0.751298, actual val: 0
+model out: 0.751299, actual val: 0
+model out: 0.751356, actual val: 0
+model out: 0.751525, actual val: 0
+model out: 0.751589, actual val: 0
+model out: 0.752521, actual val: 0
+model out: 0.752548, actual val: 0
+model out: 0.752687, actual val: 0
+model out: 0.753192, actual val: 0
+model out: 0.753219, actual val: 0
+model out: 0.753273, actual val: 0
+model out: 0.753566, actual val: 0
+model out: 0.753742, actual val: 0
+model out: 0.753759, actual val: 0
+model out: 0.754245, actual val: 0
+model out: 0.754772, actual val: 0
+model out: 0.754981, actual val: 0
+model out: 0.755331, actual val: 0
+model out: 0.757444, actual val: 0
+model out: 0.758287, actual val: 0
+model out: 0.759697, actual val: 0
+model out: 0.75984, actual val: 0
+model out: 0.75986, actual val: 0
+model out: 0.759962, actual val: 0
+model out: 0.760065, actual val: 0
+model out: 0.760072, actual val: 0
+model out: 0.760186, actual val: 0
+model out: 0.760208, actual val: 0
+model out: 0.760238, actual val: 0
+model out: 0.7604, actual val: 0
+model out: 0.760509, actual val: 0
+model out: 0.760509, actual val: 0
+model out: 0.760528, actual val: 0
+model out: 0.760541, actual val: 0
+model out: 0.760606, actual val: 0
+model out: 0.76063, actual val: 0
+model out: 0.760652, actual val: 0
+model out: 0.760677, actual val: 0
+model out: 0.760725, actual val: 0
+model out: 0.760751, actual val: 0
+model out: 0.760756, actual val: 0
+model out: 0.760761, actual val: 0
+model out: 0.760761, actual val: 0
+model out: 0.760766, actual val: 0
+model out: 0.760803, actual val: 0
+model out: 0.760826, actual val: 0
+model out: 0.76085, actual val: 0
+model out: 0.760886, actual val: 0
+model out: 0.760914, actual val: 0
+model out: 0.760914, actual val: 0
+model out: 0.760915, actual val: 0
+model out: 0.76092, actual val: 0
+model out: 0.760931, actual val: 0
+model out: 0.760935, actual val: 0
+model out: 0.760955, actual val: 0
+model out: 0.760959, actual val: 0
+model out: 0.760961, actual val: 0
+model out: 0.760962, actual val: 0
+model out: 0.760963, actual val: 0
+model out: 0.760976, actual val: 0
+model out: 0.760985, actual val: 0
+model out: 0.760995, actual val: 0
+model out: 0.760996, actual val: 0
+model out: 0.760999, actual val: 0
+model out: 0.761055, actual val: 0
+model out: 0.761085, actual val: 0
+model out: 0.761107, actual val: 0
+model out: 0.761128, actual val: 0
+model out: 0.761129, actual val: 0
+model out: 0.761165, actual val: 0
+model out: 0.761166, actual val: 0
+model out: 0.761197, actual val: 0
+model out: 0.761201, actual val: 0
+model out: 0.761218, actual val: 0
+model out: 0.761269, actual val: 0
+model out: 0.761292, actual val: 0
+model out: 0.761301, actual val: 0
+model out: 0.761336, actual val: 0
+model out: 0.761368, actual val: 0
+model out: 0.761389, actual val: 0
+model out: 0.761397, actual val: 0
+model out: 0.761429, actual val: 0
+model out: 0.761432, actual val: 0
+model out: 0.761452, actual val: 0
+model out: 0.761457, actual val: 0
+model out: 0.761465, actual val: 0
+model out: 0.761476, actual val: 0
+model out: 0.761522, actual val: 0
+model out: 0.761532, actual val: 0
+model out: 0.761564, actual val: 0
+model out: 0.761606, actual val: 0
+model out: 0.761612, actual val: 0
+model out: 0.761625, actual val: 0
+model out: 0.761665, actual val: 0
+model out: 0.761715, actual val: 0
+model out: 0.761769, actual val: 0
+model out: 0.761795, actual val: 0
+model out: 0.761796, actual val: 0
+model out: 0.761801, actual val: 0
+model out: 0.761893, actual val: 0
+model out: 0.761902, actual val: 0
+model out: 0.761917, actual val: 0
+model out: 0.761917, actual val: 0
+model out: 0.761918, actual val: 0
+model out: 0.76196, actual val: 0
+model out: 0.761961, actual val: 0
+model out: 0.761999, actual val: 0
+model out: 0.762041, actual val: 0
+model out: 0.762066, actual val: 0
+model out: 0.762069, actual val: 0
+model out: 0.762098, actual val: 0
+model out: 0.762118, actual val: 0
+model out: 0.762123, actual val: 0
+model out: 0.762129, actual val: 0
+model out: 0.762141, actual val: 0
+model out: 0.762153, actual val: 0
+model out: 0.762155, actual val: 0
+model out: 0.762206, actual val: 0
+model out: 0.762251, actual val: 0
+model out: 0.76227, actual val: 0
+model out: 0.762308, actual val: 0
+model out: 0.76236, actual val: 0
+model out: 0.762404, actual val: 0
+model out: 0.762416, actual val: 0
+model out: 0.762459, actual val: 0
+model out: 0.76249, actual val: 0
+model out: 0.762511, actual val: 0
+model out: 0.762512, actual val: 0
+model out: 0.762525, actual val: 0
+model out: 0.762531, actual val: 0
+model out: 0.762638, actual val: 0
+model out: 0.762639, actual val: 0
+model out: 0.762655, actual val: 0
+model out: 0.762684, actual val: 0
+model out: 0.762692, actual val: 0
+model out: 0.762713, actual val: 0
+model out: 0.762722, actual val: 0
+model out: 0.762729, actual val: 0
+model out: 0.762787, actual val: 0
+model out: 0.76281, actual val: 0
+model out: 0.762838, actual val: 0
+model out: 0.762841, actual val: 0
+model out: 0.762943, actual val: 0
+model out: 0.762966, actual val: 0
+model out: 0.762967, actual val: 0
+model out: 0.763024, actual val: 0
+model out: 0.76303, actual val: 0
+model out: 0.763041, actual val: 0
+model out: 0.763048, actual val: 0
+model out: 0.763071, actual val: 0
+model out: 0.763178, actual val: 0
+model out: 0.763179, actual val: 0
+model out: 0.763217, actual val: 0
+model out: 0.763314, actual val: 0
+model out: 0.763342, actual val: 0
+model out: 0.763378, actual val: 0
+model out: 0.763401, actual val: 0
+model out: 0.763467, actual val: 0
+model out: 0.763576, actual val: 0
+model out: 0.763711, actual val: 0
+model out: 0.763759, actual val: 0
+model out: 0.763767, actual val: 0
+model out: 0.76381, actual val: 0
+model out: 0.763939, actual val: 0
+model out: 0.764055, actual val: 0
+model out: 0.764064, actual val: 0
+model out: 0.76411, actual val: 0
+model out: 0.764203, actual val: 0
+model out: 0.76426, actual val: 0
+model out: 0.764272, actual val: 0
+model out: 0.764348, actual val: 0
+model out: 0.764397, actual val: 0
+model out: 0.764456, actual val: 0
+model out: 0.764463, actual val: 0
+model out: 0.764465, actual val: 0
+model out: 0.764498, actual val: 0
+model out: 0.764531, actual val: 0
+model out: 0.764538, actual val: 0
+model out: 0.764543, actual val: 0
+model out: 0.764571, actual val: 0
+model out: 0.764582, actual val: 0
+model out: 0.764595, actual val: 0
+model out: 0.764615, actual val: 0
+model out: 0.764632, actual val: 0
+model out: 0.764781, actual val: 0
+model out: 0.764827, actual val: 0
+model out: 0.764902, actual val: 0
+model out: 0.764918, actual val: 0
+model out: 0.764947, actual val: 0
+model out: 0.764974, actual val: 0
+model out: 0.764975, actual val: 0
+model out: 0.764977, actual val: 0
+model out: 0.764987, actual val: 0
+model out: 0.76499, actual val: 0
+model out: 0.765017, actual val: 0
+model out: 0.765089, actual val: 0
+model out: 0.765111, actual val: 0
+model out: 0.765148, actual val: 0
+model out: 0.765152, actual val: 0
+model out: 0.765197, actual val: 0
+model out: 0.765198, actual val: 0
+model out: 0.76522, actual val: 0
+model out: 0.765242, actual val: 0
+model out: 0.765351, actual val: 0
+model out: 0.765564, actual val: 0
+model out: 0.765628, actual val: 0
+model out: 0.765668, actual val: 0
+model out: 0.76567, actual val: 0
+model out: 0.765729, actual val: 0
+model out: 0.765745, actual val: 0
+model out: 0.76579, actual val: 0
+model out: 0.765809, actual val: 0
+model out: 0.765833, actual val: 0
+model out: 0.765901, actual val: 0
+model out: 0.765991, actual val: 0
+model out: 0.766087, actual val: 0
+model out: 0.766284, actual val: 0
+model out: 0.766309, actual val: 0
+model out: 0.766326, actual val: 0
+model out: 0.766588, actual val: 0
+model out: 0.766614, actual val: 0
+model out: 0.766634, actual val: 0
+model out: 0.766651, actual val: 0
+model out: 0.767453, actual val: 0
+model out: 0.767501, actual val: 0
+model out: 0.767608, actual val: 0
+model out: 0.767651, actual val: 0
+model out: 0.76808, actual val: 0
+model out: 0.768142, actual val: 0
+model out: 0.768214, actual val: 0
+model out: 0.768393, actual val: 0
+model out: 0.768432, actual val: 0
+model out: 0.76848, actual val: 0
+model out: 0.768512, actual val: 0
+model out: 0.769038, actual val: 0
+model out: 0.769078, actual val: 0
+model out: 0.769207, actual val: 0
+model out: 0.769895, actual val: 0
+model out: 0.769983, actual val: 0
+model out: 0.770356, actual val: 0
+model out: 0.770431, actual val: 0
+model out: 0.796938, actual val: 0
+model out: 0.799769, actual val: 0
+model out: 0.800897, actual val: 0
+model out: 0.847907, actual val: 0
+model out: 0.863968, actual val: 0
+model out: 0.871232, actual val: 0
+model out: 0.87322, actual val: 0
+model out: 0.885472, actual val: 0
+model out: 0.935176, actual val: 0
+model out: 0.939408, actual val: 0
+model out: 0.940721, actual val: 0
+model out: 0.947421, actual val: 0
+model out: 0.968269, actual val: 0
+model out: 0.99516, actual val: 0
+Total loss: 0.5628587942677399
+-----------------------------------------
+Model
+type: nn
+criterion: ce
+optimizer: adam
+learning_rate: 0.1
+threshold: 0.005
+segmentation length: 3
+offset: 5
+testing set length: 100
+model out: 0.720593, actual val: 0
+model out: 0.745234, actual val: 0
+model out: 0.750436, actual val: 0
+model out: 0.750755, actual val: 0
+model out: 0.751529, actual val: 0
+model out: 0.752391, actual val: 0
+model out: 0.752852, actual val: 0
+model out: 0.753262, actual val: 0
+model out: 0.754181, actual val: 0
+model out: 0.754198, actual val: 0
+model out: 0.75449, actual val: 0
+model out: 0.754956, actual val: 0
+model out: 0.755551, actual val: 0
+model out: 0.755933, actual val: 0
+model out: 0.756226, actual val: 0
+model out: 0.756971, actual val: 0
+model out: 0.756991, actual val: 0
+model out: 0.757288, actual val: 0
+model out: 0.757791, actual val: 0
+model out: 0.758053, actual val: 0
+model out: 0.758344, actual val: 0
+model out: 0.758365, actual val: 0
+model out: 0.758406, actual val: 0
+model out: 0.758652, actual val: 0
+model out: 0.759085, actual val: 0
+model out: 0.759086, actual val: 0
+model out: 0.759169, actual val: 0
+model out: 0.759307, actual val: 0
+model out: 0.759344, actual val: 0
+model out: 0.759499, actual val: 0
+model out: 0.7599, actual val: 0
+model out: 0.76003, actual val: 0
+model out: 0.760035, actual val: 0
+model out: 0.760289, actual val: 0
+model out: 0.760528, actual val: 0
+model out: 0.760973, actual val: 0
+model out: 0.760976, actual val: 0
+model out: 0.76106, actual val: 0
+model out: 0.7611, actual val: 0
+model out: 0.76113, actual val: 0
+model out: 0.76131, actual val: 0
+model out: 0.761361, actual val: 0
+model out: 0.761853, actual val: 0
+model out: 0.763599, actual val: 0
+model out: 0.763614, actual val: 0
+model out: 0.763758, actual val: 0
+model out: 0.764214, actual val: 0
+model out: 0.764267, actual val: 0
+model out: 0.764697, actual val: 0
+model out: 0.765453, actual val: 0
+model out: 0.765534, actual val: 0
+model out: 0.765915, actual val: 0
+model out: 0.76608, actual val: 0
+model out: 0.766254, actual val: 0
+model out: 0.76647, actual val: 0
+model out: 0.766552, actual val: 0
+model out: 0.766717, actual val: 0
+model out: 0.766807, actual val: 0
+model out: 0.766891, actual val: 0
+model out: 0.766906, actual val: 0
+model out: 0.766935, actual val: 0
+model out: 0.767034, actual val: 0
+model out: 0.767106, actual val: 0
+model out: 0.767532, actual val: 0
+model out: 0.767679, actual val: 0
+model out: 0.767805, actual val: 0
+model out: 0.767842, actual val: 0
+model out: 0.76785, actual val: 0
+model out: 0.768035, actual val: 0
+model out: 0.768163, actual val: 0
+model out: 0.768237, actual val: 0
+model out: 0.768302, actual val: 0
+model out: 0.768331, actual val: 0
+model out: 0.76857, actual val: 0
+model out: 0.768588, actual val: 0
+model out: 0.769586, actual val: 0
+model out: 0.769892, actual val: 0
+model out: 0.770263, actual val: 0
+model out: 0.770475, actual val: 0
+model out: 0.770606, actual val: 0
+model out: 0.770706, actual val: 0
+model out: 0.771055, actual val: 0
+model out: 0.771117, actual val: 0
+model out: 0.771494, actual val: 0
+model out: 0.771829, actual val: 0
+model out: 0.77221, actual val: 0
+model out: 0.777155, actual val: 0
+model out: 0.840465, actual val: 0
+model out: 0.933212, actual val: 0
+model out: 0.947851, actual val: 1
+model out: 0.949885, actual val: 0
+model out: 0.954036, actual val: 1
+model out: 0.962308, actual val: 0
+model out: 0.9627, actual val: 1
+model out: 0.963454, actual val: 1
+model out: 0.966033, actual val: 1
+model out: 0.966515, actual val: 1
+model out: 0.96919, actual val: 1
+model out: 0.978816, actual val: 1
+model out: 0.980754, actual val: 1
+Total loss: 0.5397422324670192

@@ -45,11 +45,13 @@ def segmentize():
         for i in range(len(data)):
             try:
                 seg = data[i : i + seg_length]
-                if len(seg) != seg_length:
-                    continue
-                if isConsecutive(seg, deviceID, date):
+                if isConsecutive(seg, deviceID, date) and len(seg) == seg_length:
                     # for j in range(len(seg)):
                     #     seg[j] = [ [x] for x in seg[j]]
+                    # seg_1d = []
+                    # for chunk in [ x[2:-1] for x in seg ]:
+                    #     for d in chunk:
+                    #         seg_1d.append(d)
                     segs.append([[ x[2:-1] for x in seg ], seg[0][-1]])
             except Exception as e:
                 print(f'Exception: {e}')

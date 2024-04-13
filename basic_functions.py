@@ -109,14 +109,18 @@ def load_seg_data(seg_length, offset) -> list:
         print(f'\nFailed. Error: {e}\n')
     return data
 
-def load_train_data(seg_length, offset, training_set_length) -> None:
+def load_train_data(seg_length, offset, training_set_length, mode) -> None:
     data = load_seg_data(seg_length, offset)
     testing_set = []
-    random.seed(int(time.time()))
-    for i in range(training_set_length):
-        rd = random.randint(0, len(data) - 1)
-        testing_set.append(data.pop(rd))
-    return data, testing_set
+    while True:
+        random.seed(time.time())
+        for i in range(training_set_length):
+            rd = random.randint(0, len(data) - 1)
+            testing_set.append(data.pop(rd))
+        for seg, tag in testing_set:
+            if tag == mode:
+                return data, testing_set
+    
 
 def save_labelled_data(d, date, serial) -> None:
     filename = f'data\\labelled-{serial}-{date}.json'
@@ -176,9 +180,11 @@ def time_match(running, instant) -> bool:
             continue
     return 0
 
-def log_write(s) -> None:
+def log_write(s, path = None) -> None:
     global logname
-    with open(logname, 'a') as f:
+    if path != None:
+        logname = path
+    with open(logname, 'a+') as f:
         print(s, file=f)
         print(s)
     return

@@ -18,35 +18,45 @@ class NeuralNet(nn.Module):
         super(NeuralNet, self).__init__()
         self.layer1 = nn.Linear(in_dim, n_hidden_1) #,nn.BatchNorm1d(n_hidden_1)
         self.layer2 = nn.Linear(n_hidden_1, n_hidden_2) #,nn.BatchNorm1d (n_hidden_2))
-        self.layer3 = nn.Linear(n_hidden_2, n_hidden_3) #,nn.BatchNorm1d (n_hidden_3))
-        self.layer4 = nn.Linear(n_hidden_3, n_hidden_4) #,nn.BatchNorm1d (n_hidden_4))
-        self.layer5 = nn.Linear(n_hidden_4, out_dim)
+        self.layer3 = nn.Linear(n_hidden_2, n_hidden_3)
+        self.layer4 = nn.Linear(n_hidden_3, n_hidden_3)
+        self.layer5 = nn.Linear(n_hidden_3, n_hidden_3) #,nn.BatchNorm1d (n_hidden_3))
+        self.layer6 = nn.Linear(n_hidden_3, n_hidden_4) #,nn.BatchNorm1d (n_hidden_4))
+        self.layer7 = nn.Linear(n_hidden_4, out_dim)
     def forward(self, x):
-        x = F.relu(self.layer1(x))
+        x = F.relu(self.layer1(x.view(-1)))
         x = F.relu(self.layer2(x))
         x = F.relu(self.layer3(x))
         x = F.relu(self.layer4(x))
-        x = F.sigmoid(self.layer5(x))
-        return x.squeeze()
+        x = F.relu(self.layer5(x))
+        x = F.relu(self.layer6(x))
+        x = F.sigmoid(self.layer7(x))
+        return x
     
 class ConvNet(nn.Module):
-    def __init__(self):
+    def __init__(self, para):
         super(ConvNet, self).__init__()
-        self.conv1 = nn.Conv2d(3, 6, 5)
-        self.pool = nn.MaxPool2d(2, 2)
-        self.conv2 = nn.Conv2d(6, 16, 5)
-        self.fc1 = nn.Linear(16 * 5 * 5, 120)
-        self.fc2 = nn.Linear(120, 84)
-        self.fc3 = nn.Linear(84, 10)
+        self.conv1 = nn.Sequential( #input shape (3, 4)
+            nn.Conv2d(in_channels=1, #input height 必须手动提供 输入张量的channels数
+                      out_channels=para, #n_filter 必须手动提供 输出张量的channels数
+                      kernel_size=3, #filter size 必须手动提供 卷积核的大小 
+                      # 如果左右两个数不同，比如3x5的卷积核，那么写作kernel_size = (3, 5)，注意需要写一个tuple，而不能写一个列表（list）
+                      stride=1, #filter step 卷积核在图像窗口上每次平移的间隔，即所谓的步长
+                      padding=2 #con2d出来的图片大小不变 Pytorch与Tensorflow在卷积层实现上最大的差别就在于padding上
+            ), # output shape (16,28,28) 输出图像尺寸计算公式是唯一的 # O = （I - K + 2P）/ S +1
+            nn.ReLU(), # 分段线性函数，把所有的负值都变为0，而正值不变，即单侧抑制
+            nn.MaxPool2d(kernel_size=2) #2x2采样，28/2=14，output shape (6,2) maxpooling有局部不变性而且可以提取显著特征的同时降低模型的参数，从而降低模型的过拟合
+        ) 
+        self.conv2 = nn.Sequential(nn.Conv2d(para, 3, 2, 1, 1), #output shape (3, 2)
+                                  nn.ReLU(),
+                                  nn.MaxPool2d(2))
+        self.out = nn.Linear(6, 1)
 
     def forward(self, x):
-        x = self.pool(F.relu(self.conv1(x)))
-        x = self.pool(F.relu(self.conv2(x)))
-        x = x.view(-1, 16 * 5 * 5)
-        x = F.relu(self.fc1(x))
-        x = F.relu(self.fc2(x))
-        x = self.fc3(x)
-        return x
+        x = self.conv1(x) # 卷一次
+        x = self.conv2(x) # 卷两次
+        x = x.view(x.size(0), -1)
+        return F.sigmoid(self.out(x.view(-1)))
 
 class MyDataset(Dataset):
     def __init__(self, x, y):
@@ -59,24 +69,32 @@ class MyDataset(Dataset):
 
 
 def training_set(seg_length, offset, training_set_length, mode) -> tuple:
-    trainSet, testSet = load_train_data(seg_length, offset, training_set_length)
-    print(random.choice(trainSet), '\n', random.choice(trainSet), '\n', random.choice(testSet), '\n', random.choice(testSet))
+    trainSet, testSet = load_train_data(seg_length, offset, training_set_length, mode)
+    
     for i in range(len(trainSet)):
-        if trainSet[i][1] != [mode]:
+        if trainSet[i][1] != mode:
             trainSet[i][1] = 0
         else:
             trainSet[i][1] = 1
     for i in range(len(testSet)):
-        if testSet[i][1] != [mode]:
+        if testSet[i][1] != mode:
             testSet[i][1] = 0
         else:
             testSet[i][1] = 1
 
     train_ds = MyDataset([x[0] for x in trainSet], [x[1] for x in trainSet])
-    train_dl = DataLoader(train_ds, batch_size=1, shuffle=True)
+    train_dl = DataLoader(train_ds, batch_size=1)
 
     test_ds = MyDataset([x[0] for x in testSet], [x[1] for x in testSet])
-    test_dl = DataLoader(test_ds, batch_size=1, shuffle=True)
+    test_dl = DataLoader(test_ds, batch_size=1)
+
+    # for seg, tag in testSet:
+    #     if tag == 1:
+    #         print(seg)
+    # for seg, tag in test_dl:
+    #     if tag == t.tensor([1]):
+    #         print(seg)
+    # print(i)
 
     return train_dl, test_dl
 
@@ -93,11 +111,11 @@ def cri_opt(criterion_type, optimizer_type, model, learning_rate, momentum) -> o
     elif optimizer_type == 'adagrad':
         optimizer = optim.Adagrad(model.parameters(), lr=learning_rate)
     elif optimizer_type == 'adadelta':
-        optimizer = optim.Adadelta(model.parameters(), lr=learning_rate, momentum=momentum)
+        optimizer = optim.Adadelta(model.parameters(), lr=learning_rate)
     elif optimizer_type == 'rms':
         optimizer = optim.RMSprop(model.parameters(), lr=learning_rate, momentum=momentum)
     elif optimizer_type == 'adam':
-        optimizer = optim.Adam(model.parameters(), lr=learning_rate, momentum=momentum)
+        optimizer = optim.Adam(model.parameters(), lr=learning_rate)
     else:
         print(f'Wrong optimizer type: {optimizer_type}')
         exit(1)
@@ -108,7 +126,7 @@ def training(model, criterion, optimizer, train_loader, test_loader, num_epoches
     prev_train_loss = []
     prev_test_loss = []
     for epoch in range(num_epoches):
-        print(f'On number {epoch} training')
+        print(f'\nOn number {epoch} training')
         train_loss = 0
         model.train()
 
@@ -118,8 +136,16 @@ def training(model, criterion, optimizer, train_loader, test_loader, num_epoches
 
         for seg, tag in train_loader:
             # 前向传播
-            out = model(seg)
-            loss = criterion(out, tag)
+            try:
+                out = model(seg)
+                loss = criterion(out, tag)
+            except ValueError as e:
+                print(f'\033[31mtrain set ValueError: {e}\nout: {out}\ntag: {tag}\033[30m')
+                exit(1)
+            except RuntimeError as e:
+                print(f'\033[31mtrain set RuntimeError: {e}\nseg: {seg}\ntag: {tag}\033[30m')
+                exit(1)
+            
             # 反向传播
             optimizer.zero_grad()
             loss.backward()
@@ -133,62 +159,94 @@ def training(model, criterion, optimizer, train_loader, test_loader, num_epoches
         model.eval()
 
         for seg, tag in test_loader:
-            out = model(seg)
+            try:
+                out = model(seg)
+            except RuntimeError as e:
+                print(f'test set Error: {e}\nseg: {seg}\ntag: {tag}')
+                # exit(1)
+            # out = model(seg)
             loss = criterion(out, tag)
+            print(out, '\n', tag, '\n', loss)
             test_loss += loss.item()
 
+        unit_train_loss = train_loss / len(train_loader)
+        unit_test_loss = test_loss / len(test_loader)
         print('epoch: {}, Train Loss x: {:.4f}, Test Loss x: {:.4f}'
-            .format(epoch, train_loss / len(train_loader), test_loss / len(test_loader)))
+            .format(epoch, train_loss, test_loss))
         
         t.save(model.state_dict(), pt_path)
         try:
-            if abs(train_loss - prev_train_loss[-1]) / prev_train_loss[-1] < threshold and abs(test_loss - prev_test_loss[-1]) / prev_test_loss[-1] < threshold:
+            if round(unit_train_loss, 4) == 0 and round(unit_test_loss, 4) == 0:
+                return
+            elif abs(unit_train_loss - prev_train_loss[-1]) / prev_train_loss[-1] < threshold and abs(unit_test_loss - prev_test_loss[-1]) / prev_test_loss[-1] < threshold:
                 print('Converged.')
-                break
-            elif train_loss == 0 and test_loss == 0:
-                break
+                return
         except:
             pass
-        prev_train_loss.append(train_loss)
-        prev_test_loss.append(test_loss)
+        prev_train_loss.append(unit_train_loss)
+        prev_test_loss.append(unit_test_loss)
     return
 
 def testing(data, model):
+    sum = 0
+    l = []
     for seg, tag in data:
-        out = model(seg)
-        print(f'model out: {out}, actual val: {tag}')
+        out = model(seg).item()
+        sum += (out - tag.item()) ** 2
+        l.append((round(out, 6), int(tag.item())))
+    l.sort(key=lambda x: x[0])
+    for out, tag in l:
+        log_write(f'model out: {out}, actual val: {tag}')
+    log_write(f'Total loss: {sum / len(data)}')
     return
 
 if __name__ == "__main__":
 
-    num_epoches = 20
-    learning_rate = 0.01
+    num_epoches = 5
+    learning_rate = 0.1
     momentum = 0.1
     lr_itr_rate = 1
-    threshold = 0.01
+    threshold = 0.005
+    cnn_para = 4000
 
     seg_length = 3
     offset = 5
-    training_set_length = 40
+    testing_set_length = 100
+
     mode = 1
-    criterion_type = 'mse'
-    optimizer_type = 'adagrad'
+    model_type = 'nn'
+    criterion_type = 'ce'
+    optimizer_type = 'adam'
     
-    pt_path = f'net\\model_nn_{learning_rate}_{momentum}_{criterion_type}_{optimizer_type}.pt'
+    log_path = f'ModelLog.log'
     dtype = t.float
-    train_loader, test_loader = training_set(seg_length, offset, training_set_length, mode)
     
-    model = NeuralNet(1, 300, 800, 400, 1, 1)
+    log_write('-----------------------------------------', log_path)
+    log_write(f'Model\ntype: {model_type}\ncriterion: {criterion_type}\noptimizer: {optimizer_type}\nlearning_rate: {learning_rate}\nthreshold: {threshold}\nsegmentation length: {seg_length}\noffset: {offset}\ntesting set length: {testing_set_length}', log_path)
+    
+    if model_type == 'nn':
+        model = NeuralNet(12, 500, 800, 800, 300, 1) 
+        pt_path = f'net\\{mode}_model_{model_type}_{criterion_type}_{optimizer_type}_{learning_rate}_.pt'
+    elif model_type == 'cnn':
+        model = ConvNet(cnn_para)
+        pt_path = f'net\\{mode}_model_{model_type}_{criterion_type}_{optimizer_type}_{learning_rate}_{cnn_para}_.pt'
+    else:
+        print(f'Wrong model type: {model_type}')
+        exit(0)
+
     try:
         model.load_state_dict(t.load(pt_path))
         print(f'model parameters loaded.')
     except Exception as e:
         print(f'Exception: {e}\nStart with new model.')
 
+    train_loader, test_loader = training_set(seg_length, offset, testing_set_length, mode)
     criterion, optimizer = cri_opt(criterion_type, optimizer_type, model, learning_rate, momentum)
 
     model.to(device)
     print(f'Device: {device}')
 
-    training(model, criterion, optimizer, train_loader, test_loader, num_epoches, pt_path, threshold)
+    # training(model, criterion, optimizer, train_loader, test_loader, num_epoches, pt_path, threshold)
     testing(test_loader, model)
+
+    print(f'file path: {pt_path}')
