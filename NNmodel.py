@@ -231,7 +231,7 @@ if __name__ == "__main__":
             model_folder = 'net'
         break
 
-    num_epoches = 2
+    num_epoches = 1
     learning_rate = 0.1
     momentum = 0.1
     lr_itr_rate = 1
@@ -245,7 +245,7 @@ if __name__ == "__main__":
     mode = 3
     model_type = 'nn'
     criterion_type = 'ce'
-    optimizer_type = 'adagrad'
+    optimizer_type = 'adam'
     
     log_path = f'ModelLog.log'
     dtype = t.float

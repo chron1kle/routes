@@ -361,6 +361,7 @@ class Data_Set:
                 seg_out.append([])
                 for unit in seg:
                     seg_out[0].append(unit.mean)
+                    
                 if i < testsize:
                     test_set.append([seg_out, seg[0].tag])
                     i += 1
