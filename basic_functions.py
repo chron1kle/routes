@@ -41,8 +41,13 @@ d312_20240103 = [(1436, 1441, 1), (1447, 1457, 1), (1459, 1509, 1), (1514, 1554,
 d312_20240106 = [(1539, 1543, 1), (1546, 1552, 1), (1559, 1636, 1), (1640, 1708, 1), (1736, 1758, 1), (1814, 1858, 2)]
 d312_20240107 = [(1500, 1504, 1), (1507, 1526, 1), (1537, 1554, 1), (1611, 1657, 3), (1701, 1748, 3), (1825, 1837, 1), (1844, 1854, 1), (1858, 1920, 1), (1922, 1925, 1), (1928, 1957, 1), (1958, 2001, 1), (2007, 2023, 1)]
 d312_20240119 = [(1941, 1948, 1), (1951, 2044, 1)]
-d312_20240127 = [(1604, 1610, 1), (1616, 1656, 1), (2230, 2310, 1), (2315, 2323, 1)]
+# d312_20240127 = [(1604, 1610, 1), (1616, 1656, 1), (2230, 2310, 1), (2315, 2323, 1)]
 d312_20240329 = [(1445, 1451, 1), (1457, 1542, 1)]
+d312_20240415 = [(1957, 2018, 2), (2034, 2110, 2)]
+d312_20240417 = [(1607, 1620, 2), (1631, 1652, 2)]
+d312_20240419 = [(1647, 1702, 2), (1713, 1803, 2), (1823, 1906, 2)]
+
+dates = ['20240101', '20240102', '20240103', '20240106', '20240107', '20240119', '20240329', '20240415', '20240417', '20240419']
 
 def storeData(data, serial, date) -> None:
     try:
@@ -94,8 +99,15 @@ def loadCaliData(serial, date) -> list:
         print(f'\nFailed. Error: {e}\n')
     return data
 
-def load_seg_data(seg_length, offset) -> list:
-    filename = f'data\\segs_{seg_length}_{offset}.json'
+def load_seg_data(seg_length, offset, flag=None) -> list:
+    if flag == "confi":
+        filename = f'data\\segsConfi_{seg_length}_{offset}.json'
+    elif flag == None:
+        filename = f'data\\segs_{seg_length}_{offset}.json'
+    else:
+        print(f'Wrong flag: {flag} in function {load_seg_data.__name__}')
+        exit(1)
+
     try:
         with open(filename, 'r') as f:
             data = json.load(f)
@@ -109,18 +121,40 @@ def load_seg_data(seg_length, offset) -> list:
         print(f'\nFailed. Error: {e}\n')
     return data
 
-def load_train_data(seg_length, offset, training_set_length, mode) -> None:
-    data = load_seg_data(seg_length, offset)
-    testing_set = []
-    while True:
-        random.seed(time.time())
-        for i in range(training_set_length):
-            rd = random.randint(0, len(data) - 1)
-            testing_set.append(data.pop(rd))
-        for seg, tag in testing_set:
-            if tag == mode:
-                return data, testing_set
+def load_train_data(seg_length, offset, testing_set_length, mode) -> None:
     
+    data = load_seg_data(seg_length, offset)
+    training_set = []
+    testing_set = []
+    cnt = 0
+    random.seed(time.time())
+    random.shuffle(data)
+    # for seg in data:
+    #     if seg[-1] == mode:
+    #         print(seg)
+
+    for seg in data:
+        if len(testing_set) < testing_set_length: 
+            if cnt < 5:
+                if seg[-1] != mode:
+                    training_set.append(seg)
+                else:
+                    testing_set.append(seg)
+                    cnt += 1
+            else:
+                testing_set.append(seg)
+        else:
+            training_set.append(seg)
+    print(f'training set length: {len(training_set)}  testing set length: {len(testing_set)}')
+    return training_set, testing_set
+    
+def LoadCatagory(serial, dates) -> None:
+    dataSet = Data_Set()
+    for date in dates:
+        data = loadLabelledData(serial, date)
+        for line in data:
+            dataSet.add(Data_Unit(line))
+    return dataSet
 
 def save_labelled_data(d, date, serial) -> None:
     filename = f'data\\labelled-{serial}-{date}.json'
@@ -142,7 +176,7 @@ def save_cali_data(d, date, serial) -> None:
         log_write(f'\nFailed to store calibrated data. Error: {e}\n')
     return
 
-def save_seg_data(d, filename) -> None:
+def save_seg_data(d, filename, flag=None) -> None:
     try:
         with open(filename, 'r+') as f:
             data = json.load(f)
@@ -156,6 +190,16 @@ def save_seg_data(d, filename) -> None:
         log_write(f'\n{len(d)} numbers of segmentation data successfully appended to {filename}\n')
     except Exception as e:
         log_write(f'\nFailed to store segmentation data. Error: {e}\n')
+    return
+
+def save_confi_data(data, seg_length, offset) -> None:
+    filename = f'data\\confi_{seg_length}_{offset}.json'
+    try:
+        with open(filename, 'a+') as f:
+            json.dump(data, f)
+        log_write(f'\n{len(data)} numbers of segmentation data with labelled confidence successfully saved to {filename}\n')
+    except Exception as e:
+        log_write(f'\nFailed to store confidence data. Error: {e}\n')
     return
 
 def save_train_data(trainSet, testSet, seg_length, offset) -> None:
@@ -209,3 +253,117 @@ def distrubution_process(data, position, order) -> tuple:
     subjects = [x[0] for x in refs]
     freqs = [x[1] for x in refs]
     return (subjects, freqs)
+
+class Data_Unit:
+    def __init__(self, data) -> None:
+        if data[0] + 800 > 2400:
+            return
+        self.time = data[0] + 800
+        self.date = data[1]
+        self.mean = data[2]
+        self.min = data[3]
+        self.max = data[4]
+        self.sd = data[5]
+        self.tag = data[-1]
+    def addZscore(self, z) -> None:
+        self.zscore = z
+
+class Data_Set:
+    # global d312_20240101, d312_20240102, d312_20240103, d312_20240106, d312_20240107, d312_20240119, d312_20240329, d312_20240415, d312_20240417, d312_20240419
+    d312_20240101 = [(1418, 1427, 1), (1555, 1605, 1), (1852, 1858, 1), (1903, 1907, 1), (1914, 1949, 1), (1957, 2032, 1), (2037, 2041, 1), (2047, 2053, 1), (2133, 2201, 1), (2206, 2233, 1)]
+    d312_20240102 = [(1916, 1924, 1), (1925, 1934, 1), (1953, 2004, 1), (2010, 2039, 1), (2042, 2121, 1), (2128, 2132, 1), (2149, 2230, 1), (2237, 2323, 1), (2328, 2333, 1)]
+    d312_20240103 = [(1436, 1441, 1), (1447, 1457, 1), (1459, 1509, 1), (1514, 1554, 1), (1600, 1640, 1), (1646, 1651, 1), (1911, 1916, 1), (1921, 1926, 1), (1928, 2005, 1), (2010, 2045, 1), (2047, 2052, 1), (2058, 2063, 1)]
+    d312_20240106 = [(1539, 1543, 1), (1546, 1552, 1), (1559, 1636, 1), (1640, 1708, 1), (1736, 1758, 1), (1814, 1858, 2)]
+    d312_20240107 = [(1500, 1504, 1), (1507, 1526, 1), (1537, 1554, 1), (1611, 1657, 3), (1701, 1748, 3), (1825, 1837, 1), (1844, 1854, 1), (1858, 1920, 1), (1922, 1925, 1), (1928, 1957, 1), (1958, 2001, 1), (2007, 2023, 1)]
+    d312_20240119 = [(1941, 1948, 1), (1951, 2044, 1)]
+    # d312_20240127 = [(1604, 1610, 1), (1616, 1656, 1), (2230, 2310, 1), (2315, 2323, 1)]
+    d312_20240329 = [(1445, 1451, 1), (1457, 1542, 1)]
+    d312_20240415 = [(1957, 2018, 2), (2034, 2110, 2)]
+    d312_20240417 = [(1607, 1620, 2), (1631, 1652, 2)]
+    d312_20240419 = [(1647, 1702, 2), (1713, 1803, 2), (1823, 1906, 2)]
+
+    def __init__(self) -> None:
+        self.others = []
+        self.metro = []
+        self.bus = []
+        self.seg_others = []
+        self.seg_metro = []
+        self.seg_bus = []
+    
+    def add(self, dataunit) -> None:
+        try:
+            if dataunit.mean < 5:
+                return
+            if dataunit.tag == 0:
+                tag_set = self.GetTagSet(dataunit.date)
+                for (start, end, tag) in tag_set:
+                    if dataunit.time - end < 3 and dataunit.time - end > 0:
+                        return
+                    elif start - dataunit.time < 3 and start - dataunit.time > 0:
+                        return
+                self.others.append(dataunit)
+            elif dataunit.tag == 1:
+                self.metro.append(dataunit)
+            elif dataunit.tag == 2:
+                self.bus.append(dataunit)
+        except:
+            return
+    
+    def GetTagSet(self, date) -> list:
+        if date == '20240101':
+            return self.d312_20240101
+        elif date == '20240102':
+            return self.d312_20240102
+        elif date == '20240103':
+            return self.d312_20240103
+        elif date == '20240106':
+            return self.d312_20240106
+        elif date == '20240107':
+            return self.d312_20240107
+        elif date == '20240119':
+            return self.d312_20240119
+        elif date == '20240329':
+            return self.d312_20240329
+        elif date == '20240415':
+            return self.d312_20240415
+        elif date == '20240417':
+            return self.d312_20240417
+        elif date == '20240419':
+            return self.d312_20240419
+    
+    def segment(self, length) -> None:
+        print("Data unit: ", len(self.others), ' ', len(self.metro), ' ', len(self.bus))
+        for k, dset in enumerate([self.others, self.metro, self.bus]):
+            for i, dataunit in enumerate(dset):
+                seg = [dataunit]
+                for j in range(length - 1):
+                    try:
+                        if dataunit.date == dset[i + j + 1].date and dset[i + j].time + 1 == dset[i + j + 1].time:
+                            seg.append(dset[i + j + 1])
+                        else:
+                            break
+                    except:
+                        break
+                if len(seg) == length:
+                    [self.seg_others, self.seg_metro, self.seg_bus][k].append(seg)
+        print("Seg: ", len(self.seg_others), ' ', len(self.seg_metro), ' ', len(self.seg_bus))
+        return
+    
+    def layout(self, testsize) -> list:
+        train_set = []
+        test_set = []
+        random.seed(time.time())
+        for k, dseg in enumerate([self.seg_others, self.seg_metro, self.seg_bus]):
+            i = 0
+            random.shuffle(dseg)
+            for seg in dseg:
+                seg_out = []
+                seg_out.append([])
+                for unit in seg:
+                    seg_out[0].append(unit.mean)
+                if i < testsize:
+                    test_set.append([seg_out, seg[0].tag])
+                    i += 1
+                else:
+                    train_set.append([seg_out, seg[0].tag])
+        return train_set, test_set

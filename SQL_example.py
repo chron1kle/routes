@@ -115,8 +115,8 @@ if __name__ == '__main__':
 
     # These are the arguments you have to specify or modify whenever you run this script
 
-    date = '20240327'
-    node = 1  # 0 for 305, 1 for 306, 2 for 312
+    date = '20240420'
+    node = 2  # 0 for 305, 1 for 306, 2 for 312
 
     # These are the arguments you could but not have to modify, unless necessary
 

@@ -5,25 +5,36 @@ import matplotlib.pyplot as plt
 from basic_functions import *
 ##  UTC + 8
 
-
+def GetTagSet(serial, date) -> list:
+    try:
+        return globals()[f'd{serial}_{date}']
+    except KeyError:
+        print(f'No transportation modes data.')
+        return []
 
 def resort(date, serial) -> None:
     data = loadData(serial, date)
-    data = sorted(data, key=lambda x: int(x[0]))
-    save_labelled_data(data, date, serial)
-    log_write(f'Data on #{serial} {date} resorted according to time.')
-    return 
+    # data = 
+    # save_labelled_data(data, date, serial)
+    # log_write(f'Data on #{serial} {date} resorted according to time.')
+    return sorted(data, key=lambda x: int(x[0]))
 
-def labelling(date, serial, running) -> None:
-    data = loadLabelledData(serial, date)
+def labelling(date, serial) -> None:
+    data = resort(date, serial)
+
+    tag_set = GetTagSet(serial, date)
 
     # Marker 的意义是什么？
     # 用于确保下载的数据里包含了所有被记录的区间 -> 没有意义，删去 (solved)
 
+    # Adjusting the 'Time' label
+    for i, line in enumerate(data):
+        data[i][0] = int(line[0][0:4])
+
     i = 0
     labelled = [0, 0, 0, 0, 0, 0]
     while i < len(data):
-        mode = time_match(running, data[i][0])
+        mode = time_match(tag_set, data[i][0])
         data[i].append(mode)
         labelled[mode] += 1
         i += 1
@@ -56,7 +67,7 @@ def remove_outliers(date, serial, sigma_multiplier) -> None:
         Ldata.remove(ele)
     log_write(f'Removed {len(outList)} numbers of outliers data.')
     
-    return save_labelled_data(Ldata, date, serial)
+    return save_cali_data(Ldata, date, serial)
 
 # Kalman filter
 
@@ -171,9 +182,7 @@ def calibration(date, serial, running):
     # Removing invalid (Tag = 1) data
     data = removing_Invalid_data(data)
 
-    # Adjusting the 'Time' label
-    for i, line in enumerate(data):
-        data[i][0] = int(line[0][0:4])
+    
                 
     '''
     # calibrate Tag = 0 data
@@ -196,13 +205,49 @@ def calibration(date, serial, running):
     
     return save_cali_data(data, date, serial)
 
+def BasicProcess(serial, dates) -> None:
+    dataSet = LoadCatagory(serial, dates)
 
 
-def preprocess(date, serial, running, sigma_multiplier):  # standard workflow
+def DataVisualize(key, serial=None, date=None) -> None:
+    if serial != None:
+        data = loadLabelledData(serial, date)
+        tag_set = GetTagSet(serial, date)
+    x = []
+    y = []
+    colors = []
+    for line in data:
+        if line[0] > tag_set[0][0] - 60 - 800 and line[0] < tag_set[-1][1] + 60 - 800:
+            x.append(line[0])
+            y.append(line[key])
+            if line[-1] == 0:
+                colors.append('green')
+            elif line[-1] == 1:
+                colors.append('blue')
+            elif line[-1] == 2:
+                colors.append('red')
+            # if line[key] > 200:
+            #     print(line[0], ' ', line[5])
+    plt.scatter(x, y, color = colors)
+    return
+
+def LabelAll(serial, dates) -> None:
+    for date in dates:
+        labelling(date, serial)
+    return
+
+
+
+def preprocess(date, serial, sigma_multiplier):  # standard workflow
+    try:
+        running = globals()[f'd{serial}_{date}']
+    except KeyError:
+        print(f'No transportation modes data.')
+        running = []
     
-    resort(date, serial)  # sort the data in ascending order
+    # resort(date, serial)  # sort the data in ascending order
 
-    labelling(date, serial, running)  # tag those data within transportation period
+    labelling(date, serial)  # tag those data within transportation period
 
     alignment(date, serial)   # mark out the uesless data within transportation period with value -1
 
@@ -215,19 +260,18 @@ if __name__ == '__main__':
 
     # parameters
     date = '20240327'
-    serial = '306'
+    serial = '312'
     
+    # dates = ['20240420']
+
     sigma_multiplier = 3
     chunkLength = 20
-    try:
-        running = globals()[f'd{serial}_{date}']
-    except KeyError:
-        print(f'No transportation modes data.')
-        running = []
+    
+    # LabelAll(serial, dates)
 
     log_write(f'------------------\n{time.ctime()}')
 
-    preprocess(date, serial, running, sigma_multiplier)
+    # preprocess(date, serial, sigma_multiplier)
 
     exit(0)
     

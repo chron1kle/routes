@@ -9,6 +9,7 @@ import torch.optim as optim
 from torch import nn
 
 from basic_functions import *
+from Kmeans import KMeans
 
 device = t.device("cuda:0" if t.cuda.is_available() else "cpu")
 
@@ -68,8 +69,9 @@ class MyDataset(Dataset):
         return len(self.x)
 
 
-def training_set(seg_length, offset, training_set_length, mode) -> tuple:
-    trainSet, testSet = load_train_data(seg_length, offset, training_set_length, mode)
+def training_set(trainSet, testSet, mode) -> tuple:  # seg_length, offset, training_set_length
+    # trainSet, testSet = load_train_data(seg_length, offset, training_set_length, mode)
+
     
     for i in range(len(trainSet)):
         if trainSet[i][1] != mode:
@@ -97,6 +99,12 @@ def training_set(seg_length, offset, training_set_length, mode) -> tuple:
     # print(i)
 
     return train_dl, test_dl
+
+def labelling_set(seg_length, offset, flag) -> object:
+    dataSet = load_seg_data(seg_length, offset, flag=flag)
+    label_ds = MyDataset([x[1] for x in dataSet], [x[2] for x in dataSet])
+    label_dl = DataLoader(label_ds, batch_size=1)
+    return label_dl
 
 def cri_opt(criterion_type, optimizer_type, model, learning_rate, momentum) -> object:
     if criterion_type == 'mse':
@@ -166,7 +174,7 @@ def training(model, criterion, optimizer, train_loader, test_loader, num_epoches
                 # exit(1)
             # out = model(seg)
             loss = criterion(out, tag)
-            print(out, '\n', tag, '\n', loss)
+            # print(out, '\n', tag, '\n', loss)
             test_loss += loss.item()
 
         unit_train_loss = train_loss / len(train_loader)
@@ -174,17 +182,17 @@ def training(model, criterion, optimizer, train_loader, test_loader, num_epoches
         print('epoch: {}, Train Loss x: {:.4f}, Test Loss x: {:.4f}'
             .format(epoch, train_loss, test_loss))
         
-        t.save(model.state_dict(), pt_path)
+        t.save(model, pt_path)
         try:
             if round(unit_train_loss, 4) == 0 and round(unit_test_loss, 4) == 0:
-                return
-            elif abs(unit_train_loss - prev_train_loss[-1]) / prev_train_loss[-1] < threshold and abs(unit_test_loss - prev_test_loss[-1]) / prev_test_loss[-1] < threshold:
+                pass # return
+            elif abs(train_loss - prev_train_loss[-1]) / prev_train_loss[-1] < threshold and abs(test_loss - prev_test_loss[-1]) / prev_test_loss[-1] < threshold:
                 print('Converged.')
                 return
         except:
             pass
-        prev_train_loss.append(unit_train_loss)
-        prev_test_loss.append(unit_test_loss)
+        prev_train_loss.append(train_loss)
+        prev_test_loss.append(test_loss)
     return
 
 def testing(data, model):
@@ -196,57 +204,104 @@ def testing(data, model):
         l.append((round(out, 6), int(tag.item())))
     l.sort(key=lambda x: x[0])
     for out, tag in l:
-        log_write(f'model out: {out}, actual val: {tag}')
+        if tag == 1:
+            print('\033[31m')
+            log_write(f'model out: {out}, actual val: {tag}')
+            print('\033[30m')
+        else:
+            log_write(f'model out: {out}, actual val: {tag}')
     log_write(f'Total loss: {sum / len(data)}')
     return
 
+def confidence_labelling(data, model) -> object:
+    for i in range(len(data)):
+        data[i].append(round(model(data[i][1]).item(), 6))
+    return data
+
 if __name__ == "__main__":
 
-    num_epoches = 5
+    while True:
+        userIn = int(input("Input flag: "))
+        if userIn not in [0, 1, 2]:
+            continue
+        flag = ["training", "testing", "labelling"][userIn]
+        if userIn == 2:
+            model_folder = 'trainedNet'
+        else:
+            model_folder = 'net'
+        break
+
+    num_epoches = 2
     learning_rate = 0.1
     momentum = 0.1
     lr_itr_rate = 1
     threshold = 0.005
-    cnn_para = 4000
+    cnn_para = 1000
 
     seg_length = 3
     offset = 5
-    testing_set_length = 100
+    testing_set_length = 30
 
-    mode = 1
+    mode = 3
     model_type = 'nn'
     criterion_type = 'ce'
-    optimizer_type = 'adam'
+    optimizer_type = 'adagrad'
     
     log_path = f'ModelLog.log'
     dtype = t.float
     
     log_write('-----------------------------------------', log_path)
     log_write(f'Model\ntype: {model_type}\ncriterion: {criterion_type}\noptimizer: {optimizer_type}\nlearning_rate: {learning_rate}\nthreshold: {threshold}\nsegmentation length: {seg_length}\noffset: {offset}\ntesting set length: {testing_set_length}', log_path)
-    
-    if model_type == 'nn':
-        model = NeuralNet(12, 500, 800, 800, 300, 1) 
-        pt_path = f'net\\{mode}_model_{model_type}_{criterion_type}_{optimizer_type}_{learning_rate}_.pt'
-    elif model_type == 'cnn':
-        model = ConvNet(cnn_para)
-        pt_path = f'net\\{mode}_model_{model_type}_{criterion_type}_{optimizer_type}_{learning_rate}_{cnn_para}_.pt'
-    else:
-        print(f'Wrong model type: {model_type}')
-        exit(0)
 
     try:
-        model.load_state_dict(t.load(pt_path))
-        print(f'model parameters loaded.')
+        
+        if model_type == 'nn':
+            # model = NeuralNet(seg_length * 4, 600, 1400, 800, 300, 1)
+            pt_path = f'{model_folder}\\{mode}_model_{model_type}_{criterion_type}_{optimizer_type}_{learning_rate}_.mdl'
+        elif model_type == 'cnn':
+            # model = ConvNet(cnn_para)
+            pt_path = f'{model_folder}\\{mode}_model_{model_type}_{criterion_type}_{optimizer_type}_{learning_rate}_{cnn_para}_.mdl'
+        else:
+            print(f'Wrong model type: {model_type}')
+            exit(0)
+        if flag == "labelling" or flag == "testing":
+            model = t.load(pt_path)
+            print(f'model loaded.')
     except Exception as e:
-        print(f'Exception: {e}\nStart with new model.')
+        if flag == "labelling":
+            print(f'Wrong parameters.')
+            exit(1)
+        
 
-    train_loader, test_loader = training_set(seg_length, offset, testing_set_length, mode)
-    criterion, optimizer = cri_opt(criterion_type, optimizer_type, model, learning_rate, momentum)
+    if flag == "training":
+        if model_type == 'nn':
+            model = NeuralNet(seg_length, 600, 1400, 800, 300, 1)
+            # pt_path = f'{model_folder}\\{mode}_model_{model_type}_{criterion_type}_{optimizer_type}_{learning_rate}_.mdl'
+        elif model_type == 'cnn':
+            model = ConvNet(cnn_para)
+            # pt_path = f'{model_folder}\\{mode}_model_{model_type}_{criterion_type}_{optimizer_type}_{learning_rate}_{cnn_para}_.mdl'
+        print(f'Start with new model.')
 
     model.to(device)
     print(f'Device: {device}')
 
-    # training(model, criterion, optimizer, train_loader, test_loader, num_epoches, pt_path, threshold)
-    testing(test_loader, model)
+    criterion, optimizer = cri_opt(criterion_type, optimizer_type, model, learning_rate, momentum)
+
+    if flag == "training":
+        dset = LoadCatagory('312', dates)
+        dset.segment(seg_length)
+        train_set, test_set = dset.layout(testing_set_length) # training_set(seg_length, offset, testing_set_length, mode)
+        train_loader, test_loader = training_set(train_set, test_set, mode)
+        training(model, criterion, optimizer, train_loader, test_loader, num_epoches, pt_path, threshold)
+        testing(test_loader, model)
+    elif flag == "testing":
+        train_loader, test_loader = training_set(seg_length, offset, testing_set_length, mode)
+        testing(test_loader, model)
+    elif flag == "labelling":
+        data_loader = labelling_set(seg_length, offset, flag)
+        save_confi_data(confidence_labelling(data_loader, model), seg_length, offset)
+    else:
+        print(f'Wrong flag: {flag}')
+        exit(1)
 
     print(f'file path: {pt_path}')
